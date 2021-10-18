@@ -3,7 +3,6 @@ echo ' <h1><center>Hello Patients profile </center></h1>';
 echo ' <h1><center>Welcome to Personal Health Application</center></h1>';
 session_start();
 
-
 if (!isset($_SESSION["user_name"])) {
     header("refresh: 1; url=patindex.php");
     exit();
