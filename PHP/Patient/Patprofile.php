@@ -38,7 +38,7 @@ if (!isset($_SESSION["user_name"])) {
 
 <body>
    
-    <p>Name        : <?php echo $name ?></p>
+    <p>Name        :<?php echo $name ?></p>
     <p>Phone No    :<?php echo $phoneno ?></p>
     <p>Gender      :<?php echo $gender ?></p>
     <p>Age         :<?php echo $age ?></p>

@@ -32,13 +32,12 @@ echo ' <h1><center>Welcome to Personal Health Application</center></h1>'
 
 <body>
 
-    <form action="Patindex.php" method="POST">
+    <form action="Patient/Patindex.php" method="POST">
         <input type="submit" class="button button1" value="Patient">
     </form>
-    <form action="Dtindex.php" method="POST">
+    <form action="Doctor/Dtindex.php" method="POST">
         <input type="submit" class="button button2" value="Dotcor">
     </form>
 
 </body>
-
 </html>

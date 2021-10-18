@@ -2,7 +2,7 @@
 
 echo ' <h1><center>Hello Patients profile"</center></h1>';
 echo ' <h1><center>Sign in to continue</center></h1>';
-if(session_status()>=0)
+if(session_status()>=1)
 {
     session_start();
     if(isset($_SESSION["user_name"]))
@@ -10,6 +10,9 @@ if(session_status()>=0)
         header("refresh: 0; url=Patprofile.php");
     }
 }
+
+
+
 
 ?>
 
@@ -55,9 +58,9 @@ if (isset($_POST["submit"])) {
         $count = mysqli_num_rows($result);
 
         if ($count == 1) {
-            session_start();
+           // session_start();
             $_SESSION["user_name"] = $_POST["user_name"];
-            header("refresh: 1; url=Patprofile.php");
+            header("refresh: 0; url=Patprofile.php");
             mysqli_close($conn);
             exit();
         }
