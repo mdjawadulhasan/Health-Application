@@ -38,14 +38,15 @@ if (!isset($_SESSION["user_name"])) {
 
 <body>
    
-    <p><?php echo $name ?></p>
-    <p><?php echo $phoneno ?></p>
-    <p><?php echo $gender ?></p>
-    <p><?php echo $age ?></p>
-    <p><?php echo $Bgrp ?></p>
+    <p>Name        : <?php echo $name ?></p>
+    <p>Phone No    :<?php echo $phoneno ?></p>
+    <p>Gender      :<?php echo $gender ?></p>
+    <p>Age         :<?php echo $age ?></p>
+    <p>Blood group :<?php echo $Bgrp ?></p>
     
 
     <a href="Patlogout.php">Logout</a>
+    <a href="Pateditprofile.php">Edit</a>
 </body>
 
 </html>

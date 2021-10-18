@@ -2,14 +2,17 @@
 
 echo ' <h1><center>Hello Patients profile"</center></h1>';
 echo ' <h1><center>Sign in to continue</center></h1>';
-if (session_status() >= 0) {
-
-    if (isset($_SESSION["user_name"])) {
-        header("refresh: 1; url=Patprofile.php");
+if(session_status()>=0)
+{
+    session_start();
+    if(isset($_SESSION["user_name"]))
+    {
+        header("refresh: 0; url=Patprofile.php");
     }
 }
 
 ?>
+
 
 
 <!DOCTYPE html>
