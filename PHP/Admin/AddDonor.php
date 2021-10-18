@@ -48,5 +48,47 @@ if (!isset($_SESSION["user_name"])) {
 
     </form>
 
+<table border="1">
+    <tr>
+        <th>Name</th>
+        <th>Phone No</th>
+        <th>Blood Group</th>
+        <th>City</th>
+        <th>Area</th>
+        <th>Delete</th>
+        
+    </tr>
+
+
+    
 </body>
 </html>
+
+<?php
+$conn = mysqli_connect('localhost', 'root', '', 'phawa');
+$query = "SELECT *FROM donortbl";
+$result = mysqli_query($conn, $query);
+
+
+while($r=mysqli_fetch_array($result))
+{
+echo '<tr>';
+echo '<td><center>'.$r['dnrname'].'</center></td>';
+echo '<td><center>'.$r['dnrphone'].'</center></td>';
+echo '<td><center>'.$r['dnrbrgp'].'</center></td>';
+echo '<td><center>'.$r['dnrcity'].'</center></td>';
+echo '<td><center>'.$r['dnrarea'].'</center></td>';
+
+echo "<td><a href=\"DeleteDnr.php?did=$r[did]\" onClick=\"return confirm
+('Are you sure to delete?')\"><input type='submit' value='Delete'></a></td>";
+
+
+// echo '<td>header("location:DeleteDnr.php?id=$r[did] <input type='submit' > </td>)";
+
+echo '</tr><center>';
+}
+
+?>
+</table>
+
+

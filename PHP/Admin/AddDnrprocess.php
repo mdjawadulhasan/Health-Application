@@ -11,7 +11,7 @@ if (isset($_POST["submit"])) {
 
 
     $conn = mysqli_connect('localhost', 'root', '', 'phawa');
-    $sql = "INSERT INTO donortbl(did,dnrname,dnrphone,dnrbrgp,dnrcity,dnrarea) VALUES ('0','$name','$phoneno','$Bgrp','$city','$area')";
+    $sql = "INSERT INTO donortbl(did,dnrname,dnrphone,dnrbrgp,dnrcity,dnrarea) VALUES ('0','$name','$phnno','$Bgrp','$city','$area')";
     if (mysqli_query($conn, $sql)) {
         header("location:AddDonor.php");
         mysqli_close($conn);
