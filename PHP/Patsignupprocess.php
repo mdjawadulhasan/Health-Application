@@ -43,16 +43,18 @@ if (isset($_POST["submit"])) {
         if ($usernameInDB == $user_name) {
 
             echo '<script>alert("User Name already available!,Try different User Name!")</script>';
+            header("refresh: 0.5; url=Patsignup.php");
             mysqli_close($conn);
         } else  if ($mailInDB == $user_email) {
             echo '<script>alert("Mail address already exist !,Try different mail address!")</script>';
+            header("refresh: 0.5; url=Patsignup.php");
             mysqli_close($conn);
         } else {
             if (mysqli_query($conn, $sql)) {
                 echo 'I am working';
                 session_start();
                 $_SESSION["user_name"] = $_POST["user_name"];
-                echo "Signup Done Bro !";
+                header("refresh: 1; url=patprofile.php");
                 mysqli_close($conn);
             } else {
                 echo "Signup is not Done Bro !";
