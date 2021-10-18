@@ -54,7 +54,7 @@ if (isset($_POST["submit"])) {
                 echo 'I am working';
                 session_start();
                 $_SESSION["user_name"] = $_POST["user_name"];
-                header("refresh: 1; url=patprofile.php");
+                header("refresh: 1; url=Patprofile.php");
                 mysqli_close($conn);
             } else {
                 echo "Signup is not Done Bro !";

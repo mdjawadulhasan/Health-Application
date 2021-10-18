@@ -3,6 +3,15 @@ echo ' <h1><center>Hello Patient</center></h1>';
 echo ' <h1><center>Welcome to Personal Health Application</center></h1>';
 echo ' <h1><center>Give your information</center></h1>';
 
+if(session_status()>=0)
+{
+    session_start();
+    if(isset($_SESSION["user_name"]))
+    {
+        header("refresh: 1; url=Patprofile.php");
+    }
+}
+
 ?>
 
 
