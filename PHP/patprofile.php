@@ -7,6 +7,21 @@ session_start();
 if (!isset($_SESSION["user_name"])) {
     header("refresh: 1; url=patindex.php");
     exit();
+} else {
+
+    $user_name = $_SESSION["user_name"];
+    $query = "SELECT * FROM patienttbl WHERE ptusername='$user_name';";
+    $conn = mysqli_connect('localhost', 'root', '', 'phawa');
+    $result = mysqli_query($conn, $query);
+
+    while ($row = mysqli_fetch_assoc($result)) {
+
+        $name = $row['ptname'];
+        $phoneno = $row['ptphone'];
+        $gender = $row['ptgender'];
+        $age = $row['ptage'];
+        $Bgrp = $row['ptbgrp'];
+    }
 }
 
 ?>
@@ -22,7 +37,14 @@ if (!isset($_SESSION["user_name"])) {
 </head>
 
 <body>
-    <p><?php echo $_SESSION["user_name"] ?></p>
+   
+    <p><?php echo $name ?></p>
+    <p><?php echo $phoneno ?></p>
+    <p><?php echo $gender ?></p>
+    <p><?php echo $age ?></p>
+    <p><?php echo $Bgrp ?></p>
+    
+
     <a href="Patlogout.php">Logout</a>
 </body>
 

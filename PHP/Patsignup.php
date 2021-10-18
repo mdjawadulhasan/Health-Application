@@ -8,7 +8,7 @@ if(session_status()>=0)
     session_start();
     if(isset($_SESSION["user_name"]))
     {
-        header("refresh: 1; url=Patprofile.php");
+        header("refresh: 0; url=Patprofile.php");
     }
 }
 
