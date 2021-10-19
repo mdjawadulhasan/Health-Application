@@ -58,7 +58,7 @@ if (!isset($_SESSION["user_name"])) {
     <br>
     <h1>Number of Patients :  <?php echo $count ?></h1>
     <h1>Number of Donors   :  <?php echo $count2 ?></h1>
-    <h1>Number of Donors   :  <?php echo $count3 ?></h1>
+    <h1>Number of Doctors  :  <?php echo $count3 ?></h1>
    
 
 </body>
