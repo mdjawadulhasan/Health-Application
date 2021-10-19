@@ -27,7 +27,9 @@ if (!isset($_SESSION["user_name"])) {
 
     <a href="Adminlogout.php">Logout</a>
     <br>
-    <a href="AddDonor.php">Adddonor</a>
+    <a href="AddDonor.php">Manage Donor</a>
+    <a href="ManagePat.php">Manage Patient</a>
+    <a href="Adminlogout.php">Logout </a>
 
    
 

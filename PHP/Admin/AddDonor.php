@@ -61,8 +61,7 @@ if (!isset($_SESSION["user_name"])) {
 
 
     
-</body>
-</html>
+
 
 <?php
 $conn = mysqli_connect('localhost', 'root', '', 'phawa');
@@ -83,7 +82,7 @@ echo "<td><a href=\"DeleteDnr.php?did=$r[did]\" onClick=\"return confirm
 ('Are you sure to delete?')\"><input type='submit' value='Delete'></a></td>";
 
 
-// echo '<td>header("location:DeleteDnr.php?id=$r[did] <input type='submit' > </td>)";
+
 
 echo '</tr><center>';
 }
@@ -91,4 +90,5 @@ echo '</tr><center>';
 ?>
 </table>
 
-
+</body>
+</html>

@@ -1,33 +1,50 @@
+<!DOCTYPE html>
 <html>
+	
+<head>
+	<title>
+		How to call PHP function
+		on the click of a Button ?
+	</title>
+</head>
 
-<body>
+<body style="text-align:center;">
+	
+	<h1 style="color:green;">
+		GeeksforGeeks
+	</h1>
+	
+	<h4>
+		How to call PHP function
+		on the click of a Button ?
+	</h4>
+	
+	<?php
+		if(array_key_exists('button1', $_POST)) {
+			button1("ishan");
+		}
+		else if(array_key_exists('button2', $_POST)) {
+			button2();
+		}
+		function button1($val) {
+			echo "This is Button1 that is selected";
+            echo $val;
+		}
+		function button2() {
+			echo "This is Button2 that is selected";
+		}
+	?>
 
-    <form method="post" action="<?php echo $_SERVER['PHP_SELF']; ?>">
-        <label for="cars">Choose a car:</label>
-        <select name="cars" id="cars">
-            <option value="volvo">Volvo</option>
-            <option value="saab">Saab</option>
-            <option value="opel">Opel</option>
-            <option value="audi">Audi</option>
-        </select>
-        <br><br>
-
-
-        <input type="submit">
-    </form>
-
-    <?php
-    if ($_SERVER["REQUEST_METHOD"] == "POST") {
-        // collect value of input field
-        $name = $_POST['cars'];
-        if (empty($name)) {
-            echo "Name is empty";
-        } else {
-            echo $name;
-        }
-    }
-    ?>
-
-</body>
+	<form method="post">
+		<input type="submit" name="button1"
+				class="button" value="Button1" />
+		
+		<input type="submit" name="button"
+				 value="12" />
+	</form>
+</head>
 
 </html>
+
+
+
