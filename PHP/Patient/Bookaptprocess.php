@@ -58,7 +58,7 @@ while ($row = mysqli_fetch_assoc($result)) {
         <input type="hidden"  name="dtrname" value="<?php echo $dtname; ?>">
         <input type="hidden"  name="dtrid" value="<?php echo $dtid; ?>">
         <label for="birthday">SET APPONTMENT DATE:</label>
-        <input type="date" name="aptdate">
+        <input type="date" name="aptdate"   required>
         <br>
         <button type="submit" name="submit">SET</button><br><br>
 
