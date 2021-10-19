@@ -44,12 +44,21 @@ if (!isset($_SESSION["user_name"])) {
     $result = mysqli_query($conn, $query);
     $row = mysqli_fetch_array($result, MYSQLI_ASSOC);
     $count2 = mysqli_num_rows($result);
+
+
+    $query = "SELECT * from doctortbl";
+    $result = mysqli_query($conn, $query);
+    $row = mysqli_fetch_array($result, MYSQLI_ASSOC);
+    $count3 = mysqli_num_rows($result);
+
+
     ?>
 
     <br>
     <br>
     <h1>Number of Patients :  <?php echo $count ?></h1>
     <h1>Number of Donors   :  <?php echo $count2 ?></h1>
+    <h1>Number of Donors   :  <?php echo $count3 ?></h1>
    
 
 </body>
