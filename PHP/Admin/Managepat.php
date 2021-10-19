@@ -52,7 +52,7 @@ echo '<td><center>'.$r['ptbgrp'].'</center></td>';
 echo '<td><center>'.$r['ptusername'].'</center></td>';
 echo '<td><center>'.$r['ptuseremail'].'</center></td>';
 echo '<td><center>'.$r['pid'].'</center></td>';
-echo "<td><a href=\"Delete.php?pid=$r[pid]\" onClick=\"return confirm
+echo "<td><a href=\"PatDelete.php?pid=$r[pid]\" onClick=\"return confirm
 ('Are you sure to delete?')\"><input type='submit' value='Delete'></a></td>";
 
 
