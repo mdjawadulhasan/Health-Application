@@ -6,9 +6,9 @@ echo ' <h1><center>Give your information</center></h1>';
 if(session_status()>=0)
 {
     session_start();
-    if(isset($_SESSION["dtuser_name"]))
+    if(isset($_SESSION["user_name"]))
     {
-        header("refresh: 0; url=Patprofile.php");
+        header("refresh: 0; url=Dtprofile.php");
     }
 }
 

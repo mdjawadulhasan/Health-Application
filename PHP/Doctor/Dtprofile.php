@@ -1,5 +1,5 @@
 <?php
-echo ' <h1><center>Hello Patients profile </center></h1>';
+echo ' <h1><center>Hello Doctors profile </center></h1>';
 echo ' <h1><center>Welcome to Personal Health Application</center></h1>';
 session_start();
 
@@ -51,8 +51,8 @@ if (!isset($_SESSION["user_name"])) {
     <p>Mail id :<?php echo  $user_email ?></p>
 
 
-    <a href="Patlogout.php">Logout</a>
-    <a href="Pateditprofile.php">Edit</a>
+    <a href="Dtlogout.php">Logout</a>
+    <a href="Dteditprofile.php">Edit</a>
 
 </body>
 
