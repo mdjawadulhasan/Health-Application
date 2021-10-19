@@ -1,21 +1,21 @@
 <?php
-
 session_start();
 if (!isset($_SESSION["user_name"])) {
-    header("refresh: 1; url=patindex.php");
+    header("refresh: 0; url=Patprofile.php");
     exit();
 }
 
 
-$dtid = $_GET['dtid'];
 
-$query = "SELECT * FROM doctortbl WHERE dtid='$dtid';";
+
+$dtid = $_GET['dtid'];
 $conn = mysqli_connect('localhost', 'root', '', 'phawa');
+$query = "SELECT * FROM doctortbl WHERE dtid='$dtid';";
 $result = mysqli_query($conn, $query);
 
 while ($row = mysqli_fetch_assoc($result)) {
 
-    $name = $row['dtname'];
+    $dtname = $row['dtname'];
     $degree = $row['dtdegree'];
     $dept = $row['dtdept'];
     $chamber = $row['dtchamber'];
@@ -23,7 +23,11 @@ while ($row = mysqli_fetch_assoc($result)) {
     $vdays = $row['dtvisitingdays'];
     $phnno = $row['dtphone'];
     $user_email = $row['dtemail_id'];
+    $Doctorid=$row['dtid'];
 }
+
+
+
 
 ?>
 
@@ -39,7 +43,7 @@ while ($row = mysqli_fetch_assoc($result)) {
 
 <body>
 
-    <p>Name :<?php echo $name ?></p>
+    <p>Name :<?php echo $dtname ?></p>
     <p>Degree :<?php echo   $degree ?></p>
     <p>Department :<?php echo $dept ?></p>
     <p>Chamber :<?php echo $chamber ?></p>
@@ -48,8 +52,11 @@ while ($row = mysqli_fetch_assoc($result)) {
     <p>Phone No :<?php echo  $phnno ?></p>
     <p>Mail id :<?php echo  $user_email ?></p>
 
-    <form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="post">
+    <form action="Confirmappointment.php" method="post">
 
+
+        <input type="hidden"  name="dtrname" value="<?php echo $dtname; ?>">
+        <input type="hidden"  name="dtrid" value="<?php echo $dtid; ?>">
         <label for="birthday">SET APPONTMENT DATE:</label>
         <input type="date" name="aptdate">
         <br>
@@ -69,15 +76,18 @@ while ($row = mysqli_fetch_assoc($result)) {
 if (isset($_POST["submit"])) {
     if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
+        $AptDate = $_POST['aptdate'];
+        $Dtrname = $_POST['dtrname'];
+        $Dtrid = $_POST['dtrid'];
 
         $conn = mysqli_connect('localhost', 'root', '', 'phawa');
-        $sql = "INSERT INTO patienttbl(pid,ptname,ptphone,ptgender,ptage,ptbgrp,ptusername,ptpass,ptuseremail) VALUES ('0','$name','$phoneno','$gender','$age','$Bgrp','$user_name','$user_pass','$user_email')";
+        $sql="INSERT INTO appointmenttbl(aptid,doctorid,patientid,apdtname,apptname,appdate) VALUES ('0','$Dtrid',$patid,'$Dtrname','$patname','$AptDate')";
         if (mysqli_query($conn, $sql)) {
             echo '<script>alert("Appointment Has been Set!")</script>';
             header("refresh: 0; url=Patprofile.php");
             mysqli_close($conn);
         } else {
-            echo "Signup is not Done Bro !";
+            echo '<script>alert("Try Again!")</script>';
         }
     }
 }

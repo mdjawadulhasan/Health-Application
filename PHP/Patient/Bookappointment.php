@@ -51,12 +51,7 @@ echo '<td><center>'.$r['dtdept'].'</center></td>';
 echo '<td><center>'.$r['dtchamber'].'</center></td>';
 echo '<td><center>'.$r['dtphone'].'</center></td>';
 echo '<td><center>'.$r['dtemail_id'].'</center></td>';
-echo "<td><a href=\"Bookaptprocess.php?dtid=$r[dtid]\" onClick=\"return confirm
-('Confirm?')\"><input type='submit' value='Set'></a></td>";
-
-
-
-
+echo "<td><a href=\"Bookaptprocess.php?dtid=$r[dtid]\"><input type='submit' value='Set'></a></td>";
 echo '</tr><center>';
 }
 
