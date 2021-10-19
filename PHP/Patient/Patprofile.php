@@ -43,9 +43,11 @@ if (!isset($_SESSION["user_name"])) {
     <p>Age         :<?php echo $age ?></p>
     <p>Blood group :<?php echo $Bgrp ?></p>
     
-
-    <a href="Patlogout.php">Logout</a>
-    <a href="Pateditprofile.php">Edit</a>
+    <a href="Patlogout.php">Logout</a><br>
+    <a href="Pateditprofile.php">Edit</a><br>
+    <a href="Donorlist.php">Donorlist</a><br>
+    <a href="Bookappointment.php">Book Appointment</a><br>
+    <a href="Viewappointment.php">view Appointment</a>
 </body>
 
 </html>
