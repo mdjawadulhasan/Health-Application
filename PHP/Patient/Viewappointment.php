@@ -38,7 +38,7 @@ if (!isset($_SESSION["user_name"])) {
         while ($r = mysqli_fetch_array($result)) {
             echo '<tr>';
             echo '<td><center>' . $r['apdtname'] . '</center></td>';
-            echo '<td><center>' . $r['apdtname'] . '</center></td>';
+            echo '<td><center>' . $r['apptname'] . '</center></td>';
             echo '<td><center>' . $r['appdate'] . '</center></td>';
             echo "<td><a href=\"Aptdelete.php?aptid=$r[aptid]\" onClick=\"return confirm
 ('Are you sure to delete?')\"><input type='submit' value='Delete'></a></td>";
