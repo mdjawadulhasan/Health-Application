@@ -30,7 +30,10 @@ if (!isset($_SESSION["user_name"])) {
     <br>
     <a href="ManagePat.php">Manage Patient</a>
     <br>
+    <a href="ManageDoctor.php">Manage Doctor</a>
+    <br>
     <a href="Adminlogout.php">Logout </a>
+    
 
 
     <?php
