@@ -25,20 +25,33 @@ if (!isset($_SESSION["user_name"])) {
 
 <body>
 
-    <a href="Adminlogout.php">Logout</a>
-    <br>
+    
     <a href="AddDonor.php">Manage Donor</a>
+    <br>
     <a href="ManagePat.php">Manage Patient</a>
+    <br>
     <a href="Adminlogout.php">Logout </a>
 
+
+    <?php
+    $conn = mysqli_connect('localhost', 'root', '', 'phawa');
+    $query = "SELECT * from patienttbl";
+    $result = mysqli_query($conn, $query);
+    $row = mysqli_fetch_array($result, MYSQLI_ASSOC);
+    $count = mysqli_num_rows($result);
+
+    $query = "SELECT * from donortbl";
+    $result = mysqli_query($conn, $query);
+    $row = mysqli_fetch_array($result, MYSQLI_ASSOC);
+    $count2 = mysqli_num_rows($result);
+    ?>
+
+    <br>
+    <br>
+    <h1>Number of Patients :  <?php echo $count ?></h1>
+    <h1>Number of Donors   :  <?php echo $count2 ?></h1>
    
 
 </body>
 
 </html>
-
-<?php
-
-
-
-?>
