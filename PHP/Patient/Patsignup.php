@@ -1,8 +1,11 @@
-<?php
-echo ' <h1><center>Hello Patient</center></h1>';
-echo ' <h1><center>Welcome to Personal Health Application</center></h1>';
-echo ' <h1><center>Give your information</center></h1>';
 
+<style>
+<?php
+
+   include "design.css";
+?>
+</style>
+<?php
 if(session_status()>=0)
 {
     session_start();
@@ -18,8 +21,17 @@ if(session_status()>=0)
 <!DOCTYPE html>
 <html>
 <body>
+<header id="main-header">
+ <div class="container">
+ <h1>Hello Patient</h1>
+ <h1>Welcome to Personal Health Application</h1>
+ <h1>Give your information</h1>
 
-    <form action="Patsignupprocess.php" method="post" >
+</div>
+</header>
+<br>
+
+   <b> <form action="Patsignupprocess.php" method="post" >
 
         <label for="first_name">First name: </label>
         <input type="text" name="fname" value="" required><br><br>
@@ -51,7 +63,7 @@ if(session_status()>=0)
         <label for="user_email">E-mail: </label>
         <input type="email" name="user_email" value="" required><br><br>
 
-        <button type="submit" name="submit">Register</button><br><br>
+        <button type="submit" name="submit" style="background-color:#04AA6D"><b>Register<b></button><br><br></b>
 
     </form>
 

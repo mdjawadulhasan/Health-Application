@@ -1,6 +1,15 @@
+<style>
+    <?php
+
+    include "design.css";
+    ?>
+</style>
+
+
+
+
 <?php
-echo ' <h1><center>Hello Patients profile </center></h1>';
-echo ' <h1><center>Welcome to Personal Health Application</center></h1>';
+
 session_start();
 
 if (!isset($_SESSION["user_name"])) {
@@ -29,25 +38,47 @@ if (!isset($_SESSION["user_name"])) {
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>Document</title>
 </head>
 
 <body>
-   
-    <p>Name        :<?php echo $name ?></p>
-    <p>Phone No    :<?php echo $phoneno ?></p>
-    <p>Gender      :<?php echo $gender ?></p>
-    <p>Age         :<?php echo $age ?></p>
-    <p>Blood group :<?php echo $Bgrp ?></p>
-    
-    <a href="Patlogout.php">Logout</a><br>
-    <a href="Pateditprofile.php">Edit</a><br>
-    <a href="Donorlist.php">Donorlist</a><br>
-    <a href="Bookappointment.php">Book Appointment</a><br>
-    <a href="Viewappointment.php">view Appointment</a>
+    <header id="main-header">
+        <div class="container">
+
+
+            <h1>Hello Patients profile </h1>
+            <h1>Welcome to Personal Health Application</h1>
+        </div>
+    </header>
+
+
+
+    <nav id="navbar">
+        <div class="container">
+            <ul>
+                <li><a href="Patlogout.php">Logout</a></a></li>
+
+                <li><a href="Pateditprofile.php">Edit</a></a></li>
+
+                <li> <a href="Donorlist.php">Donorlist</a></a></li>
+
+                <li> <a href="Bookappointment.php">Book Appointment</a></a></li>
+                <li> <a href="Viewappointment.php">view Appointment</a></a></a></li>
+                <li> <a href="Seepresc.php">See Prescription</a></a></li>
+
+            </ul>
+        </div>
+    </nav>
+
+
+    <p><b>Name :<b><?php echo $name ?></p>
+    <p><b>Phone No :<b><?php echo $phoneno ?></p>
+    <p><b>Gender :<b><?php echo $gender ?></p>
+    <p><b>Age :<b><?php echo $age ?></p>
+    <p><b>Blood group :<b><?php echo $Bgrp ?></p>
+
+
 </body>
 
 </html>

@@ -1,8 +1,10 @@
-<?php
-echo ' <h1><center>Hello Doctor Vhai</center></h1>';
-echo ' <h1><center>Welcome to Personal Health Application</center></h1>'
-?>
 
+<style>
+<?php
+
+   include "design.css";
+?>
+</style>
 
 <!DOCTYPE html>
 <html>
@@ -34,7 +36,18 @@ echo ' <h1><center>Welcome to Personal Health Application</center></h1>'
 
 <body>
 
-    <form action="Dtsignin.php" method="POST">
+<header id="main-header">
+ <div class="container">
+<h1>Hello Doctor Vhai</h1>
+ <h1> Welcome to Personal Health Application</h1>
+</div>
+</header>
+
+ 
+
+
+
+   <br><br> <form action="Dtsignin.php" method="POST">
         <input type="submit" class="button button1" value="Sign in">
     </form>
     <form action="Dtsignup.php" method="POST">

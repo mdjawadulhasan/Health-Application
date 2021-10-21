@@ -39,5 +39,9 @@ echo ' <h1><center>Welcome to Personal Health Application</center></h1>'
         <input type="submit" class="button button2" value="Dotcor">
     </form>
 
+    <form action="Admin/Admin.php" method="POST">
+        <input type="submit" class="button button2" value="Admin">
+    </form>
+
 </body>
 </html>

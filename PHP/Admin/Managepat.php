@@ -1,9 +1,12 @@
 
+<style>
 <?php
 
-echo ' <h1><center>Hello Admin"</center></h1>';
-echo ' <h1><center>Manage Patient</center></h1>';
+   include "design.css";
+?>
+</style>
 
+<?php
 session_start();
 if (!isset($_SESSION["user_name"])) {
     header("refresh: 0; url=Admin.php");
@@ -17,8 +20,29 @@ if (!isset($_SESSION["user_name"])) {
 <!DOCTYPE html>
 <html>
 <body>
-<table border="1">
-    <tr>
+   <header id="main-header">
+ <div class="container">
+ <h1>Hello Admin"</br>
+ Manage Patient</h1>
+</div>
+</header>
+
+<nav id="navbar">
+    <div class="container">
+<ul>
+    <li><a href="AddDonor.php">Manage Donor</a></li>
+ 
+    <li><a href="ManagePat.php">Manage Patient</a></li>
+    
+    <li><a href="ManageDoctor.php">Manage Doctor</a></li>
+    
+   <li> <a href="Adminlogout.php">Logout </a></li>
+</ul>
+</div>
+</nav>
+
+<br><table border="1">
+    <tr style="background-color:#81D3BD">
         <th>Name</th>
         <th>Phone No</th>
         <th>Gender</th>
@@ -26,7 +50,7 @@ if (!isset($_SESSION["user_name"])) {
         <th>Blood Group</th>
         <th>Username</th>
         <th>Usermail</th>
-        <th>Delete</th>
+        <th>&nbsp;&nbsp;&#128465&nbsp;&nbsp;</th>
         
     </tr>
 

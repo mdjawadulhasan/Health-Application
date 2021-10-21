@@ -1,6 +1,13 @@
+
+
+<style>
 <?php
-echo ' <h1><center>Hello Patients profile </center></h1>';
-echo ' <h1><center>Welcome to Personal Health Application</center></h1>';
+
+   include "design.css";
+?>
+</style>
+<?php
+
 session_start();
 if (!isset($_SESSION["user_name"])) {
     header("refresh: 1; url=patindex.php");
@@ -34,13 +41,36 @@ function ShowDonor($sql)
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
     <title>Document</title>
 </head>
 
 <body>
+
+
+<header id="main-header">
+ <div class="container">
+ <h1>Hello Patients profile</h1>
+<h1>Welcome to Personal Health Application</h1>
+</div>
+</header>
+
+<nav id="navbar">
+    <div class="container">
+<ul>
+    <li><a href="Patlogout.php">Logout</a></a></li>
+ 
+    <li><a href="Pateditprofile.php">Edit</a></a></li>
+    
+    <li> <a href="Donorlist.php">Donorlist</a></a></li>
+
+   <li>   <a href="Bookappointment.php">Book Appointment</a></a></li>
+   <li>   <a href="Viewappointment.php">view Appointment</a></a></a></li>
+
+</ul>
+</div>
+</nav>
+ <br>
 
     <form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="post">
 
@@ -50,13 +80,9 @@ function ShowDonor($sql)
 
     </form>
 
-    <a href="Patlogout.php">Logout</a><br>
-    <a href="Pateditprofile.php">Edit</a><br>
-    <a href="Donorlist.php">Donorlist</a><br>
-    <a href="Bookappointment.php">Book Appointment</a><br>
-    <a href="Viewappointment.php">view Appointment</a>
-    <table border="1">
-        <tr>
+    
+    <table border="1" >
+        <tr style="background-color:#81D3BD">
             <th>Name</th>
             <th>Phone No</th>
             <th>Blood Group</th>

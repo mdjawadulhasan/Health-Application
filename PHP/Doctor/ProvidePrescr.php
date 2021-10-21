@@ -1,16 +1,7 @@
-
-
-<style>
-<?php
-
-   include "design.css";
-?>
-</style>
-
 <?php
 session_start();
 if (!isset($_SESSION["user_name"])) {
-    header("refresh: 0; url=Patprofile.php");
+    header("refresh: 0; url=Dtprofile.php");
     exit();
 }
 
@@ -25,8 +16,8 @@ if (!isset($_SESSION["user_name"])) {
 <body>
 <header id="main-header">
  <div class="container">
- <h1>Hello Admin"</h1>
- <h1>Manage Doctor</h1>
+ <h1>Hello Doctor</h1>
+ <h1>Prescription De tattari</h1>
 
 </div>
 </header>
@@ -37,14 +28,25 @@ if (!isset($_SESSION["user_name"])) {
             <th>Doctor Name</th>
             <th>Patient Name</th>
             <th>Appointment Date</th>
-            <th>Delete</th>
+            <th>Give Prescription</th>
 
         </tr>
 
 
         <?php
+        $user_name = $_SESSION["user_name"];
+        $query = "SELECT * FROM doctortbl WHERE dtuser_name='$user_name';";
         $conn = mysqli_connect('localhost', 'root', '', 'phawa');
-        $query = "SELECT *FROM appointmenttbl";
+        $result = mysqli_query($conn, $query);
+        
+        while ($row = mysqli_fetch_assoc($result)) {
+        
+            $dtid=$row['dtid'];
+        }
+
+
+        $conn = mysqli_connect('localhost', 'root', '', 'phawa');
+        $query = "SELECT *FROM appointmenttbl where doctorid='$dtid'";
         $result = mysqli_query($conn, $query);
 
         while ($r = mysqli_fetch_array($result)) {
@@ -52,8 +54,7 @@ if (!isset($_SESSION["user_name"])) {
             echo '<td><center>' . $r['apdtname'] . '</center></td>';
             echo '<td><center>' . $r['apptname'] . '</center></td>';
             echo '<td><center>' . $r['appdate'] . '</center></td>';
-            echo "<td><a href=\"Aptdelete.php?aptid=$r[aptid]\" onClick=\"return confirm
-('Are you sure to delete?')\"><input type='submit' value='Delete'></a></td>";
+            echo "<td><a href=\"ProvidePrescrProcess.php?patientid=$r[patientid]\"><input type='submit' value='Give Prescription'></a></td>";
         }
         ?>
 

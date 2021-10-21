@@ -1,7 +1,11 @@
+
+<style>
 <?php
-echo ' <h1><center>Hello Patient</center></h1>';
-echo ' <h1><center>Welcome to Personal Health Application</center></h1>'
+
+   include "design.css";
 ?>
+</style>
+
 
 
 <!DOCTYPE html>
@@ -33,7 +37,13 @@ echo ' <h1><center>Welcome to Personal Health Application</center></h1>'
 </head>
 
 <body>
-
+<header id="main-header">
+ <div class="container">
+ <h1>Hello Patient</h1>
+ <h1>Welcome to Personal Health Application</h1>
+</div>
+</header>
+ <br>
     <form action="Patsignin.php" method="POST">
         <input type="submit" class="button button1" value="Sign in">
     </form>

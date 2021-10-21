@@ -24,7 +24,7 @@ if (isset($_POST["submit"])) {
 
     if (isset($fname) && isset($lname) && isset($phoneno) && isset($gender) && isset($age) && isset($Bgrp) && isset($user_name) && isset($user_pass) && isset($user_email)) {
 
-        //  $user_name = mysqli_real_escape_string($conn, $_POST['$user_name']);
+       
 
         $query = "SELECT ptusername FROM patienttbl WHERE ptusername='$user_name';";
         $result = mysqli_query($conn, $query);

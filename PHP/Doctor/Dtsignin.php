@@ -1,7 +1,11 @@
-<?php
-echo ' <h1><center>Sign in to Continue</center></h1>';
-echo ' <h1><center>Welcome to Personal Health Application</center></h1>';
 
+<style>
+<?php
+
+   include "design.css";
+?>
+</style>
+<?php
 if(session_status()>=1)
 {
     session_start();
@@ -20,7 +24,14 @@ if(session_status()>=1)
 
 <body>
 
-    <form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="post">
+<header id="main-header">
+ <div class="container">
+ <h1>Sign in to Continue</h1>
+ <h1>Welcome to Personal Health Application</h1>
+</div>
+</header>
+
+    <br> <form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="post">
 
         <label for="user_name">User name: </label>
         <input type="text" name="user_name" value="" required><br><br>
@@ -28,8 +39,8 @@ if(session_status()>=1)
         <label for="user_pass">Password: </label>
         <input type="password" name="user_pass" value="" required><br><br>
 
-
-        <button type="submit" name="submit">Login</button><br><br>
+     
+        <button type="submit" name="submit" style="background-color:#04AA6D">Login</button><br><br>
 
     </form>
 
@@ -60,6 +71,10 @@ if (isset($_POST["submit"])) {
             header("refresh: 0; url=Dtprofile.php");
             mysqli_close($conn);
             exit();
+        }
+        else
+        {
+            echo '<script>alert("Login Failed!")</script>';
         }
     }
 }

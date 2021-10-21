@@ -1,25 +1,51 @@
+
+<style>
 <?php
 
-echo ' <h1><center>Hello Admin"</center></h1>';
-echo ' <h1><center>Add Donor</center></h1>';
+   include "design.css";
+?>
+</style>
 
+
+<?php
 session_start();
 if (!isset($_SESSION["user_name"])) {
     header("refresh: 0; url=Admin.php");
     exit();
 }
 
-
 ?>
-
 
 <!DOCTYPE html>
 <html>
 <body>
 
+<header id="main-header">
+ <div class="container">
+ <h1>Hello Admin"</br>
+ Add Donor</h1>
+</div>
+</header>
+
+
+<nav id="navbar">
+    <div class="container">
+<ul>
+    <li><a href="AddDonor.php">Manage Donor</a></li>
+ 
+    <li><a href="ManagePat.php">Manage Patient</a></li>
+    
+    <li><a href="ManageDoctor.php">Manage Doctor</a></li>
+    
+   <li> <a href="Adminlogout.php">Logout </a></li>
+</ul>
+</div>
+</nav>
+
+
     <form action="AddDnrprocess.php" method="post" >
 
-        <label for="name">Full Name: </label>
+      <br>  <label for="name">Full Name: </label>
         <input type="text" name="name" value="" required><br><br>
        
         <label for="Phoneno">Phone No : </label>
@@ -44,18 +70,18 @@ if (!isset($_SESSION["user_name"])) {
         <label for="Area">Area : </label>
         <input type="text" name="area" value="" required><br><br>
 
-        <button type="submit" name="submit">Add</button><br><br>
+        <button type="submit" name="submit" style="background-color:#81D3BD"><b>Add</b></button><br><br>
 
     </form>
 
-<table border="1">
-    <tr>
+<table border="1"  >
+    <tr style="background-color:#81D3BD">
         <th>Name</th>
         <th>Phone No</th>
         <th>Blood Group</th>
         <th>City</th>
         <th>Area</th>
-        <th>Delete</th>
+        <th>&nbsp;&nbsp;&#128465&nbsp;&nbsp;</th>
         
     </tr>
 

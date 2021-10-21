@@ -1,7 +1,13 @@
-<?php
-echo ' <h1><center>Hello Dcotor profile Edit </center></h1>';
-echo ' <h1><center>Welcome to Personal Health Application</center></h1>';
 
+<style>
+<?php
+
+   include "design.css";
+?>
+</style>
+
+
+<?php
 session_start();
 if (!isset($_SESSION["user_name"])) {
     header("refresh: 1; url=Dtindex.php");
@@ -35,38 +41,48 @@ if (!isset($_SESSION["user_name"])) {
 
 <body>
 
-    <form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="post">
+<body>
 
-        <label for="name">Name  : </label>
+<header id="main-header">
+ <div class="container">
+ <h1>Hello Dcotor profile Edit</h1>
+ <h1>Welcome to Personal Health Application</h1>
+</div>
+</header>
+
+
+    <br><form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="post">
+
+        <label for="name"><b>Name  :<b> </label>
         <input type="text" name="name" value="<?php echo $name; ?>" required><br><br>
 
-        <label for="degree">Degree : </label>
+        <label for="degree"><b>Degree :<b> </label>
         <input type="text" name="degree" value="<?php echo $degree; ?>" required><br><br>
         
-        <label for="dept">Department : </label>
+        <label for="dept"><b>Department :<b> </label>
         <input type="text" name="dept" value="<?php echo $dept; ?>" required><br><br>
         
-        <label for="chamber">Chamber : </label>
+        <label for="chamber"><b>Chamber :<b> </label>
         <input type="text" name="chamber" value="<?php echo $chamber; ?>" required><br><br>
 
-        <label for="vtime">Visiting Time : </label>
+        <label for="vtime"><b>Visiting Time :<b> </label>
         <input type="text" name="vtime" value="<?php echo $vtime; ?>" required><br><br>
 
-        <label for="vdays">Visiting Days : </label>
+        <label for="vdays"><b>Visiting Days :<b> </label>
         <input type="text" name="vdays" value="<?php echo $vdays ; ?>" required><br><br>
 
-        <label for="phnno">Phone No : </label>
+        <label for="phnno"><b>Phone No :<b> </label>
         <input type="text" name="phnno" value="<?php echo $phnno; ?>" required><br><br>
 
 
-        <label for="user_pass">New Password: </label>
+        <label for="user_pass"><b>New Password:<b> </label>
         <input type="password" name="newpass" value="" required><br><br>
 
-        <label for="user_pass">Current Password: </label>
+        <label for="user_pass"><b>Current Password:<b> </label>
         <input type="password" name="crntpass" value="" required><br><br>
 
 
-        <button type="submit" name="submit">Update</button><br><br>
+        <button type="submit" name="submit" style="background-color:#04AA6D"><b>Update<b></button><br><br>
 
     </form>
 

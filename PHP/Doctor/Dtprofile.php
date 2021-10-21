@@ -1,8 +1,14 @@
-<?php
-echo ' <h1><center>Hello Doctors profile </center></h1>';
-echo ' <h1><center>Welcome to Personal Health Application</center></h1>';
-session_start();
 
+
+<style>
+<?php
+
+   include "design.css";
+?>
+</style>
+
+<?php
+session_start();
 if (!isset($_SESSION["user_name"])) {
     header("refresh: 1; url=Dtindex.php");
     exit();
@@ -32,27 +38,33 @@ if (!isset($_SESSION["user_name"])) {
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
     <title>Document</title>
 </head>
 
+
 <body>
 
-    <p>Name :<?php echo $name ?></p>
-    <p>User Name :<?php echo $user_name ?></p>
-    <p>Degree :<?php echo   $degree ?></p>
-    <p>Department :<?php echo $dept ?></p>
-    <p>Chamber :<?php echo $chamber ?></p>
-    <p>Visiting Time :<?php echo  $vtime ?></p>
-    <p>Visiting Days :<?php echo   $vdays ?></p>
-    <p>Phone No :<?php echo  $phnno ?></p>
-    <p>Mail id :<?php echo  $user_email ?></p>
+<header id="main-header">
+ <div class="container">
+ <h1>Hello Doctors profile </h1>
+<h1>Welcome to Personal Health Application</h1>
+</div>
+</header>
 
-
-    <a href="Dtlogout.php">Logout</a>
-    <a href="Dteditprofile.php">Edit</a>
+    <p><b>Name :<b><?php echo $name ?></p>
+    <p><b>User Name :<b><?php echo $user_name ?></p>
+    <p><b>Degree :<b><?php echo   $degree ?></p>
+    <p><b>Department :<b><?php echo $dept ?></p>
+    <p><b>Chamber :<b><?php echo $chamber ?></p>
+    <p><b>Visiting Time :<b><?php echo  $vtime ?></p>
+    <p><b>Visiting Days :<b><?php echo   $vdays ?></p>
+    <p><b>Phone No :<b><?php echo  $phnno ?></p>
+    <p><b>Mail id :<b><?php echo  $user_email ?></p>
+<br>
+    <button style="background-color:#04AA6D"><a href="Dtlogout.php"><b>Logout<b></a></button> &nbsp; &nbsp;
+    <button style="background-color:#04AA6D"> <a href="Dteditprofile.php"><b>Edit<b></a></button><br><br>
+   
 
 </body>
 

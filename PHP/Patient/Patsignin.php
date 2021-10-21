@@ -1,7 +1,13 @@
+
+<style>
 <?php
 
-echo ' <h1><center>Hello Patients profile"</center></h1>';
-echo ' <h1><center>Sign in to continue</center></h1>';
+   include "design.css";
+?>
+</style>
+
+<?php
+
 if(session_status()>=1)
 {
     session_start();
@@ -23,6 +29,17 @@ if(session_status()>=1)
 
 <body>
 
+<header id="main-header">
+ <div class="container">
+ <h1>Hello Patients profile"</h1>
+ <h1>Sign in to continue</h1>
+
+</div>
+</header>
+ 
+<br>
+
+
     <form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="post">
 
         <label for="user_name">User name: </label>
@@ -32,7 +49,7 @@ if(session_status()>=1)
         <input type="password" name="user_pass" value="" required><br><br>
 
 
-        <button type="submit" name="submit">Login</button><br><br>
+        <button type="submit" name="submit" style="background-color:#04AA6D">Login</button><br><br>
 
     </form>
 

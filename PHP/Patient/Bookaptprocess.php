@@ -1,12 +1,16 @@
+<style>
+<?php
+
+   include "design.css";
+?>
+</style>
+
 <?php
 session_start();
 if (!isset($_SESSION["user_name"])) {
     header("refresh: 0; url=Patprofile.php");
     exit();
 }
-
-
-
 
 $dtid = $_GET['dtid'];
 $conn = mysqli_connect('localhost', 'root', '', 'phawa');
@@ -27,30 +31,33 @@ while ($row = mysqli_fetch_assoc($result)) {
 }
 
 
-
-
 ?>
 
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+   
 </head>
 
 <body>
+<header id="main-header">
+ <div class="container">
+ <h1>APPONTMENT SET PAGE</h1>
+ 
+</div>
+</header>
 
-    <p>Name :<?php echo $dtname ?></p>
-    <p>Degree :<?php echo   $degree ?></p>
-    <p>Department :<?php echo $dept ?></p>
-    <p>Chamber :<?php echo $chamber ?></p>
-    <p>Visiting Time :<?php echo  $vtime ?></p>
-    <p>Visiting Days :<?php echo   $vdays ?></p>
-    <p>Phone No :<?php echo  $phnno ?></p>
-    <p>Mail id :<?php echo  $user_email ?></p>
+
+
+    <p><b>Name :<b><?php echo $dtname ?></p>
+    <p><b>Degree :<b><?php echo   $degree ?></p>
+    <p><b>Department :<b><?php echo $dept ?></p>
+    <p><b>Chamber :<b><?php echo $chamber ?></p>
+    <p><b>Visiting Time :<b><?php echo  $vtime ?></p>
+    <p><b>Visiting Days :<b><?php echo   $vdays ?></p>
+    <p><b>Phone No :<b><?php echo  $phnno ?></p>
+    <p><b>Mail id :<b><?php echo  $user_email ?></p>
 
     <form action="Confirmappointment.php" method="post">
 
@@ -60,7 +67,7 @@ while ($row = mysqli_fetch_assoc($result)) {
         <label for="birthday">SET APPONTMENT DATE:</label>
         <input type="date" name="aptdate"   required>
         <br>
-        <button type="submit" name="submit">SET</button><br><br>
+        <button type="submit" name="submit"  style="background-color:#04AA6D">SET</button><br><br>
 
     </form>
 
@@ -71,25 +78,3 @@ while ($row = mysqli_fetch_assoc($result)) {
 
 
 
-<?php
-
-if (isset($_POST["submit"])) {
-    if ($_SERVER["REQUEST_METHOD"] == "POST") {
-
-        $AptDate = $_POST['aptdate'];
-        $Dtrname = $_POST['dtrname'];
-        $Dtrid = $_POST['dtrid'];
-
-        $conn = mysqli_connect('localhost', 'root', '', 'phawa');
-        $sql="INSERT INTO appointmenttbl(aptid,doctorid,patientid,apdtname,apptname,appdate) VALUES ('0','$Dtrid',$patid,'$Dtrname','$patname','$AptDate')";
-        if (mysqli_query($conn, $sql)) {
-            echo '<script>alert("Appointment Has been Set!")</script>';
-            header("refresh: 0; url=Patprofile.php");
-            mysqli_close($conn);
-        } else {
-            echo '<script>alert("Try Again!")</script>';
-        }
-    }
-}
-
-?>

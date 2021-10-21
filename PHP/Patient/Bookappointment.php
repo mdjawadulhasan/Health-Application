@@ -1,7 +1,14 @@
+
+<style>
 <?php
 
-echo ' <h1><center>Hello Admin"</center></h1>';
-echo ' <h1><center>Manage Doctor</center></h1>';
+   include "design.css";
+?>
+</style>
+
+<?php
+
+
 
 session_start();
 if (!isset($_SESSION["user_name"])) {
@@ -38,7 +45,13 @@ function ShowDocttor($sql)
 <html>
 
 <body>
-
+<header id="main-header">
+ <div class="container">
+ <h1>Hello Admin"</h1>
+ <h1>Manage Doctor</h1>
+</div>
+</header>
+<br>
     <form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="post">
 
         <label for="Search">Seacrh By Department: </label>
@@ -50,7 +63,7 @@ function ShowDocttor($sql)
 
 
     <table border="1">
-        <tr>
+        <tr style="background-color:#81D3BD">
             <th>Name</th>
             <th>User Name</th>
             <th>Degree</th>

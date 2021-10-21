@@ -1,7 +1,18 @@
+
+<style>
 <?php
 
-echo ' <h1><center>Hello Admin"</center></h1>';
-echo ' <h1><center>Sign in to continue</center></h1>';
+   include "design.css";
+?>
+
+</style>
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head >
+
+  <?php
 
 if(session_status()>=0)
 {
@@ -13,30 +24,29 @@ if(session_status()>=0)
 }
 
 ?>
-
-
-
-<!DOCTYPE html>
-<html>
-
+</head>
 <body>
+<header id="main-header">
+ <div class="container">
+ <h1>Hello Admin"</br>
+ Sign in to continue</h1>
+</div>
+
+</header>
 
     <form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="post">
 
-        <label for="user_name">User name: </label>
+       <br> <label for="user_name">User name: </label>
         <input type="text" name="user_name" value="" required><br><br>
 
         <label for="user_pass">Password: </label>
         <input type="password" name="user_pass" value="" required><br><br>
-
-
-        <button type="submit" name="submit">Login</button><br><br>
+        <button type="submit" name="submit" style="background-color:#81D3BD"><b>Login</b></button><br><br>
 
     </form>
 
-</body>
 
-</html>
+
 
 
 
@@ -61,3 +71,7 @@ if (isset($_POST["submit"])) {
 }
 
 ?>
+
+</body>
+
+</html>
