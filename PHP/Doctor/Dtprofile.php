@@ -64,6 +64,7 @@ if (!isset($_SESSION["user_name"])) {
 <br>
     <button style="background-color:#04AA6D"><a href="Dtlogout.php"><b>Logout<b></a></button> &nbsp; &nbsp;
     <button style="background-color:#04AA6D"> <a href="Dteditprofile.php"><b>Edit<b></a></button><br><br>
+    <button style="background-color:#04AA6D"> <a href="ProvidePrescr.php"><b>Give Prescrption<b></a></button><br><br>
    
 
 </body>
