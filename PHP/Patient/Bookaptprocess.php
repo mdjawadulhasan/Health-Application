@@ -1,8 +1,8 @@
 <style>
-<?php
+    <?php
 
-   include "design.css";
-?>
+    include "design.css";
+    ?>
 </style>
 
 <?php
@@ -27,7 +27,7 @@ while ($row = mysqli_fetch_assoc($result)) {
     $vdays = $row['dtvisitingdays'];
     $phnno = $row['dtphone'];
     $user_email = $row['dtemail_id'];
-    $Doctorid=$row['dtid'];
+    $Doctorid = $row['dtid'];
 }
 
 
@@ -37,25 +37,41 @@ while ($row = mysqli_fetch_assoc($result)) {
 <html lang="en">
 
 <head>
-   
+
 </head>
 
 <body>
-<header id="main-header">
- <div class="container">
- <h1>APPONTMENT SET PAGE</h1>
- 
-</div>
-</header>
-</header>
-<nav id="navbar">
-    <div class="container">
-<ul>
-<li style="text-align:left"><a href="http://localhost/Health/"><b>&#8803;&nbsp; HOME<b></a></li> 
-   
-</ul>
-</div>
-</nav>
+    <header id="main-header">
+        <div class="container">
+            <h1>APPONTMENT SET PAGE</h1>
+
+        </div>
+    </header>
+    </header>
+    <nav id="navbar">
+        <div class="container">
+            <ul>
+                </header>
+
+                <li style="text-align:left"><a href="http://localhost/phawa/php"><b>&#8803;&nbsp; HOME<b></a></li>
+
+
+                <li> <a href="Bookappointment.php">Book Appointment</a></a></li>
+                <li> <a href="Viewappointment.php">view Appointment</a></a></a></li>
+                <li> <a href="Seepresc.php">See Prescription</a></a></li>
+                <li> <a href="Donorlist.php">Donorlist</a></a></li>
+                <li><a href="Pateditprofile.php">Edit</a></a></li>
+                <li><a href="Patlogout.php">Logout</a></a></li>
+
+
+
+
+
+
+
+            </ul>
+        </div>
+    </nav>
 
 
     <p><b>Name :<b><?php echo $dtname ?></p>
@@ -70,12 +86,12 @@ while ($row = mysqli_fetch_assoc($result)) {
     <form action="Confirmappointment.php" method="post">
 
 
-        <input type="hidden"  name="dtrname" value="<?php echo $dtname; ?>">
-        <input type="hidden"  name="dtrid" value="<?php echo $dtid; ?>">
+        <input type="hidden" name="dtrname" value="<?php echo $dtname; ?>">
+        <input type="hidden" name="dtrid" value="<?php echo $dtid; ?>">
         <label for="birthday">SET APPONTMENT DATE:</label>
-        <input type="date" name="aptdate"   required>
+        <input type="date" name="aptdate" required>
         <br>
-        <button type="submit" name="submit"  style="background-color:#04AA6D">SET</button><br><br>
+        <button type="submit" name="submit" style="background-color:#04AA6D">SET</button><br><br>
 
     </form>
 
@@ -83,6 +99,3 @@ while ($row = mysqli_fetch_assoc($result)) {
 </body>
 
 </html>
-
-
-

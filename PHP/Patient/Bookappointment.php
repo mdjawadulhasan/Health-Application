@@ -1,9 +1,8 @@
-
 <style>
-<?php
+    <?php
 
-   include "design.css";
-?>
+    include "design.css";
+    ?>
 </style>
 
 <?php
@@ -19,7 +18,7 @@ if (!isset($_SESSION["user_name"])) {
 function ShowDocttor($sql)
 {
     $conn = mysqli_connect('localhost', 'root', '', 'phawa');
-    $query = $sql; 
+    $query = $sql;
     $result = mysqli_query($conn, $query);
 
     while ($r = mysqli_fetch_array($result)) {
@@ -45,40 +44,40 @@ function ShowDocttor($sql)
 <html>
 
 <body>
-<header id="main-header">
- <div class="container">
- <h1>Hello Admin"</h1>
- <h1>Manage Doctor</h1>
-</div>
-</header>
+    <header id="main-header">
+        <div class="container">
+            <h1>Hello Admin"</h1>
+            <h1>Manage Doctor</h1>
+        </div>
+    </header>
 
-<nav id="navbar">
+    <nav id="navbar">
         <div class="container">
             <ul>
-            </header>
+                </header>
 
-<li style="text-align:left"><a href="http://localhost/Health/"><b>&#8803;&nbsp; HOME<b></a></li> 
-   
+                <li style="text-align:left"><a href="http://localhost/phawa/php"><b>&#8803;&nbsp; HOME<b></a></li>
 
-            <li> <a href="Bookappointment.php">Book Appointment</a></a></li>
-             <li> <a href="Viewappointment.php">view Appointment</a></a></a></li>
+
+                <li> <a href="Bookappointment.php">Book Appointment</a></a></li>
+                <li> <a href="Viewappointment.php">view Appointment</a></a></a></li>
                 <li> <a href="Seepresc.php">See Prescription</a></a></li>
-              <li> <a href="Donorlist.php">Donorlist</a></a></li>
+                <li> <a href="Donorlist.php">Donorlist</a></a></li>
                 <li><a href="Pateditprofile.php">Edit</a></a></li>
                 <li><a href="Patlogout.php">Logout</a></a></li>
 
-              
 
-              
 
-               
+
+
+
 
             </ul>
         </div>
     </nav>
 
 
-<br>
+    <br>
     <form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="post">
 
         <label for="Search">Seacrh By Department: </label>

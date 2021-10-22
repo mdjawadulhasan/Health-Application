@@ -25,7 +25,7 @@ if(session_status()>=0)
  <div class="container">
  <h1>Hello Patient</h1>
  <h1>Welcome to Personal Health Application</h1>
- <h1>Give your information</h1>
+ <h1>Provide your information</h1>
 
 </div>
 </header>
@@ -33,7 +33,7 @@ if(session_status()>=0)
 <nav id="navbar">
     <div class="container">
 <ul>
-<li style="text-align:left"><a href="http://localhost/Health/"><b>&#8803;&nbsp; HOME<b></a></li> 
+<li style="text-align:left"><a href="http://localhost/phawa/php"><b>&#8803;&nbsp; HOME<b></a></li> 
    
 </ul>
 </div>
@@ -48,7 +48,7 @@ if(session_status()>=0)
         <input type="text" name="lname" value="" required><br><br>
 
         <label for="Phoneno">Phone No : </label>
-        <input type="text" name="phnno" value="" required><br><br>
+        <input type="text" name="phnno" placeholder="01x-xxxxxxxx" pattern="[0-9]{3}-[0-9]{8}" required><br><br>
 
         <label for="Gender">Gender : </label>
         <input type="radio" id="Male" name="gender" value="Male">
