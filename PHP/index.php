@@ -1,6 +1,11 @@
+
+
+<style>
 <?php
-echo ' <h1><center>Welcome to Personal Health Application</center></h1>'
+
+   include "Admin/design.css";
 ?>
+</style>
 
 <!DOCTYPE html>
 <html>
@@ -27,10 +32,27 @@ echo ' <h1><center>Welcome to Personal Health Application</center></h1>'
         .button2 {
             background-color: #FFCA33;
         }
+        .button3
+        {
+            background-color: #DE3163; 
+        }
     </style>
-</head>
 
-<body>
+
+</head> 
+ 
+
+<body >
+
+   <header id="main-header">
+ <div class="container">
+
+ <h1>Welcome to Personal Health Application</h1>
+</div>
+</header>
+<br>
+
+
 
     <form action="Patient/Patindex.php" method="POST">
         <input type="submit" class="button button1" value="Patient">
@@ -40,8 +62,9 @@ echo ' <h1><center>Welcome to Personal Health Application</center></h1>'
     </form>
 
     <form action="Admin/Admin.php" method="POST">
-        <input type="submit" class="button button2" value="Admin">
+        <input type="submit" class="button button3" value="Admin">
     </form>
 
+   
 </body>
 </html>

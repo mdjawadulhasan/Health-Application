@@ -57,15 +57,20 @@ if (!isset($_SESSION["user_name"])) {
     <nav id="navbar">
         <div class="container">
             <ul>
-                <li><a href="Patlogout.php">Logout</a></a></li>
+            </header>
 
-                <li><a href="Pateditprofile.php">Edit</a></a></li>
+<li style="text-align:left"><a href="http://localhost/Health/"><b>&#8803;&nbsp; HOME<b></a></li> 
+   
 
-                <li> <a href="Donorlist.php">Donorlist</a></a></li>
-
-                <li> <a href="Bookappointment.php">Book Appointment</a></a></li>
+            <li> <a href="Bookappointment.php">Book Appointment</a></a></li>
                 <li> <a href="Viewappointment.php">view Appointment</a></a></a></li>
                 <li> <a href="Seepresc.php">See Prescription</a></a></li>
+               
+                <li> <a href="Donorlist.php">Donorlist</a></a></li>
+                <li><a href="Pateditprofile.php">Edit</a></a></li>
+                <li><a href="Patlogout.php">Logout</a></a></li>
+          
+
 
             </ul>
         </div>

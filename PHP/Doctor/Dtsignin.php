@@ -30,7 +30,14 @@ if(session_status()>=1)
  <h1>Welcome to Personal Health Application</h1>
 </div>
 </header>
-
+<nav id="navbar">
+    <div class="container">
+<ul>
+<li style="text-align:left"><a href="http://localhost/Health/"><b>&#8803;&nbsp; HOME<b></a></li> 
+   
+</ul>
+</div>
+</nav>
     <br> <form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="post">
 
         <label for="user_name">User name: </label>

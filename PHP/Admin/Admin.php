@@ -33,6 +33,15 @@ if(session_status()>=0)
 </div>
 
 </header>
+    
+<nav id="navbar">
+    <div class="container">
+<ul>
+<li style="text-align:left"><a href="http://localhost/Health/"><b>&#8803;&nbsp; HOME<b></a></li> 
+   
+</ul>
+</div>
+</nav>
 
     <form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="post">
 
@@ -41,7 +50,9 @@ if(session_status()>=0)
 
         <label for="user_pass">Password: </label>
         <input type="password" name="user_pass" value="" required><br><br>
-        <button type="submit" name="submit" style="background-color:#81D3BD"><b>Login</b></button><br><br>
+        <button type="submit" name="submit" style="background-color:#81D3BD"><b>Login</b></button>
+      
+     
 
     </form>
 

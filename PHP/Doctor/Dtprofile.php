@@ -51,7 +51,19 @@ if (!isset($_SESSION["user_name"])) {
 <h1>Welcome to Personal Health Application</h1>
 </div>
 </header>
-
+<nav id="navbar">
+    <div class="container">
+<ul>
+<li style="text-align:left"><a href="http://localhost/Health/"><b>&#8803;&nbsp; HOME<b></a></li> 
+ <li><a href="ProvidePrescr.php"><b>Give Prescrption<b></a></li>
+  <li> <a href="Dteditprofile.php"><b>Edit<b></a></li>
+<li><a href="Dtlogout.php"><b>Logout<b></a><li>
+  
+  
+   
+</ul>
+</div>
+</nav>
     <p><b>Name :<b><?php echo $name ?></p>
     <p><b>User Name :<b><?php echo $user_name ?></p>
     <p><b>Degree :<b><?php echo   $degree ?></p>
@@ -62,9 +74,9 @@ if (!isset($_SESSION["user_name"])) {
     <p><b>Phone No :<b><?php echo  $phnno ?></p>
     <p><b>Mail id :<b><?php echo  $user_email ?></p>
 <br>
-    <button style="background-color:#04AA6D"><a href="Dtlogout.php"><b>Logout<b></a></button> &nbsp; &nbsp;
+    <!-- <button style="background-color:#04AA6D"><a href="Dtlogout.php"><b>Logout<b></a></button> &nbsp; &nbsp;
     <button style="background-color:#04AA6D"> <a href="Dteditprofile.php"><b>Edit<b></a></button><br><br>
-    <button style="background-color:#04AA6D"> <a href="ProvidePrescr.php"><b>Give Prescrption<b></a></button><br><br>
+    <button style="background-color:#04AA6D"> <a href="ProvidePrescr.php"><b>Give Prescrption<b></a></button><br><br> -->
    
 
 </body>

@@ -43,7 +43,17 @@
  <h1>Welcome to Personal Health Application</h1>
 </div>
 </header>
- <br>
+
+ </header>
+<nav id="navbar">
+    <div class="container">
+<ul>
+<li style="text-align:left"><a href="http://localhost/Health/"><b>&#8803;&nbsp; HOME<b></a></li> 
+   
+</ul>
+</div>
+</nav>
+<br>
     <form action="Patsignin.php" method="POST">
         <input type="submit" class="button button1" value="Sign in">
     </form>

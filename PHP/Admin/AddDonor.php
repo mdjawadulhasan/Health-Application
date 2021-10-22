@@ -24,6 +24,7 @@ if (!isset($_SESSION["user_name"])) {
  <div class="container">
  <h1>Hello Admin"</br>
  Add Donor</h1>
+
 </div>
 </header>
 
@@ -31,16 +32,22 @@ if (!isset($_SESSION["user_name"])) {
 <nav id="navbar">
     <div class="container">
 <ul>
-    <li><a href="AddDonor.php">Manage Donor</a></li>
+    
+   <li style="text-align:left"><a href="http://localhost/Health/"><b>&#8803;&nbsp; HOME<b></a></li> 
+    <li><a href="AddDonor.php">&nbsp;&nbsp;&nbsp;Manage Donor</a></li>
  
     <li><a href="ManagePat.php">Manage Patient</a></li>
     
     <li><a href="ManageDoctor.php">Manage Doctor</a></li>
     
    <li> <a href="Adminlogout.php">Logout </a></li>
+ 
+    
+    
 </ul>
 </div>
 </nav>
+
 
 
     <form action="AddDnrprocess.php" method="post" >
@@ -115,6 +122,8 @@ echo '</tr><center>';
 
 ?>
 </table>
+
+
 
 </body>
 </html>

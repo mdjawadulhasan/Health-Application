@@ -1,3 +1,13 @@
+
+
+
+<style>
+<?php
+
+   include "design.css";
+?>
+</style>
+
 <?php
 session_start();
 if (!isset($_SESSION["user_name"])) {
@@ -17,11 +27,34 @@ if (!isset($_SESSION["user_name"])) {
 <header id="main-header">
  <div class="container">
  <h1>Hello Patient</h1>
- <h1>Prescription Dekho tomar</h1>
+ <h1>See Prescription</h1>
 
 </div>
 </header>
- 
+<nav id="navbar">
+        <div class="container">
+            <ul>
+            </header>
+
+<li style="text-align:left"><a href="http://localhost/Health/"><b>&#8803;&nbsp; HOME<b></a></li> 
+   
+
+            <li> <a href="Bookappointment.php">Book Appointment</a></a></li>
+             <li> <a href="Viewappointment.php">view Appointment</a></a></a></li>
+                <li> <a href="Seepresc.php">See Prescription</a></a></li>
+              <li> <a href="Donorlist.php">Donorlist</a></a></li>
+                <li><a href="Pateditprofile.php">Edit</a></a></li>
+                <li><a href="Patlogout.php">Logout</a></a></li>
+
+              
+
+              
+
+               
+
+            </ul>
+        </div>
+    </nav>
 <br>
     <table border="1">
         <tr style="background-color:#81D3BD">

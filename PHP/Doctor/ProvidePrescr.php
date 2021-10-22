@@ -1,3 +1,15 @@
+
+
+
+<style>
+<?php
+
+   include "design.css";
+?>
+
+</style>
+
+
 <?php
 session_start();
 if (!isset($_SESSION["user_name"])) {
@@ -21,7 +33,14 @@ if (!isset($_SESSION["user_name"])) {
 
 </div>
 </header>
- 
+<nav id="navbar">
+    <div class="container">
+<ul>
+<li style="text-align:left"><a href="http://localhost/Health/"><b>&#8803;&nbsp; HOME<b></a></li> 
+   
+</ul>
+</div>
+</nav>
 <br>
     <table border="1">
         <tr style="background-color:#81D3BD">

@@ -41,6 +41,7 @@ if (!isset($_SESSION["user_name"])) {
 <nav id="navbar">
     <div class="container">
 <ul>
+<li style="text-align:left"><a href="http://localhost/Health/"><b>&#8803;&nbsp; HOME<b></a></li> 
     <li><a href="AddDonor.php">Manage Donor</a></li>
  
     <li><a href="ManagePat.php">Manage Patient</a></li>
