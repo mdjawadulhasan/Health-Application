@@ -1,7 +1,5 @@
 <?php
-echo ' <h1><center>Hello Doctor Vhai </center></h1>';
-echo ' <h1><center>Welcome to Personal Health Application</center></h1>';
-echo ' <h1><center>Give your information</center></h1>';
+
 $usernameInDB = $mailInDB = "";
 
 if (isset($_POST["submit"])) {
@@ -52,9 +50,8 @@ if (isset($_POST["submit"])) {
     } else {
         if (mysqli_query($conn, $sql)) {
             session_start();
-            echo "Signup Done  !";
             $_SESSION["user_name"] = $_POST["user_name"];
-            header("refresh: 1; url=Dtprofile.php");
+            header("refresh: 0; url=Dtprofile.php");
             mysqli_close($conn);
         } else {
             echo "Signup is not  !";

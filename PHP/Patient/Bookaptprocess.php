@@ -43,7 +43,9 @@ while ($row = mysqli_fetch_assoc($result)) {
 <body>
     <header id="main-header">
         <div class="container">
-            <h1>APPONTMENT SET PAGE</h1>
+        <h1>Hello Patient</h1>
+        <h1>Welcome to Personal Health Application</h1>
+        <h1>APPONTMENT SET PAGE</h1>
 
         </div>
     </header>
@@ -61,6 +63,7 @@ while ($row = mysqli_fetch_assoc($result)) {
                 <li> <a href="Seepresc.php">See Prescription</a></a></li>
                 <li> <a href="Donorlist.php">Donorlist</a></a></li>
                 <li><a href="Pateditprofile.php">Edit</a></a></li>
+                <li><a href="Patprofile.php">Profile</a></a></li>
                 <li><a href="Patlogout.php">Logout</a></a></li>
 
 

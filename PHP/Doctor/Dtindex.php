@@ -1,9 +1,8 @@
-
 <style>
-<?php
+    <?php
 
-   include "design.css";
-?>
+    include "design.css";
+    ?>
 </style>
 
 <!DOCTYPE html>
@@ -36,25 +35,25 @@
 
 <body>
 
-<header id="main-header">
- <div class="container">
-<h1>Hello Doctor Vhai</h1>
- <h1> Welcome to Personal Health Application</h1>
-</div>
-</header>
+    <header id="main-header">
+        <div class="container">
+            <h1>Welcome Doctor</h1>
+        </div>
+    </header>
 
-<nav id="navbar">
-    <div class="container">
-<ul>
-<li style="text-align:left"><a href="http://localhost/Health/"><b>&#8803;&nbsp; HOME<b></a></li> 
-   
-</ul>
-</div>
-</nav>
+    <nav id="navbar">
+        <div class="container">
+            <ul>
+                <li style="text-align:left"><a href="http://localhost/phawa/php"><b>&#8803;&nbsp; HOME<b></a></li>
 
+            </ul>
+        </div>
+    </nav>
 
 
-   <br><br> <form action="Dtsignin.php" method="POST">
+
+    <br><br>
+    <form action="Dtsignin.php" method="POST">
         <input type="submit" class="button button1" value="Sign in">
     </form>
     <form action="Dtsignup.php" method="POST">

@@ -1,9 +1,8 @@
-
 <style>
-<?php
+    <?php
 
-   include "design.css";
-?>
+    include "design.css";
+    ?>
 </style>
 <?php
 session_start();
@@ -23,7 +22,7 @@ if (!isset($_SESSION["user_name"])) {
         $phoneno = $row['ptphone'];
         $age = $row['ptage'];
         $Bgrp = $row['ptbgrp'];
-        $pass=$row['ptpass'];
+        
     }
 }
 ?>
@@ -36,36 +35,40 @@ if (!isset($_SESSION["user_name"])) {
 <body>
 
 
-<header id="main-header">
- <div class="container">
- <h1>Hello Patients profile Edit </h1>
- <h1>Welcome to Personal Health Application</h1>
-</div>
-</header>
+    <header id="main-header">
+        <div class="container">
+            <h1>Hello Patients profile </h1>
+            <h1>Welcome to Personal Health Application</h1>
+            <h1>EDIT PROFILE</h1>
+            
+        </div>
+    </header>
 
-<nav id="navbar">
-    <div class="container">
-<ul>
-</header>
+    <nav id="navbar">
+        <div class="container">
+            <ul>
+                </header>
 
-<li style="text-align:left"><a href="http://localhost/phawa/php"><b>&#8803;&nbsp; HOME<b></a></li> 
-   
+                <li style="text-align:left"><a href="http://localhost/phawa/php"><b>&#8803;&nbsp; HOME<b></a></li>
 
-    <li> <a href="Bookappointment.php">Book Appointment</a></a></li>
-    <li> <a href="Viewappointment.php">view Appointment</a></a></a></li>
-    <li> <a href="Seepresc.php">See Prescription</a></a></li>
-    <li> <a href="Donorlist.php">Donorlist</a></a></li>
-    <li><a href="Pateditprofile.php">Edit</a></a></li>
-    <li><a href="Patlogout.php">Logout</a></a></li>
- 
-   
 
-   
-</ul>
-</div>
-</nav>
- <br>
-   <br> <form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="post">
+                <li> <a href="Bookappointment.php">Book Appointment</a></a></li>
+                <li> <a href="Viewappointment.php">view Appointment</a></a></a></li>
+                <li> <a href="Seepresc.php">See Prescription</a></a></li>
+                <li> <a href="Donorlist.php">Donorlist</a></a></li>
+                <li><a href="Pateditprofile.php">Edit</a></a></li>
+                <li><a href="Patprofile.php">Profile</a></a></li>
+                <li><a href="Patlogout.php">Logout</a></a></li>
+
+
+
+
+            </ul>
+        </div>
+    </nav>
+    <br>
+    <br>
+    <form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="post">
 
 
 
@@ -79,7 +82,7 @@ if (!isset($_SESSION["user_name"])) {
         <input type="text" name="Bgrp" value="<?php echo $Bgrp; ?>" required><br><br>
 
         <label for="user_pass"><b>New Password: <b></label>
-        <input type="password" name="newpass" value="<?php echo $pass;?>" required><br><br>
+        <input type="password" name="newpass" value="<?php echo $currentpass; ?>" required><br><br>
 
         <label for="user_pass"><b>Current Password: <b></label>
         <input type="password" name="crntpass" value="" required><br><br>
@@ -98,10 +101,10 @@ if (!isset($_SESSION["user_name"])) {
 
 if (isset($_POST["submit"])) {
     if ($_SERVER["REQUEST_METHOD"] == "POST") {
-        $new_phn=$_POST['phnno'];
-        $new_age=$_POST['age'];
-        $new_bgrp=$_POST['Bgrp'];
-        $new_pass=$_POST['newpass'];
+        $new_phn = $_POST['phnno'];
+        $new_age = $_POST['age'];
+        $new_bgrp = $_POST['Bgrp'];
+        $new_pass = $_POST['newpass'];
 
         $input_crnt_pass = $_POST['crntpass'];
         if ($input_crnt_pass == $currentpass) {
@@ -109,16 +112,13 @@ if (isset($_POST["submit"])) {
             $sql = "UPDATE patienttbl SET ptphone='$new_phn',ptage='$new_age',ptbgrp='$new_bgrp',ptpass='$new_pass' where ptusername='$user_name';";
             if (mysqli_query($conn, $sql)) {
                 echo '<script>alert("Info Updated!")</script>';
-               header("refresh: 0; url=Pateditprofile.php");
+                header("refresh: 0; url=Pateditprofile.php");
                 mysqli_close($conn);
-            }
-            else
-            {
+            } else {
                 echo '<script>alert("Try Again!")</script>';
                 header("refresh: 0; url=Pateditprofile.php");
             }
-        } 
-        else {
+        } else {
             echo '<script>alert("Password Didnt matched!")</script>';
             header("refresh: 0; url=Pateditprofile.php");
         }

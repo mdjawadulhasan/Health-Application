@@ -1,18 +1,15 @@
-
 <style>
-<?php
+    <?php
 
-   include "design.css";
-?>
+    include "design.css";
+    ?>
 </style>
 
 <?php
 
-if(session_status()>=1)
-{
+if (session_status() >= 1) {
     session_start();
-    if(isset($_SESSION["user_name"]))
-    {
+    if (isset($_SESSION["user_name"])) {
         header("refresh: 0; url=Patprofile.php");
     }
 }
@@ -29,23 +26,24 @@ if(session_status()>=1)
 
 <body>
 
-<header id="main-header">
- <div class="container">
- <h1>Hello Patients profile"</h1>
- <h1>Sign in to continue</h1>
+    <header id="main-header">
+        <div class="container">
+            <h1>Hello Patient</h1>
+            <h1>Welcome to Personal Health Application</h1>
+            <h1>SIGN IN TO CONTINUE</h1>
 
-</div>
-</header>
-</header>
-<nav id="navbar">
-    <div class="container">
-<ul>
-<li style="text-align:left"><a href="http://localhost/phawa/php"><b>&#8803;&nbsp; HOME<b></a></li> 
-   
-</ul>
-</div>
-</nav>
-<br>
+        </div>
+    </header>
+    </header>
+    <nav id="navbar">
+        <div class="container">
+            <ul>
+                <li style="text-align:left"><a href="http://localhost/phawa/php"><b>&#8803;&nbsp; HOME<b></a></li>
+
+            </ul>
+        </div>
+    </nav>
+    <br>
 
 
     <form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="post">
@@ -83,11 +81,13 @@ if (isset($_POST["submit"])) {
         $count = mysqli_num_rows($result);
 
         if ($count == 1) {
-           // session_start();
+            // session_start();
             $_SESSION["user_name"] = $_POST["user_name"];
             header("refresh: 0; url=Patprofile.php");
             mysqli_close($conn);
             exit();
+        } else {
+            echo '<script>alert("Credential Incorrect!")</script>';
         }
     }
 }

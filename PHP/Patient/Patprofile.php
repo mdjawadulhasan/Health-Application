@@ -45,8 +45,6 @@ if (!isset($_SESSION["user_name"])) {
 <body>
     <header id="main-header">
         <div class="container">
-
-
             <h1>Hello Patients profile </h1>
             <h1>Welcome to Personal Health Application</h1>
         </div>

@@ -1,12 +1,8 @@
-
-
-
 <style>
-<?php
+    <?php
 
-   include "design.css";
-?>
-
+    include "design.css";
+    ?>
 </style>
 
 
@@ -26,22 +22,29 @@ if (!isset($_SESSION["user_name"])) {
 <html>
 
 <body>
-<header id="main-header">
- <div class="container">
- <h1>Hello Doctor</h1>
- <h1>Prescription De tattari</h1>
+    <header id="main-header">
+        <div class="container">
+            <h1>Welcome Doctor</h1>
+            <h1>Welcome to Personal Health Application</h1>
+            <h1>Give Prescription</h1>
 
-</div>
-</header>
-<nav id="navbar">
-    <div class="container">
-<ul>
-<li style="text-align:left"><a href="http://localhost/Health/"><b>&#8803;&nbsp; HOME<b></a></li> 
-   
-</ul>
-</div>
-</nav>
-<br>
+        </div>
+    </header>
+    <nav id="navbar">
+        <div class="container">
+            <ul>
+                <li style="text-align:left"><a href="http://localhost/phawa/php"><b>&#8803;&nbsp; HOME<b></a></li>
+                <li><a href="ProvidePrescr.php"><b>Give Prescrption<b></a></li>
+                <li> <a href="Dteditprofile.php"><b>Edit<b></a></li>
+                <li> <a href="Dtprofile.php"><b>Profile<b></a></li>
+                <li><a href="Dtlogout.php"><b>Logout<b></a>
+                <li>
+            </ul>
+        </div>
+    </nav>
+
+
+    <br>
     <table border="1">
         <tr style="background-color:#81D3BD">
             <th>Doctor Name</th>
@@ -57,10 +60,10 @@ if (!isset($_SESSION["user_name"])) {
         $query = "SELECT * FROM doctortbl WHERE dtuser_name='$user_name';";
         $conn = mysqli_connect('localhost', 'root', '', 'phawa');
         $result = mysqli_query($conn, $query);
-        
+
         while ($row = mysqli_fetch_assoc($result)) {
-        
-            $dtid=$row['dtid'];
+
+            $dtid = $row['dtid'];
         }
 
 

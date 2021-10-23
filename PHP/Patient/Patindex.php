@@ -1,9 +1,8 @@
-
 <style>
-<?php
+    <?php
 
-   include "design.css";
-?>
+    include "design.css";
+    ?>
 </style>
 
 
@@ -37,23 +36,23 @@
 </head>
 
 <body>
-<header id="main-header">
- <div class="container">
- <h1>Hello Patient</h1>
- <h1>Welcome to Personal Health Application</h1>
-</div>
-</header>
+    <header id="main-header">
+        <div class="container">
+            <h1>Hello Patient</h1>
+            <h1>Welcome to Personal Health Application</h1>
+        </div>
+    </header>
 
- </header>
-<nav id="navbar">
-    <div class="container">
-<ul>
-<li style="text-align:left"><a href="http://localhost/phawa/php"><b>&#8803;&nbsp; HOME<b></a></li> 
-   
-</ul>
-</div>
-</nav>
-<br>
+    </header>
+    <nav id="navbar">
+        <div class="container">
+            <ul>
+                <li style="text-align:left"><a href="http://localhost/phawa/php"><b>&#8803;&nbsp; HOME<b></a></li>
+
+            </ul>
+        </div>
+    </nav>
+    <br>
     <form action="Patsignin.php" method="POST">
         <input type="submit" class="button button1" value="Sign in">
     </form>

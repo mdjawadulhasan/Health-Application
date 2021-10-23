@@ -1,10 +1,11 @@
-
-
 <style>
-<?php
+    <?php
 
-   include "Admin/design.css";
-?>
+    include "Admin/design.css";
+    session_start();
+    session_unset();
+    session_destroy();
+    ?>
 </style>
 
 <!DOCTYPE html>
@@ -32,25 +33,25 @@
         .button2 {
             background-color: #FFCA33;
         }
-        .button3
-        {
-            background-color: #DE3163; 
+
+        .button3 {
+            background-color: #DE3163;
         }
     </style>
 
 
-</head> 
- 
+</head>
 
-<body >
 
-   <header id="main-header">
- <div class="container">
+<body>
 
- <h1>Welcome to Personal Health Application</h1>
-</div>
-</header>
-<br>
+    <header id="main-header">
+        <div class="container">
+
+            <h1>Welcome to Personal Health Application</h1>
+        </div>
+    </header>
+    <br>
 
 
 
@@ -65,6 +66,7 @@
         <input type="submit" class="button button3" value="Admin">
     </form>
 
-   
+
 </body>
+
 </html>

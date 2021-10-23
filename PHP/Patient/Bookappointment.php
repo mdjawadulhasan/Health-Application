@@ -46,8 +46,10 @@ function ShowDocttor($sql)
 <body>
     <header id="main-header">
         <div class="container">
-            <h1>Hello Admin"</h1>
-            <h1>Manage Doctor</h1>
+        <h1>Hello Patient</h1>
+        <h1>Welcome to Personal Health Application</h1>
+        <h1>BOOK APPOINTMENT</h1>
+        
         </div>
     </header>
 
@@ -64,6 +66,7 @@ function ShowDocttor($sql)
                 <li> <a href="Seepresc.php">See Prescription</a></a></li>
                 <li> <a href="Donorlist.php">Donorlist</a></a></li>
                 <li><a href="Pateditprofile.php">Edit</a></a></li>
+                <li><a href="Patprofile.php">Profile</a></a></li>
                 <li><a href="Patlogout.php">Logout</a></a></li>
 
 
