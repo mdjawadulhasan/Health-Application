@@ -43,6 +43,7 @@ if (session_status() >= 1) {
     
                     <button type="submit" name="submit" class="submit">Login</button>
                 </form>
+                <div class="signup_link">Not a Member ?  <a href="Patsignup.php"> Sign up</a></div>
             </div>
         </section>
     </div>

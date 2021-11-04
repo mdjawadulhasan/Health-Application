@@ -46,7 +46,7 @@
         </p>
         
         <div class="btn">
-          <a href="Patient/Patindex.php" class="loginbtn"
+          <a href="Patient/Patsignin.php" class="loginbtn"
           >Continue as Patient <span class="fas fa-sign-in-alt"></span
            
         ></a>
