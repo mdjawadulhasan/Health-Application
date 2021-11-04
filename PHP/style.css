@@ -1,0 +1,117 @@
+@import url('https://fonts.googleapis.com/css2?family=Zen+Antique+Soft&display=swap');
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+  border: none;
+  text-transform: capitalize;
+  text-decoration: none;
+  
+}
+
+
+.header {
+  padding: 2rem 9%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  box-shadow: 0 .5rem 1.5rem rgba(0,0,0,.1);
+  background: #fff;
+
+}
+body{
+    
+}
+
+html{
+    font-size: 62.5%;
+}
+
+section{
+    padding: 2rem 9%;
+}
+
+.header .logo{
+    font-size: 3.5rem;
+    color: #444;
+    
+}
+
+.header .logo i{
+    color: #16a085;
+}
+
+
+.home{
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    padding-top: 10rem;
+
+}
+
+
+.home .img{
+    flex:1 1 30rem;
+    width: 100%;
+}
+
+.home .elements{
+    flex:1 1 45rem;
+    margin: 80px;
+    
+}
+
+.home .elements h3{
+    font-family: 'Zen Antique Soft', serif;
+    font-size: 5rem;
+    color:black;
+    line-height: 2;
+    text-shadow: .4rem .4rem 0 rgba(0, 0, 0, .2);
+}
+
+.home .elements p{
+    font-family: 'Zen Antique Soft', serif;
+    font-size: 2rem;
+    color:#777;
+    line-height: 2;
+    padding:1rem 0;
+}
+
+.loginbtn{
+    
+    margin-top: 1rem;
+    padding: .7rem;
+    padding-left: 1rem;
+    border: .2rem solid #16a085;
+    border-radius: .5rem;
+    box-shadow: .4rem .4rem 0 rgba(0, 0, 0, .2);
+    color:#16a085;
+    cursor: pointer;
+    font-size: 2.7rem;
+
+}
+
+.loginbtn span{
+   padding:.7rem 1rem;
+   border-radius: .5rem;
+   background: #16a085;
+   color: #fff;
+   margin-left: 0;
+}
+
+.loginbtn:hover{
+    background: #16a085;
+    color: #fff;
+}
+
+.loginbtn:hover span{
+    color:#16a085;
+    background: #fff;
+    margin-left: 1rem ;
+}
+

@@ -65,8 +65,20 @@ if (!isset($_SESSION["user_name"])) {
 
 
         <?php
+        $user_name = $_SESSION["user_name"];
+        $query = "SELECT * FROM patienttbl WHERE ptusername='$user_name';";
         $conn = mysqli_connect('localhost', 'root', '', 'phawa');
-        $query = "SELECT *FROM appointmenttbl";
+        $result = mysqli_query($conn, $query);
+
+        while ($row = mysqli_fetch_assoc($result)) {
+
+            $ptid = $row['pid'];
+        }
+        
+
+
+        $conn = mysqli_connect('localhost', 'root', '', 'phawa');
+        $query = "SELECT *FROM appointmenttbl where patientid='$ptid'";
         $result = mysqli_query($conn, $query);
 
         while ($r = mysqli_fetch_array($result)) {
