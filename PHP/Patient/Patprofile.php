@@ -1,6 +1,5 @@
-<?php require_once 'header.php'; ?>
 
-
+<?php require_once './includes/header.php'; ?>
 
 
 <?php
@@ -29,9 +28,10 @@ if (!isset($_SESSION["user_name"])) {
 
 ?>
 
+<?php require_once './includes/sidebar.php'; ?>
 
 
-<section class="show">
+<section class="showval">
     <b>Name :<b><?php echo $name ?>
     <p><b>Phone No :<b><?php echo $phoneno ?></p>
     <p><b>Gender :<b><?php echo $gender ?></p>
@@ -46,4 +46,4 @@ if (!isset($_SESSION["user_name"])) {
 
 
 
-<?php require_once 'footer.php'; ?>
+<?php require_once './includes/footer.php'; ?>
