@@ -1,154 +1,252 @@
-@import url('https://fonts.googleapis.com/css2?family=Zen+Antique+Soft&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Zen+Antique+Soft&display=swap");
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Zen Antique Soft', serif;
-    color: #303433;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Zen Antique Soft", serif;
+  color: #303433;
 
-    outline: none; 
-    border: none;
-    text-transform: capitalize;
-    text-decoration: none;
+  outline: none;
+  border: none;
+  text-transform: capitalize;
+  text-decoration: none;
 }
 
-
-
-body {
-    min-height: 100vh;
-    width: 100%;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
+.header {
+  padding: 1rem 9%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  box-shadow: 0 0.5rem 1.5rem rgba(0, 0, 0, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #fff;
 }
 
-section {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.header .logo {
+  font-size: 2rem;
+  color: #444;
 }
 
-
-
-.side img {
-    width: 90%;
-    max-width: 100%;
+.header .logo i {
+  color: #16a085;
 }
 
-.loginctrl {
-    max-width: 450px;
-    padding: 24px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+.header .navbar a {
+  font-size: 1.5rem;
+  color: #777;
+  margin-left: 2rem;
 }
 
-.title {
-    text-transform: uppercase;
-    font-size: 3em;
-    font-weight: bold;
-    text-align: center;
-    letter-spacing: 1px;
+.header .navbar a:hover {
+  color: #16a085;
 }
 
-.separator {
-    width: 150px;
-    height: 4px;
-    background-color: #16a085;
-    margin: 24px;
+.sidediv {
+  margin-top: 50px;
+  margin-bottom: 100px;
+}
+.btn {
+  position: absolute;
+  margin-top: 70px;
+  top: 15px;
+  left: 25px;
+  height: 45px;
+  width: 45px;
+  text-align: center;
+  background: #16a085;
+  border-radius: 3px;
+  cursor: pointer;
+  transition: left 0.4s ease;
+}
+.btn.click {
+  left: 260px;
+}
+.btn span {
+  color: white;
+  font-size: 28px;
+  line-height: 45px;
+}
+.btn.click span:before {
+  content: "\f00d";
+}
+.sidebar {
+  position: fixed;
+  width: 250px;
+  height: 100%;
+  left: -250px;
+  background: #16a085;
+  transition: left 0.4s ease;
+}
+.sidebar.show {
+  left: 0px;
+}
+.sidebar .text {
+  color: white;
+  font-size: 25px;
+  font-weight: 600;
+  line-height: 65px;
+  text-align: center;
+  background: #16a085;
+  letter-spacing: 1px;
+}
+nav ul {
+  background: #16a085;
+  height: 100%;
+  width: 100%;
+  list-style: none;
+}
+nav ul li {
+  line-height: 60px;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+nav ul li:last-child {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+nav ul li a {
+  position: relative;
+  color: white;
+  text-decoration: none;
+  font-size: 18px;
+  padding-left: 40px;
+  font-weight: 500;
+  display: block;
+  width: 100%;
+  border-left: 3px solid transparent;
+}
+nav ul li.active a {
+  color: rgb(2, 22, 22);
+  background: #16a085;
+  border-left-color: rgb(246, 250, 250);
+}
+nav ul li a:hover {
+  background: #16a085;
+}
+nav ul ul {
+  position: static;
+  display: none;
+}
+nav ul .feat-show.show {
+  display: block;
 }
 
-.welcome-message {
-    text-align: center;
-    font-size: 1.1em;
-    line-height: 28px;
-    margin-bottom: 30px;
-    color: #696969;
+nav ul ul li {
+  line-height: 42px;
+  border-top: none;
+}
+nav ul ul li a {
+  font-size: 17px;
+  color: #e6e6e6;
+  padding-left: 80px;
+}
+nav ul li.active ul li a {
+  color: #e6e6e6;
+  background: #16a085;
+  border-left-color: transparent;
+}
+nav ul ul li a:hover {
+  color: white;
+  background: #1e1e1e !important;
+}
+nav ul li a:hover {
+  color: white;
+  background: #1e1e1e !important;
+}
+nav ul li a span {
+  position: absolute;
+  top: 50%;
+  right: 20px;
+  transform: translateY(-50%);
+  font-size: 22px;
+  transition: transform 0.4s;
+}
+nav ul li a span.rotate {
+  transform: translateY(-50%) rotate(-180deg);
 }
 
-.login-form {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
+nav i {
+  color: white;
+}
+.showval {
+  margin-left: 100px;
+  margin-right: 1000px;
+  top: 100px;
+  border: 3px solid green;
+  padding: 10px;
 }
 
-.frm {
-    width: 100%;
-    position: relative;
-    margin-bottom: 24px;
+.footer {
+  position: fixed;
+  padding: 10px;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: black;
+  opacity: 1;
+  color: white;
+  text-align: center;
 }
 
-input,
-button {
-    border: none;
-    outline: none;
-    border-radius: 30px;
-    font-size: 1.1em;
+/* Book Appointment */
+
+.BookApt {
+  margin-left: 100px;
+  margin-right: 100px;
+  top: 100px;
+  padding: 10px;
 }
 
-input {
-    width: 100%;
-    background: #e6e6e6;
-    color: #333;
-    letter-spacing: 0.5px;
-    padding: 14px 64px;
+.deptin i {
+  position: absolute;
+  margin-top: 10px;
+  margin-left: -170px;
 }
 
-input:hover{
-    border: solid;
+#aptl1 {
+  font-size: 1.3rem;
+}
+#aptsrc {
+  background: #e6e6e6;
+  color: rgb(3, 2, 2);
+  letter-spacing: 0.5px;
+  padding: 6px 6px;
+  border-radius: 10px;
+  font-size: 1rem;
+  text-align:center;
 }
 
-input ~ i {
-    position: absolute;
-    left: 32px;
-    top: 50%;
-    transform: translateY(-50%);
-    color: #888;
-    transition: color   0.4s;
+.srchdt{
+  display: flex;
+  align-items: center;
+  margin-left:300px;
+  
 }
 
-input:focus ~ i {
-    color: #16a085;
-    
+.srchdt> div {
+  margin: 15px;
 }
 
-button.submit {
+.dtsrcbtn{
     color: #0c0101;
     background-color: #fcfcfc;;
-    padding: 14px 64px;
-    margin: 32px auto;
-    text-transform: uppercase;
-    letter-spacing: 2px;
+    padding: 4px 6px;
     font-weight: bold;
     cursor: pointer;
     transition: opacity 0.4s;
     border: solid;
+    border-width: 1px;
+    border-radius: 2px;
+    font-size: 1em;
+    
+
+
 }
 
-button.submit:hover {
-    opacity: 0.9;
+.dtsrcbtn:hover{
+   opacity: 0.9;
     background-color: #16a085;
     color: white;
 }
-
-
-.signup_link a:hover{
-    font-size: 22px;
-    color: #16a085;;
-    
-}
-
-
-.login-box{
-    margin-top: 100px;
-    margin-right: 200px;
-    margin-left: 200px;
-    margin-bottom: 135px;
-   
-    border-radius: 30px;
-    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
-}
-
-
-
-
-
