@@ -241,6 +241,9 @@ nav i {
     text-align: center;
 }
 
+
+/* here .srchdt and .dtsrcbtn is common for both book apt abd dbrlist */
+
 .srchdt {
     display: flex;
     align-items: center;
@@ -274,7 +277,7 @@ nav i {
     border-collapse: collapse;
     margin: 25px 0;
     margin-bottom: 101px;
-    font-size: 0.9em;
+    font-size: 1.2rem;
     min-width: 400px;
     border-radius: 5px 5px 0 0;
     overflow: hidden;
@@ -318,7 +321,7 @@ nav i {
 .viewaptimg {
     float: left;
     margin-top: 100px;
-    margin-left: 200px;
+    margin-left: 180px;
 }
 
 .viewapttbl {
@@ -341,5 +344,52 @@ nav i {
     float: left;
     margin-top: 100px;
     margin-left: 150px;
+    font-size: 1.5rem;
+}
+
+
+/* Donor List */
+
+.Dnrlist {
+    margin-left: 100px;
+    margin-right: 100px;
+    top: 100px;
+    padding: 10px;
+}
+
+.Dnrin i {
+    position: absolute;
+    margin-top: 10px;
+    margin-left: -170px;
+}
+
+#dnrl1 {
+    font-size: 1.3rem;
+}
+
+#Dnrsrc {
+    background: #e6e6e6;
+    color: rgb(3, 2, 2);
+    letter-spacing: 0.5px;
+    padding: 6px 6px;
+    border-radius: 10px;
+    font-size: 1rem;
+    text-align: center;
+}
+
+.DonorList-Form {
+    margin-left: 330px;
+}
+
+.dnrimg {
+    float: left;
+    margin-top: 100px;
+    margin-left: 0px;
+}
+
+.dnrtbl {
+    float: left;
+    margin-top: 20px;
+    margin-left: 20px;
     font-size: 1.5rem;
 }

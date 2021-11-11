@@ -99,7 +99,7 @@ if (isset($_POST["show"])) {
 }
 ?>
 
-</table>
+
 
 
 

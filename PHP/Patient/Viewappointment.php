@@ -16,7 +16,7 @@ if (!isset($_SESSION["user_name"])) {
 
 <section class="viewapt">
     <div class="viewaptimg">
-    <img src="../../Images/Apt.gif" alt="" width="700" height="700">
+    <img src="../../Images/Apt.gif" alt="" width="500" height="500">
     </div>
     <div class="viewapttbl">
     <table class="tablestyle">
