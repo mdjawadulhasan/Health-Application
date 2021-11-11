@@ -30,52 +30,36 @@ while ($row = mysqli_fetch_assoc($result)) {
 }
 ?>
 
-<section class="AptDt">
-    <div class="aptsetdiv">
-        <div class="dtset">
+<section class="bookapt">
 
-            <div class="Dtprofile">
-                <div class="dtimg">
-                    <img src="../../Images/Dtuser.png" alt="Avatar" height="200px" width="170px"">
+    <div class="dtset">
+        <div class="Dtprofile">
+            <div class="dtimg">
+                <img src="../../Images/Dtuser.png" alt="Avatar" height="200px" width="170px"">
                 </div>
                 <div class=" dtcontainer">
-                    <h4><b><?php echo $dtname ?></b></h4>
-                    <p><?php echo   $degree ?></p>
-                </div>
+                <h4><b><?php echo $dtname ?></b></h4>
+                <p><?php echo   $degree ?></p>
             </div>
-
-
-            <div class="dtinfo">
-                <div class="dtlabels">Chamber :</div>
-                <div class="dtoutput"><?php echo $chamber ?></div>
-                <div class="dtlabels">Visiting Time :</div>
-                <div class="dtoutput"><?php echo  $vtime ?></div>
-                <div class="dtlabels">Visiting Days :</div>
-                <div class="dtoutput"><?php echo   $vdays ?></div>
-                <div class="dtlabels">Phone No :</div>
-                <div class="dtoutput"><?php echo  $phnno ?></div>
-                <div class="dtlabels">Mail id :</div>
-                <div class="dtoutput"><?php echo  $user_email ?></div>
-            </div>
-
-
         </div>
+        <div class="row">
+            <form action="Confirmappointment.php" method="post">
 
+                <input type="hidden" name="dtrname" value="<?php echo $dtname; ?>">
+                <input type="hidden" name="dtrid" value="<?php echo $dtid; ?>">
+                <input type="date" name="aptdate" class="box" required>
+                <input type="submit" name="submit" value="book now" class="btnset">
 
-
-        <form class="Aptconf" action="Confirmappointment.php" method="post">
-            <input type="hidden" name="dtrname" value="<?php echo $dtname; ?>">
-            <input type="hidden" name="dtrid" value="<?php echo $dtid; ?>">
-            <label for="birthday">SET APPONTMENT DATE:</label>
-            <input type="date" name="aptdate" required>
-            <br>
-            <button type="submit" name="submit" class="aptsetbtn">SET</button>
-
-        </form>
+            </form>
+        </div>
     </div>
-    <div class="aptimg"></div>
 
+    <div class="aptsetimage">
+        <img src="../../Images/book-img.svg" alt="">
+    </div>
 </section>
+
+
 </body>
 
 </html>

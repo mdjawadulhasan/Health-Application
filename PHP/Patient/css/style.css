@@ -327,7 +327,7 @@ nav i {
 .viewapttbl {
     float: left;
     margin-top: 200px;
-    margin-left: 100px;
+    margin-left: 10px;
     font-size: 1.5rem;
 }
 
@@ -420,79 +420,64 @@ nav i {
     background-color: #009879;
 }
 
-.dtinfo {
-    width: 40%;
-    margin-left: 120px;
-}
-
-.dtlabels {
+.bookapt .row {
     margin-top: 10px;
-    margin-left: 100px;
-    text-align: right;
-    width: 24%;
-    padding: 5px;
-    background-color: rgb(223, 218, 219);
-    position: flex;
+    margin-left: 270px;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: .2rem;
+    width: 20%;
+}
+
+.bookapt .row form {
+    flex: 1 1 .45rem;
+    background: #fff;
+    border: 0.1rem solid #16a085;
+    box-shadow: 0.5rem 0.5rem 0 rgba(22, 160, 133, 0.2);
+    text-align: center;
+    padding: .7rem;
+    border-radius: 0.9rem;
+}
+
+.bookapt .row form .box {
+    width: 100%;
+    margin: 0.2rem 0;
+    border-radius: 0.5rem;
+    border: 0.2rem solid #16a085;
     font-size: 1rem;
-    border-left: 5px solid #009879;
-    border-radius: 15px 0px 0px 15px
+    color: #444;
+    text-transform: none;
+    padding: .5rem;
 }
 
-.dtoutput {
-    position: absolute;
-    float: right;
-    margin-top: -33px;
-    margin-left: 246px;
-    text-align: left;
-    width: 16%;
-    padding: 5px;
-    background-color: rgb(223, 218, 219);
-    position: flex;
-    font-size: 1rem;
-    border-left: 5px solid #009879;
-    border-right: 5px solid #009879;
-    border-radius: 0px 15px 15px 0px
+.bookapt .row form .btnset {
+    padding: 1rem 2rem;
 }
 
-.Aptconf {
-    margin-top: 20px;
-    margin-left: 200px;
-}
-
-.Aptconf label {
-    background-color: rgb(223, 218, 219);
-    padding: 10px;
-    border-left: 5px solid #009879;
-    margin-left: 10px;
-}
-
-.Aptconf input {
-    background-color: rgb(223, 218, 219);
-    padding: 11px;
-    margin-top: 5px;
-    margin-left: -10px;
-    border-right: 5px solid #009879;
-}
-
-.aptsetbtn {
-    color: #0c0101;
-    background-color: #fcfcfc;
-    padding: 4px 16px;
-    font-weight: bold;
+.btnset {
+    display: inline-block;
+    margin-top: 1rem;
+    padding: 0.5 rem;
+    padding-left: 1 rem;
+    border: 0.2rem solid #16a085;
+    border-radius: 0.5 rem;
+    box-shadow: 0.5rem 0.5rem 0 rgba(22, 160, 133, 0.2);
+    color: #16a085;
     cursor: pointer;
-    transition: opacity 0.4s;
-    border: solid;
-    border-width: 1px;
-    border-radius: 2px;
-    font-size: 1em;
-    margin-top: 10px;
-    margin-left: 170px;
+    font-size: 1rem;
+    background: #fff;
 }
 
-.aptsetbtn:hover {
-    opacity: 0.9;
-    background-color: #16a085;
-    color: white;
+.btnset:hover {
+    background: #16a085;
+    color: #fff;
 }
 
-.aptsetdiv {}
+.aptsetimage {
+    float: right;
+    width: 500px;
+    height: 500px;
+    margin-top: -420px;
+    margin-right: 200px;
+}
