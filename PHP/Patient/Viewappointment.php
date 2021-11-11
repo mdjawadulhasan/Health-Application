@@ -15,6 +15,10 @@ if (!isset($_SESSION["user_name"])) {
 ?>
 
 <section class="viewapt">
+    <div class="viewaptimg">
+    <img src="../../Images/Apt.gif" alt="" width="700" height="700">
+    </div>
+    <div class="viewapttbl">
     <table class="tablestyle">
         <thead>
 
@@ -59,4 +63,5 @@ if (!isset($_SESSION["user_name"])) {
         </tbody>
     </table>
 
+    </div>
 </section>
