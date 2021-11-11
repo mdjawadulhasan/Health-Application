@@ -26,9 +26,13 @@ function ShowDocttor($sql)
         echo '<td><center>' . $r['dtchamber'] . '</center></td>';
         echo '<td><center>' . $r['dtphone'] . '</center></td>';
         echo '<td><center>' . $r['dtemail_id'] . '</center></td>';
-        echo "<td><a href=\"Bookaptprocess.php?dtid=$r[dtid]\"><input type='submit' value='Set'></a></td>";
+        echo "<td><a href=\"Bookaptprocess.php?dtid=$r[dtid]\"><input type='submit' value='' ><i class='fas fa-angle-double-right'></i></i></i></a></td>";
         echo '</tr><center>';
     }
+
+
+    echo '</tbody>';
+    echo '</table>';
 }
 
 
@@ -55,26 +59,27 @@ function ShowDocttor($sql)
             <div class="alldtshow">
                 <button type="submit" name="show" class="dtsrcbtn">Show All</button>
             </div>
-            
+
         </div>
 
 
     </form>
 
 
+    <table class="tablestyle">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Degree</th>
+                <th>Department</th>
+                <th>Chamber</th>
+                <th>Phone No</th>
+                <th>Mail ID</th>
+                <th>Set</th>
 
-    <table border="1">
-        <tr style="background-color:#81D3BD">
-            <th>Name</th>
-            <th>Degree</th>
-            <th>Department</th>
-            <th>Chamber</th>
-            <th>Phone No</th>
-            <th>Mail ID</th>
-            <th>Delete</th>
-
-        </tr>
-
+            </tr>
+        </thead>
+        <tbody>
 </section>
 
 <?php
@@ -99,4 +104,4 @@ if (isset($_POST["show"])) {
 
 
 
-<?php require_once './includes/footer.php'; ?>
+<!-- <?php require_once './includes/footer.php'; ?> -->
