@@ -1,5 +1,5 @@
 <?php
-$title = 'Book Appointment';
+$title = 'Select Doctor';
 require_once './includes/header.php';
 require_once './includes/sidebar.php';
 ?>

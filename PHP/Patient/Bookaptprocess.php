@@ -1,9 +1,8 @@
-<style>
-    <?php
-
-    include "design.css";
-    ?>
-</style>
+<?php
+$title = 'Set Appointment';
+require_once './includes/header.php';
+require_once './includes/sidebar.php';
+?>
 
 <?php
 session_start();
@@ -29,76 +28,54 @@ while ($row = mysqli_fetch_assoc($result)) {
     $user_email = $row['dtemail_id'];
     $Doctorid = $row['dtid'];
 }
-
-
 ?>
 
-<!DOCTYPE html>
-<html lang="en">
+<section class="AptDt">
+    <div class="aptsetdiv">
+        <div class="dtset">
 
-<head>
+            <div class="Dtprofile">
+                <div class="dtimg">
+                    <img src="../../Images/Dtuser.png" alt="Avatar" height="200px" width="170px"">
+                </div>
+                <div class=" dtcontainer">
+                    <h4><b><?php echo $dtname ?></b></h4>
+                    <p><?php echo   $degree ?></p>
+                </div>
+            </div>
 
-</head>
 
-<body>
-    <header id="main-header">
-        <div class="container">
-        <h1>Hello Patient</h1>
-        <h1>Welcome to Personal Health Application</h1>
-        <h1>APPONTMENT SET PAGE</h1>
+            <div class="dtinfo">
+                <div class="dtlabels">Chamber :</div>
+                <div class="dtoutput"><?php echo $chamber ?></div>
+                <div class="dtlabels">Visiting Time :</div>
+                <div class="dtoutput"><?php echo  $vtime ?></div>
+                <div class="dtlabels">Visiting Days :</div>
+                <div class="dtoutput"><?php echo   $vdays ?></div>
+                <div class="dtlabels">Phone No :</div>
+                <div class="dtoutput"><?php echo  $phnno ?></div>
+                <div class="dtlabels">Mail id :</div>
+                <div class="dtoutput"><?php echo  $user_email ?></div>
+            </div>
+
 
         </div>
-    </header>
-    </header>
-    <nav id="navbar">
-        <div class="container">
-            <ul>
-                </header>
-
-                <li style="text-align:left"><a href="http://localhost/phawa/php"><b>&#8803;&nbsp; HOME<b></a></li>
-
-
-                <li> <a href="Bookappointment.php">Book Appointment</a></a></li>
-                <li> <a href="Viewappointment.php">view Appointment</a></a></a></li>
-                <li> <a href="Seepresc.php">See Prescription</a></a></li>
-                <li> <a href="Donorlist.php">Donorlist</a></a></li>
-                <li><a href="Pateditprofile.php">Edit</a></a></li>
-                <li><a href="Patprofile.php">Profile</a></a></li>
-                <li><a href="Patlogout.php">Logout</a></a></li>
 
 
 
+        <form class="Aptconf" action="Confirmappointment.php" method="post">
+            <input type="hidden" name="dtrname" value="<?php echo $dtname; ?>">
+            <input type="hidden" name="dtrid" value="<?php echo $dtid; ?>">
+            <label for="birthday">SET APPONTMENT DATE:</label>
+            <input type="date" name="aptdate" required>
+            <br>
+            <button type="submit" name="submit" class="aptsetbtn">SET</button>
 
+        </form>
+    </div>
+    <div class="aptimg"></div>
 
-
-
-            </ul>
-        </div>
-    </nav>
-
-
-    <p><b>Name :<b><?php echo $dtname ?></p>
-    <p><b>Degree :<b><?php echo   $degree ?></p>
-    <p><b>Department :<b><?php echo $dept ?></p>
-    <p><b>Chamber :<b><?php echo $chamber ?></p>
-    <p><b>Visiting Time :<b><?php echo  $vtime ?></p>
-    <p><b>Visiting Days :<b><?php echo   $vdays ?></p>
-    <p><b>Phone No :<b><?php echo  $phnno ?></p>
-    <p><b>Mail id :<b><?php echo  $user_email ?></p>
-
-    <form action="Confirmappointment.php" method="post">
-
-
-        <input type="hidden" name="dtrname" value="<?php echo $dtname; ?>">
-        <input type="hidden" name="dtrid" value="<?php echo $dtid; ?>">
-        <label for="birthday">SET APPONTMENT DATE:</label>
-        <input type="date" name="aptdate" required>
-        <br>
-        <button type="submit" name="submit" style="background-color:#04AA6D">SET</button><br><br>
-
-    </form>
-
-
+</section>
 </body>
 
 </html>

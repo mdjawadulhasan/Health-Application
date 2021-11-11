@@ -1,5 +1,5 @@
 <?php
-$title = 'Book Appointment';
+$title = 'Donor List';
 require_once './includes/header.php';
 require_once './includes/sidebar.php';
 ?>
