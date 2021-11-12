@@ -51,6 +51,10 @@ section {
     font-size: 3.5rem;
 }
 
+.header .logo2 i:hover {
+    cursor: pointer;
+}
+
 .home {
     display: flex;
     align-items: center;
