@@ -1,15 +1,16 @@
 <?php
+session_start();
+if (!isset($_SESSION["user_name"])) {
+    header("refresh: 0; url=Patsignin.php");
+    exit();
+}
 $title = 'Set Appointment';
 require_once './includes/header.php';
 require_once './includes/sidebar.php';
 ?>
 
 <?php
-session_start();
-if (!isset($_SESSION["user_name"])) {
-    header("refresh: 0; url=Patprofile.php");
-    exit();
-}
+
 
 $dtid = $_GET['dtid'];
 $conn = mysqli_connect('localhost', 'root', '', 'phawa');

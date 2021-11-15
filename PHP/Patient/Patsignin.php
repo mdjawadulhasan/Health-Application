@@ -3,7 +3,7 @@
 if (session_status() >= 1) {
     session_start();
     if (isset($_SESSION["user_name"])) {
-        header("refresh: 0; url=Patprofile.php");
+        header("refresh: 0; url=PatientHome.php");
     }
 }
 ?>
@@ -69,7 +69,7 @@ if (isset($_POST["submit"])) {
         if ($count == 1) {
             // session_start();
             $_SESSION["user_name"] = $_POST["user_name"];
-            header("refresh: 0; url=Patprofile.php");
+            header("refresh: 0; url=PatientHome.php");
             mysqli_close($conn);
             exit();
         } else {

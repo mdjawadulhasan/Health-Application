@@ -1,15 +1,18 @@
-
 <?php
-$title = 'Profile'; 
- require_once './includes/header.php'; ?>
+session_start();
+if (!isset($_SESSION["user_name"])) {
+    header("refresh: 0; url=Patsignin.php");
+    exit();
+}
+$title = 'Profile';
+require_once './includes/header.php'; ?>
 
 
 <?php
 
 session_start();
-
 if (!isset($_SESSION["user_name"])) {
-    header("refresh: 1; url=patindex.php");
+    header("refresh: 0; url=Patsignin.php");
     exit();
 } else {
 
@@ -35,10 +38,10 @@ if (!isset($_SESSION["user_name"])) {
 
 <section class="showval">
     <b>Name :<b><?php echo $name ?>
-    <p><b>Phone No :<b><?php echo $phoneno ?></p>
-    <p><b>Gender :<b><?php echo $gender ?></p>
-    <p><b>Age :<b><?php echo $age ?></p>
-    <p><b>Blood group :<b><?php echo $Bgrp ?></p>
+            <p><b>Phone No :<b><?php echo $phoneno ?></p>
+            <p><b>Gender :<b><?php echo $gender ?></p>
+            <p><b>Age :<b><?php echo $age ?></p>
+            <p><b>Blood group :<b><?php echo $Bgrp ?></p>
 </section>
 
 

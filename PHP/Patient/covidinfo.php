@@ -1,8 +1,15 @@
 <?php
+session_start();
+if (!isset($_SESSION["user_name"])) {
+    header("refresh: 0; url=Patsignin.php");
+    exit();
+}
 $title = 'Covid-19';
 require_once './includes/header.php';
 require_once './includes/sidebar.php';
 ?>
+
+
 
 
 <!DOCTYPE html>

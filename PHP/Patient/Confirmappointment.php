@@ -1,7 +1,7 @@
 <?php
 session_start();
 if (!isset($_SESSION["user_name"])) {
-    header("refresh: 0; url=Patprofile.php");
+    header("refresh: 0; url=Patsignin.php");
     exit();
 }
 $user_name = $_SESSION["user_name"];
