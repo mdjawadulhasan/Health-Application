@@ -1,16 +1,21 @@
-<?php 
-$title = 'Logout'; 
-require_once './includes/header.php'; 
+<?php
+$title = 'Logout';
 ?>
 
+<!DOCTYPE html>
+<head>
+    <script>
+        sessionStorage.clear();  
+    </script>
+</head>
+</html>
+
 <?php
-if(session_status()>=0)
-{
+if (session_status() >= 0) {
     session_start();
     session_unset();
     session_destroy();
     header("refresh: 0; url=Patsignin.php");
-
 }
 
 ?>
