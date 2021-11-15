@@ -16,7 +16,9 @@ require_once './includes/sidebar.php';
   </head>
   <body>
     <div class="container">
-      <h2>COVID -19 Dashboard - <span id="country"></span> <img src="" id="flag"></h2>
+    <h2><img src="" id="flag"></h2>
+    <h2><span id="country"></span> </h2>
+      <span><h2>COVID -19 Dashboard</h2></span>
       <div class="board">
         <div class="card a"><i class="fa fa-tachometer"></i><h5>Active Cases</h5><span id="active"></span></div>
         <div class="card ca"><i class="fa fa-th-list"></i><h5>Total Cases</h5><span id="cases"></span></div>
