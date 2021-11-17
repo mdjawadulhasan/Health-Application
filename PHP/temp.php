@@ -31,21 +31,7 @@ $var = 34;
             <img src="../../Images/SleeP.svg" alt="">
         </div>
         <div class="Countercontent">
-            <p>How Long did you sleep today?</p>
-            <div class="counterbox">
-                <!-- <span id="number">5</span> Hours -->
-                <input id="number" type="text" value =0>
-            </div>
-            <div class="btns center">
-                <button class="btnsubtract">-</button>
-                <button class="btnadd">+</button>
-
-                <form action="<?php echo $_SERVER['PHP_SELF'];?>" method="post">>
-                <input type="submit" value="SET" name="Setted" class="btnset">
-                </form>
-                
-
-            </div>
+            
 
         </div>
     </section>
