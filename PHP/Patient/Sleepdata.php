@@ -33,16 +33,18 @@ $var = 34;
         <div class="Countercontent">
             <p>How Long did you sleep today?</p>
             <div class="counterbox">
-                <form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="post">
-
-                    <input id="number" type="text" name="Count" value="<?php if (isset($_POST['Setted'])) echo $_POST['Setted']; ?>" required>
-                    <input type="submit" value="SET" name="Setted" class="btnset">
-
-                </form>
+                <span id="number">0</span> Hours
             </div>
             <div class="btns center">
                 <button class="btnsubtract">-</button>
                 <button class="btnadd">+</button>
+
+                <form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="post">
+                    <input id="fnumber" type="hidden" name="Count" value="<?php if (isset($_POST['Setted'])) echo $_POST['Setted']; ?>" required>
+                    <input type="submit" value="SET" name="Setted" class="btnset">
+                </form>
+
+
             </div>
 
         </div>
@@ -57,7 +59,7 @@ $var = 34;
     number = document.getElementById('number');
 
     var counter = 0;
-    // document.querySelector('#number').value=counter;
+    document.querySelector('#fnumber').value=counter;
     function check() {
         if (counter > 5) {
             document.querySelector('.counterbox').style.color = "#16a085";
@@ -76,7 +78,9 @@ $var = 34;
             counter++;
         }
         check();
-        document.querySelector('#number').value = counter;
+        number.innerHTML = counter;
+        document.querySelector('#fnumber').value=counter;
+      
 
     });
     subtractBtn.addEventListener("click", function() {
@@ -85,7 +89,8 @@ $var = 34;
             counter--;
         }
         check();
-        document.querySelector('#number').value = counter;
+        number.innerHTML = counter;
+        document.querySelector('#fnumber').value=counter;
 
     });
 </script>
