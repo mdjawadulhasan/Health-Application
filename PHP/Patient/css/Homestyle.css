@@ -11,8 +11,8 @@
 
 .services .box-container .box {
     background: #fff;
-    border-radius: .5rem;
-    box-shadow: .5rem .5rem 0 rgba(22, 160, 133, .2);
+    border-radius: 0.5rem;
+    box-shadow: 0.5rem 0.5rem 0 rgba(22, 160, 133, 0.2);
     padding: 1.2rem;
 }
 
@@ -28,7 +28,7 @@
 .services .box-container .box h3 {
     color: rgb(7, 0, 0);
     font-size: 2rem;
-    padding: .1rem 0;
+    padding: 0.1rem 0;
 }
 
 .services .box-container .box p {
@@ -40,5 +40,88 @@
 .services .box-container .box a {
     color: #050808;
     font-size: 3.5rem;
-    padding-bottom: .5rem;
+    padding-bottom: 0.5rem;
+}
+
+
+/* Sleep Data */
+
+.sleephm {
+    padding: 0 9%;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+}
+
+.sleephm .image {
+    flex: 1 1 25rem;
+}
+
+.sleephm .image img {
+    width: 100%;
+}
+
+.sleephm .Countercontent {
+    flex: 1 1 45rem;
+}
+
+.counterbox {
+    font-size: 50px;
+    color: tomato;
+    background: #fff;
+    border-radius: 0.9 rem;
+    border: 0.1rem solid #16a085;
+    box-shadow: 0.5rem 0.5rem 0 rgb(22 160 133 / 20%);
+    text-align: center;
+    font-weight: bold;
+    width: 40%;
+    padding: 40px;
+    margin-left: 200px;
+}
+
+.Countercontent p {
+    text-align: center;
+    color: turquoise;
+    font-size: 2rem;
+    margin: 20px;
+}
+
+.btns {
+    margin-top: 30px;
+    margin-left: 280px;
+}
+
+.btnsubtract {
+    font-size: 2rem;
+    background-color: rgb(250, 245, 245);
+    border: .1rem solid #16a085;
+    box-shadow: 0.5rem 0.5rem 0 rgb(22 160 133 / 20%);
+    border-radius: 0.5 rem;
+    cursor: pointer;
+    padding-top: 1px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.btnadd {
+    font-size: 2rem;
+    background-color: rgb(250, 245, 245);
+    border: .1rem solid #16a085;
+    box-shadow: 0.5rem 0.5rem 0 rgb(22 160 133 / 20%);
+    border-radius: 0.5 rem;
+    cursor: pointer;
+    padding-top: 1px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.btnsubtract:hover {
+    background-color: #a01628;
+    color: white;
+}
+
+.btnadd:hover {
+    background-color: #16a085;
+    color: white;
 }
