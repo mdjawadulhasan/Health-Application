@@ -10,14 +10,15 @@ if (!isset($_SESSION["user_name"])) {
 $title = 'Sleep Record';
 require_once './includes/header.php';
 require_once './includes/sidebar.php';
-$var = 34;
-
 ?>
 
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
+    <script>
+        dcheck();
+    </script>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -33,14 +34,29 @@ $var = 34;
         <div class="Countercontent">
             <p>How Long did you sleep today?</p>
             <div class="counterbox">
-                <span id="number">0</span> Hours
+                <span id="number">
+
+                    <?php
+                    if (isset($_POST['Setted']))
+                        echo $_POST['Count'];
+
+                    else
+                        echo '0';
+                    ?>
+                </span> Hours
             </div>
             <div class="btns center">
                 <button class="btnsubtract">-</button>
                 <button class="btnadd">+</button>
 
                 <form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="post">
-                    <input id="fnumber" type="hidden" name="Count" value="<?php if (isset($_POST['Setted'])) echo $_POST['Setted']; ?>" required>
+                    <input id="fnumber" type="hidden" name="Count" value="<?php
+                                                                            if (isset($_POST['Setted']))
+                                                                                echo $_POST['Count'];
+
+                                                                            else
+                                                                                echo '0';
+                                                                            ?>" required>
                     <input type="submit" value="SET" name="Setted" class="btnset">
                 </form>
 
@@ -53,13 +69,27 @@ $var = 34;
 
 
 <script type="text/javascript">
+    var counter2 = document.querySelector('#fnumber').value;
+    if (counter2 > 5) {
+        document.querySelector('.counterbox').style.color = "#16a085";
+        document.querySelector("img").src = "../../Images/Slee2.svg";
+        document.querySelector("img").style.height = "500px";
+        document.querySelector("img").style.width = "500px";
+    } else {
+        document.querySelector('.counterbox').style.color = "tomato";
+        document.querySelector("img").src = "../../Images/Sleep.svg";
+    }
+
+
+
     addBtn = document.getElementsByClassName('btnadd')[0];
     subtractBtn = document.getElementsByClassName('btnsubtract')[0];
     setbtn = document.getElementsByClassName('btnset')[0];
     number = document.getElementById('number');
 
-    var counter = 0;
-    document.querySelector('#fnumber').value=counter;
+    var counter = document.querySelector('#fnumber').value;
+
+    document.querySelector('#fnumber').value = counter;
     function check() {
         if (counter > 5) {
             document.querySelector('.counterbox').style.color = "#16a085";
@@ -72,6 +102,9 @@ $var = 34;
         }
     }
 
+
+
+
     addBtn.addEventListener("click", function() {
 
         if (counter < 24) {
@@ -79,8 +112,8 @@ $var = 34;
         }
         check();
         number.innerHTML = counter;
-        document.querySelector('#fnumber').value=counter;
-      
+        document.querySelector('#fnumber').value = counter;
+
 
     });
     subtractBtn.addEventListener("click", function() {
@@ -90,7 +123,7 @@ $var = 34;
         }
         check();
         number.innerHTML = counter;
-        document.querySelector('#fnumber').value=counter;
+        document.querySelector('#fnumber').value = counter;
 
     });
 </script>
@@ -108,11 +141,11 @@ if (isset($_POST["Setted"])) {
         $sql =  "INSERT INTO temp(tidd,Val) VALUES ('0','$countval')";
 
         if (mysqli_query($conn, $sql)) {
-            // echo '<script>alert("Done")</script>';
+            echo '<script>alert("Done")</script>';
             mysqli_close($conn);
         } else {
 
-            // echo '<script>alert("Try Again!")</script>';
+            echo '<script>alert("Try Again!")</script>';
         }
     }
 }
