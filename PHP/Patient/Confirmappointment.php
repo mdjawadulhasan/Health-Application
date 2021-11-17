@@ -37,7 +37,8 @@ if (isset($_POST["submit"])) {
             header("refresh: 0; url=Bookappointment.php");
             mysqli_close($conn);
         } else {
-            echo "Signup is not Done Bro !";
+            // echo "Signup is not Done !";
+            echo '<script>alert("Try Again!")</script>';
         }
     }
 }

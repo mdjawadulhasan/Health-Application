@@ -116,6 +116,23 @@
     padding-right: 20px;
 }
 
+.btnset {
+    font-size: 2rem;
+    background-color: rgb(250, 245, 245);
+    border: .1rem solid #16a085;
+    box-shadow: 0.5rem 0.5rem 0 rgb(22 160 133 / 20%);
+    border-radius: 0.5 rem;
+    cursor: pointer;
+    padding-top: 1px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.btnset:hover {
+    background-color: #16a085;
+    color: white;
+}
+
 .btnsubtract:hover {
     background-color: #a01628;
     color: white;

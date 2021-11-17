@@ -33,16 +33,18 @@ $var = 34;
         <div class="Countercontent">
             <p>How Long did you sleep today?</p>
             <div class="counterbox">
-                <form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="post">
-
-                    <input id="number" type="text" name="Count" value="<?php if (isset($_POST['Setted'])) echo $_POST['Setted']; ?>" required>
-                    <input type="submit" value="SET" name="Setted" class="btnset">
-
-                </form>
+                <!-- <span id="number">5</span> Hours -->
+                <input id="number" type="text" value =0>
             </div>
             <div class="btns center">
                 <button class="btnsubtract">-</button>
                 <button class="btnadd">+</button>
+
+                <form action="<?php echo $_SERVER['PHP_SELF'];?>" method="post">>
+                <input type="submit" value="SET" name="Setted" class="btnset">
+                </form>
+                
+
             </div>
 
         </div>
@@ -57,7 +59,7 @@ $var = 34;
     number = document.getElementById('number');
 
     var counter = 0;
-    // document.querySelector('#number').value=counter;
+
     function check() {
         if (counter > 5) {
             document.querySelector('.counterbox').style.color = "#16a085";
@@ -76,8 +78,7 @@ $var = 34;
             counter++;
         }
         check();
-        document.querySelector('#number').value = counter;
-
+        number.innerHTML = counter;
     });
     subtractBtn.addEventListener("click", function() {
 
@@ -85,9 +86,11 @@ $var = 34;
             counter--;
         }
         check();
-        document.querySelector('#number').value = counter;
+        number.innerHTML = counter;
 
     });
+
+   
 </script>
 
 
@@ -97,10 +100,12 @@ $var = 34;
 if (isset($_POST["Setted"])) {
     if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
-        $countval = $_POST['Count'];
+        $val= "<script>document.writeln(number.innerHTML);</script>"; 
+        echo $val;
+
 
         $conn = mysqli_connect('localhost', 'root', '', 'phawa');
-        $sql =  "INSERT INTO temp(tidd,Val) VALUES ('0','$countval')";
+        $sql =  "INSERT INTO temp(tidd,Val) VALUES ('0','$val')";
 
         if (mysqli_query($conn, $sql)) {
             // echo '<script>alert("Done")</script>';
@@ -109,6 +114,7 @@ if (isset($_POST["Setted"])) {
 
             // echo '<script>alert("Try Again!")</script>';
         }
+        
     }
 }
 
