@@ -9,6 +9,8 @@ if (counter2 > 5) {
     // document.querySelector("img").src = "../../Images/Sleep.svg";
 }
 
+
+
 addBtn = document.getElementsByClassName('btnadd')[0];
 subtractBtn = document.getElementsByClassName('btnsubtract')[0];
 setbtn = document.getElementsByClassName('btnset')[0];

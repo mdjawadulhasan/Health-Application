@@ -12,7 +12,7 @@ require_once './includes/header.php';
 require_once './includes/sidebar.php';
 $conn = mysqli_connect('localhost', 'root', '', 'phawa');
 
-$defaultvalue=0;
+$defaultvalue = 0;
 $user_name = $_SESSION["user_name"];
 $Todaydt = date('Y-m-d');
 $query = "SELECT *FROM sleepdatatbl where crnt_date='$Todaydt' and username='$user_name'";
@@ -75,12 +75,18 @@ while ($row = mysqli_fetch_assoc($result)) {
 
         </div>
     </section>
-    <script type="text/javascript" src="../Patient/Userhome.js/sleepdata.js"></script>
+    <div id="chart-container">
+        <canvas id="mycanvas"></canvas>
+    </div>
+
+    <!-- javascript -->
+    <script type="text/javascript" src="js/jquery.min.js"></script>
+    <script type="text/javascript" src="js/Chart.min.js"></script>
+    <script type="text/javascript" src="js/app.js"></script>
+
+    <script type="text/javascript" src="../Patient/Userhome/sleepdata.js"></script>
+
 </body>
-
-
-
-
 
 <?php
 
