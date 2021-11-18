@@ -29,7 +29,7 @@ require_once './includes/sidebar.php';
     <section class="sleephm" id="sleephm">
 
         <div class="image">
-            <img src="../../Images/SleeP.svg" alt="">
+            <img src="../../Images/Slee2.svg" alt="">
         </div>
         <div class="Countercontent">
             <p>How Long did you sleep today?</p>
@@ -72,12 +72,12 @@ require_once './includes/sidebar.php';
     var counter2 = document.querySelector('#fnumber').value;
     if (counter2 > 5) {
         document.querySelector('.counterbox').style.color = "#16a085";
-        document.querySelector("img").src = "../../Images/Slee2.svg";
-        document.querySelector("img").style.height = "500px";
-        document.querySelector("img").style.width = "500px";
+        // document.querySelector("img").src = "../../Images/Slee2.svg";
+        // document.querySelector("img").style.height = "300px";
+        // document.querySelector("img").style.width = "300px";
     } else {
         document.querySelector('.counterbox').style.color = "tomato";
-        document.querySelector("img").src = "../../Images/Sleep.svg";
+        // document.querySelector("img").src = "../../Images/Sleep.svg";
     }
 
 
@@ -93,12 +93,12 @@ require_once './includes/sidebar.php';
     function check() {
         if (counter > 5) {
             document.querySelector('.counterbox').style.color = "#16a085";
-            document.querySelector("img").src = "../../Images/Slee2.svg";
-            document.querySelector("img").style.height = "500px";
-            document.querySelector("img").style.width = "500px";
+            // document.querySelector("img").src = "../../Images/Slee2.svg";
+            // document.querySelector("img").style.height = "500px";
+            // document.querySelector("img").style.width = "500px";
         } else {
             document.querySelector('.counterbox').style.color = "tomato";
-            document.querySelector("img").src = "../../Images/Sleep.svg";
+            // document.querySelector("img").src = "../../Images/Sleep.svg";
         }
     }
 
@@ -136,17 +136,15 @@ if (isset($_POST["Setted"])) {
     if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
         $countval = $_POST['Count'];
+        $user_name = $_SESSION["user_name"];
+        $Todaydt=date('Y-m-d');
+         
 
         $conn = mysqli_connect('localhost', 'root', '', 'phawa');
-        $sql =  "INSERT INTO temp(tidd,Val) VALUES ('0','$countval')";
-
+        $sql="INSERT INTO sleepdatatbl(sleepdataid,username,crnt_date,hrcounter) VALUES ('0','$user_name',' $Todaydt','$countval')";
         if (mysqli_query($conn, $sql)) {
-            echo '<script>alert("Done")</script>';
             mysqli_close($conn);
-        } else {
-
-            echo '<script>alert("Try Again!")</script>';
-        }
+        } 
     }
 }
 

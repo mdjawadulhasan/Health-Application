@@ -55,7 +55,7 @@
 }
 
 .sleephm .image {
-    flex: 1 1 25rem;
+    flex: auto;
 }
 
 .sleephm .image img {
@@ -63,7 +63,7 @@
 }
 
 .sleephm .Countercontent {
-    flex: 1 1 45rem;
+    flex: auto;
 }
 
 .counterbox {
@@ -76,7 +76,10 @@
     text-align: center;
     font-weight: bold;
     width: 40%;
-    padding: 40px;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 50px;
+    padding-bottom: 50px;
     margin-left: 200px;
 }
 
@@ -123,9 +126,10 @@
     box-shadow: 0.5rem 0.5rem 0 rgb(22 160 133 / 20%);
     border-radius: 0.5 rem;
     cursor: pointer;
+    margin-left: 2px;
     padding-top: 1px;
-    padding-left: 20px;
-    padding-right: 20px;
+    padding-left: 38px;
+    padding-right: 35px;
 }
 
 .btnset:hover {
