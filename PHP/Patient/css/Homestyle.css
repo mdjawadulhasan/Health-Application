@@ -155,6 +155,12 @@
     margin-left: 150px;
 }
 
+.chartext h2 {
+    color: crimson;
+    padding: 20px;
+    background-color: crimson;
+}
+
 #mycanvas {
     background-color: rgb(251, 253, 255);
     border-style: solid;

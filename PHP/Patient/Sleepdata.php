@@ -76,6 +76,7 @@ while ($row = mysqli_fetch_assoc($result)) {
         </div>
     </section>
     <div id="chart-container">
+        <p class="chartext"><h2><center>Your Previous Data </center></h2></p>
         <canvas id="mycanvas"></canvas>
     </div>
 
