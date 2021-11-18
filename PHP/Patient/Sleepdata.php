@@ -80,11 +80,11 @@ while ($row = mysqli_fetch_assoc($result)) {
     </div>
 
     <!-- javascript -->
-    <script type="text/javascript" src="js/jquery.min.js"></script>
-    <script type="text/javascript" src="js/Chart.min.js"></script>
-    <script type="text/javascript" src="js/app.js"></script>
+    <script type="text/javascript" src="Js/jquery.min.js"></script>
+    <script type="text/javascript" src="Js/Chart.min.js"></script>
+    <script type="text/javascript" src="Js/sleepdata.js"></script>
 
-    <script type="text/javascript" src="../Patient/Userhome/sleepdata.js"></script>
+    
 
 </body>
 
@@ -124,6 +124,5 @@ if (isset($_POST["Setted"])) {
 }
 
 
-
-
 ?>
+

@@ -56,3 +56,63 @@ subtractBtn.addEventListener("click", function() {
     document.querySelector('#fnumber').value = counter;
 
 });
+
+
+$(document).ready(function() {
+    $.ajax({
+        url: "http://localhost/phawa/PHP/Patient/graphdata.php",
+        method: "GET",
+        success: function(data) {
+            console.log(data);
+            var player = [];
+            var hrcounter = [];
+
+            for (var i in data) {
+                player.push(data[i].crnt_date);
+                hrcounter.push(data[i].hrcounter);
+            }
+
+            // for (var i in data) {
+            //     if (hrcounter[i] < 5) {
+            //         backgroundColor: rgb(255, 51, 51);
+            //     }
+
+            // }
+
+            var chartdata = {
+                labels: player,
+                datasets: [{
+                    label: 'Sleep Hours',
+                    backgroundColor: 'rgb(22, 160, 133)',
+                    borderColor: '#fff',
+                    hoverBackgroundColor: 'rgb(0, 0, 102)',
+                    hoverBorderColor: 'rgba(200, 200, 200, 1)',
+                    data: hrcounter
+
+                }]
+            };
+
+
+
+            var ctx = $("#mycanvas");
+
+            var barGraph = new Chart(ctx, {
+                type: 'bar',
+                data: chartdata,
+                options: {
+                    scales: {
+                        yAxes: [{
+                            ticks: {
+                                beginAtZero: true
+                            }
+                        }]
+                    }
+                }
+
+            });
+        },
+        error: function(data) {
+            console.log(data);
+        }
+    });
+});
