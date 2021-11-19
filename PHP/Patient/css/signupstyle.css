@@ -1,7 +1,6 @@
 .register {
     background: rgb(37, 168, 141);
     background: linear-gradient( 90deg, rgba(37, 168, 141, 1) 0%, rgba(0, 152, 121, 1) 19%, rgba(36, 137, 169, 1) 94%, rgba(21, 182, 149, 1) 100%);
-    margin-top: 3%;
     padding: 3%;
 }
 
@@ -47,11 +46,20 @@
     border: none;
     border-radius: 1.5rem;
     padding: 2%;
-    background: #0062cc;
+    background: #050607;
     color: #fff;
     font-weight: 600;
     width: 50%;
     cursor: pointer;
+}
+
+.btnRegister:hover {
+    background-color: #16a085;
+}
+
+.loginbtn:hover {
+    background-color: #030405;
+    color: rgb(247, 252, 249);
 }
 
 .register .nav-tabs {

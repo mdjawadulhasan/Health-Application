@@ -34,7 +34,7 @@ if (session_status() >= 0) {
                 <h4>To</h4>
                 <h4>Health Care System</h4>
                 <p>Provide Your information and join Now!</p>
-                <input type="submit" name="" value="Login" /><br />
+                <input type="submit" class="loginbtn" name="" value="Login" onclick="location.href='Patsignin.php';"/><br />
             </div>
             <div class="col-md-9 register-right">
                 <div class="tab-content" id="myTabContent">
