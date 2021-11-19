@@ -18,7 +18,7 @@ while ($row = mysqli_fetch_assoc($result)) {
     $gender = $row['ptgender'];
     $age = $row['ptage'];
     $Bgrp = $row['ptbgrp'];
-    $Email=$row['ptuseremail'];
+    $Email = $row['ptuseremail'];
 }
 
 require_once './includes/sidebar.php';
@@ -39,9 +39,9 @@ require_once './includes/sidebar.php';
 <body>
     <div class="profile">
         <div class="usercard">
-           <div class="imgcontainer">
-           <img src="../../Images/placeholder.png" alt="Avatar" style="width:100%">
-           </div>
+            <div class="imgcontainer">
+                <img src="../../Images/placeholder.png" alt="Avatar" style="width:100%">
+            </div>
             <div class="container">
                 <h4><b><?php echo $name ?></b></h4>
             </div>
@@ -61,7 +61,7 @@ require_once './includes/sidebar.php';
                         <div class="col-lg-6">
                             <div class="form-group">
                                 <label class="form-control-label" for="input-email">Email address</label>
-                                <input type="email" id="input-email" class="form-control form-control-alternative" value="<?php echo $Email ?>" >
+                                <input type="email" id="input-email" class="form-control form-control-alternative" value="<?php echo $Email ?>">
                             </div>
                         </div>
                     </div>
@@ -75,54 +75,42 @@ require_once './includes/sidebar.php';
                         <div class="col-lg-6">
                             <div class="form-group focused">
                                 <label class="form-control-label" for="input-last-name">Phone Number</label>
-                                <input type="text" id="input-last-name" class="form-control form-control-alternative"  value="<?php echo $phoneno?>">
+                                <input type="text" id="input-last-name" class="form-control form-control-alternative" value="<?php echo $phoneno ?>">
                             </div>
                         </div>
                     </div>
                 </div>
                 <hr class="my-4">
-                <!-- Address -->
                 <h6 class="heading-small text-muted mb-4">Personal Information</h6>
                 <div class="pl-lg-4">
                     <div class="row">
-                        <div class="col-md-12">
+                        <div class="col-lg-6">
                             <div class="form-group focused">
-                                <label class="form-control-label" for="input-address">Address</label>
-                                <input id="input-address" class="form-control form-control-alternative" placeholder="Home Address" value="Bld Mihail Kogalniceanu, nr. 8 Bl 1, Sc 1, Ap 09" type="text">
+                                <label class="form-control-label" for="input-username">Age</label>
+                                <input type="text" id="input-username" class="form-control form-control-alternative" value="<?php echo $age ?>">
+                            </div>
+                        </div>
+                        <div class="col-lg-6">
+                            <div class="form-group">
+                                <label class="form-control-label" for="input-email">Gender</label>
+                                <input type="email" id="input-email" class="form-control form-control-alternative" value="<?php echo $gender ?>">
                             </div>
                         </div>
                     </div>
                     <div class="row">
-                        <div class="col-lg-4">
+                        <div class="col-lg-6">
                             <div class="form-group focused">
-                                <label class="form-control-label" for="input-city">City</label>
-                                <input type="text" id="input-city" class="form-control form-control-alternative" placeholder="City" value="New York">
+                                <label class="form-control-label" for="input-first-name">Blood Group</label>
+                                <input type="text" id="input-first-name" class="form-control form-control-alternative" placeholder="First name" value="<?php echo $Bgrp ?>">
                             </div>
                         </div>
-                        <div class="col-lg-4">
-                            <div class="form-group focused">
-                                <label class="form-control-label" for="input-country">Country</label>
-                                <input type="text" id="input-country" class="form-control form-control-alternative" placeholder="Country" value="United States">
-                            </div>
-                        </div>
-                        <div class="col-lg-4">
-                            <div class="form-group">
-                                <label class="form-control-label" for="input-country">Postal code</label>
-                                <input type="number" id="input-postal-code" class="form-control form-control-alternative" placeholder="Postal code">
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <hr class="my-4">
-                <!-- Description -->
-                <h6 class="heading-small text-muted mb-4">About me</h6>
-                <div class="pl-lg-4">
-                    <div class="form-group focused">
-                        <label>About Me</label>
-                        <textarea rows="4" class="form-control form-control-alternative" placeholder="A few words about you ...">A beautiful Dashboard for Bootstrap 4. It is Free and Open Source.</textarea>
                     </div>
                 </div>
             </form>
+            <br>
+            <br>
+            <button type="button" class="editbtn" onclick="location.href='Pateditprofile.php';">Edit Profile</button>
+            
         </div>
     </div>
 

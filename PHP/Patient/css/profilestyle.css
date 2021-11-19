@@ -31,3 +31,18 @@ img {
     box-shadow: 0 14px 18px 0 rgba(0, 0, 0, 0.2);
     border-radius: 40px;
 }
+
+.editbtn {
+    float: right;
+    color: #fff;
+    border-color: #fb6340;
+    background-color: #fb6340;
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.5);
+    font-size: .875rem;
+    padding: 10px;
+}
+
+.editbtn:hover {
+    transform: translateY(2%);
+    cursor: pointer;
+}
