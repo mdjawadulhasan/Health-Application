@@ -1,15 +1,13 @@
-<style>
-    <?php
-
-    include "design.css";
-    ?>
-</style>
 <?php
+
 session_start();
 if (!isset($_SESSION["user_name"])) {
     header("refresh: 1; url=patindex.php");
     exit();
 } else {
+    $title = 'Edit Profile';
+    require_once './includes/header.php';
+    require_once './includes/sidebar.php';
 
     $user_name = $_SESSION["user_name"];
     $query = "SELECT * FROM patienttbl WHERE ptusername='$user_name';";
@@ -22,107 +20,109 @@ if (!isset($_SESSION["user_name"])) {
         $phoneno = $row['ptphone'];
         $age = $row['ptage'];
         $Bgrp = $row['ptbgrp'];
-        
+        $name = $row['ptname'];
+        $gender = $row['ptgender'];
+        $Email = $row['ptuseremail'];
     }
 }
 ?>
-
-
 
 <!DOCTYPE html>
-<html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="../Patient/css/profilestyle.css">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet">
+</head>
 
 <body>
-
-
-    <header id="main-header">
-        <div class="container">
-            <h1>Hello Patients profile </h1>
-            <h1>Welcome to Personal Health Application</h1>
-            <h1>EDIT PROFILE</h1>
-            
+    <div class="profile">
+        <div class="usercard">
+            <div class="imgcontainer">
+                <img src="../../Images/placeholder.png" alt="Avatar" style="width:100%">
+            </div>
+            <div class="container">
+                <h4><b><?php echo $name ?></b></h4>
+            </div>
         </div>
-    </header>
 
-    <nav id="navbar">
-        <div class="container">
-            <ul>
-                </header>
+        <div class="userinfo">
+            <form action="Editprocess.php" method="post">
+                <h6 class="heading-small text-muted mb-4">User information</h6>
+                <div class="pl-lg-4">
+                    <div class="row">
+                        <div class="col-lg-6">
+                            <div class="form-group focused">
+                                <label class="form-control-label" for="input-username">Name</label>
+                                <input type="text" name="uname" id="input-username" class="form-control form-control-alternative" placeholder="Username" value="<?php echo $name ?>" required>
+                            </div>
+                        </div>
+                        <div class="col-lg-6">
+                            <div class="form-group">
+                                <label class="form-control-label" for="input-email">Email address</label>
+                                <input type="email" name="email" id="input-email" class="form-control form-control-alternative" value="<?php echo $Email ?>" required>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-lg-6">
+                            <div class="form-group focused">
+                                <label class="form-control-label" for="input-first-name">User Name</label>
+                                <input type="text" id="input-first-name" class="form-control form-control-alternative" placeholder="First name" value="<?php echo $user_name ?>" disabled>
+                            </div>
+                        </div>
+                        <div class="col-lg-6">
+                            <div class="form-group focused">
+                                <label class="form-control-label" for="input-last-name">Phone Number</label>
+                                <input type="text" name="phnno" id="input-last-name" class="form-control form-control-alternative" value="<?php echo $phoneno ?>" placeholder="01x-xxxxxxxx" pattern="[0-9]{3}-[0-9]{8}" required>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <hr class="my-4">
+                <h6 class="heading-small text-muted mb-4">Personal Information</h6>
+                <div class="pl-lg-4">
+                    <div class="row">
+                        <div class="col-lg-6">
+                            <div class="form-group focused">
+                                <label class="form-control-label" for="input-username">Age</label>
+                                <input type="text" name="age" id="input-username" class="form-control form-control-alternative" value="<?php echo $age ?>" required>
+                            </div>
+                        </div>
+                        <div class="col-lg-6">
+                            <div class="form-group">
+                                <label class="form-control-label" for="input-email">Gender</label>
+                                <input type="text" name="gender" id="input-email" class="form-control form-control-alternative" value="<?php echo $gender ?>" required>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-lg-6">
+                            <div class="form-group focused">
+                                <label class="form-control-label" for="input-first-name">Blood Group</label>
+                                <input type="text" name="Bgrp" id="input-first-name" class="form-control form-control-alternative" placeholder="First name" value="<?php echo $Bgrp ?>" required>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <hr class="my-4">
+                <h6 class="heading-small text-muted mb-4">Password Confirmation</h6>
+                <div class="pl-lg-4">
 
-                <li style="text-align:left"><a href="http://localhost/phawa/php"><b>&#8803;&nbsp; HOME<b></a></li>
-
-
-                <li> <a href="Bookappointment.php">Book Appointment</a></a></li>
-                <li> <a href="Viewappointment.php">view Appointment</a></a></a></li>
-                <li> <a href="Seepresc.php">See Prescription</a></a></li>
-                <li> <a href="Donorlist.php">Donorlist</a></a></li>
-                <li><a href="Pateditprofile.php">Edit</a></a></li>
-                <li><a href="Patprofile.php">Profile</a></a></li>
-                <li><a href="Patlogout.php">Logout</a></a></li>
-
-
-
-
-            </ul>
+                    <div class="col-lg-6">
+                        <div class="form-group">
+                            <label class="form-control-label" for="input-email">Current Password</label>
+                            <input type="password" name="crntpass" id="input-email" class="form-control form-control-alternative" value="" required>
+                        </div>
+                    </div>
+                </div>
+               
+                <button type="submit" name="submit" class="savebtn">Save</button>
         </div>
-    </nav>
-    <br>
-    <br>
-    <form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="post">
+        </form>
 
-
-
-        <label for="Phoneno"><b>Phone No :<b> </label>
-        <input type="text" name="phnno" value="<?php echo $phoneno; ?>" required><br><br>
-
-        <label for="Age"><b>Age : <b></label>
-        <input type="text" name="age" value="<?php echo $age; ?>" required><br><br>
-
-        <label for="Bgrp"><b>Blood Group : <b></label>
-        <input type="text" name="Bgrp" value="<?php echo $Bgrp; ?>" required><br><br>
-
-        <label for="user_pass"><b>New Password: <b></label>
-        <input type="password" name="newpass" value="<?php echo $currentpass; ?>" required><br><br>
-
-        <label for="user_pass"><b>Current Password: <b></label>
-        <input type="password" name="crntpass" value="" required><br><br>
-
-
-        <button type="submit" name="submit" style="background-color:#04AA6D"><b>Update<b></button><br><br>
-
-    </form>
-
+    </div>
+    </div>
 </body>
 
-</html>
-
-
-<?php
-
-if (isset($_POST["submit"])) {
-    if ($_SERVER["REQUEST_METHOD"] == "POST") {
-        $new_phn = $_POST['phnno'];
-        $new_age = $_POST['age'];
-        $new_bgrp = $_POST['Bgrp'];
-        $new_pass = $_POST['newpass'];
-
-        $input_crnt_pass = $_POST['crntpass'];
-        if ($input_crnt_pass == $currentpass) {
-
-            $sql = "UPDATE patienttbl SET ptphone='$new_phn',ptage='$new_age',ptbgrp='$new_bgrp',ptpass='$new_pass' where ptusername='$user_name';";
-            if (mysqli_query($conn, $sql)) {
-                echo '<script>alert("Info Updated!")</script>';
-                header("refresh: 0; url=Pateditprofile.php");
-                mysqli_close($conn);
-            } else {
-                echo '<script>alert("Try Again!")</script>';
-                header("refresh: 0; url=Pateditprofile.php");
-            }
-        } else {
-            echo '<script>alert("Password Didnt matched!")</script>';
-            header("refresh: 0; url=Pateditprofile.php");
-        }
-    }
-}
-
-?>

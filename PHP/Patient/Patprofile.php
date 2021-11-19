@@ -55,13 +55,13 @@ require_once './includes/sidebar.php';
                         <div class="col-lg-6">
                             <div class="form-group focused">
                                 <label class="form-control-label" for="input-username">Name</label>
-                                <input type="text" id="input-username" class="form-control form-control-alternative" placeholder="Username" value="<?php echo $name ?>">
+                                <input type="text" id="input-username" class="form-control form-control-alternative" placeholder="Username" value="<?php echo $name ?>" required>
                             </div>
                         </div>
                         <div class="col-lg-6">
                             <div class="form-group">
                                 <label class="form-control-label" for="input-email">Email address</label>
-                                <input type="email" id="input-email" class="form-control form-control-alternative" value="<?php echo $Email ?>">
+                                <input type="email" id="input-email" class="form-control form-control-alternative" value="<?php echo $Email ?>"  required>
                             </div>
                         </div>
                     </div>
@@ -75,7 +75,7 @@ require_once './includes/sidebar.php';
                         <div class="col-lg-6">
                             <div class="form-group focused">
                                 <label class="form-control-label" for="input-last-name">Phone Number</label>
-                                <input type="text" id="input-last-name" class="form-control form-control-alternative" value="<?php echo $phoneno ?>">
+                                <input type="text" id="input-last-name" class="form-control form-control-alternative" value="<?php echo $phoneno ?>" required>
                             </div>
                         </div>
                     </div>
@@ -87,13 +87,13 @@ require_once './includes/sidebar.php';
                         <div class="col-lg-6">
                             <div class="form-group focused">
                                 <label class="form-control-label" for="input-username">Age</label>
-                                <input type="text" id="input-username" class="form-control form-control-alternative" value="<?php echo $age ?>">
+                                <input type="text" id="input-username" class="form-control form-control-alternative" value="<?php echo $age ?>" required>
                             </div>
                         </div>
                         <div class="col-lg-6">
                             <div class="form-group">
                                 <label class="form-control-label" for="input-email">Gender</label>
-                                <input type="email" id="input-email" class="form-control form-control-alternative" value="<?php echo $gender ?>">
+                                <input type="email" id="input-email" class="form-control form-control-alternative" value="<?php echo $gender ?>" required>
                             </div>
                         </div>
                     </div>
@@ -101,7 +101,7 @@ require_once './includes/sidebar.php';
                         <div class="col-lg-6">
                             <div class="form-group focused">
                                 <label class="form-control-label" for="input-first-name">Blood Group</label>
-                                <input type="text" id="input-first-name" class="form-control form-control-alternative" placeholder="First name" value="<?php echo $Bgrp ?>">
+                                <input type="text" id="input-first-name" class="form-control form-control-alternative" placeholder="First name" value="<?php echo $Bgrp ?>" required>
                             </div>
                         </div>
                     </div>
@@ -113,5 +113,4 @@ require_once './includes/sidebar.php';
             
         </div>
     </div>
-
 </body>
