@@ -93,16 +93,41 @@ if (!isset($_SESSION["user_name"])) {
                         <div class="col-lg-6">
                             <div class="form-group">
                                 <label class="form-control-label" for="input-email">Gender</label>
-                                <input type="text" name="gender" id="input-email" class="form-control form-control-alternative" value="<?php echo $gender ?>" required>
+                                <div class="form-group">
+                                    <div class="maxl">
+                                        <label class="radio inline">
+                                            <input type="radio" name="gender" value="Male" required />
+                                            <span> Male </span>
+                                        </label>
+                                        <label class="radio inline">
+                                            <input type="radio" name="gender" value="Female" required />
+                                            <span>Female </span>
+                                        </label>
+                                        <label class="radio inline">
+                                            <input type="radio" name="gender" value="Others" required/>
+                                            <span>Others </span>
+                                        </label>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
                     <div class="row">
                         <div class="col-lg-6">
-                            <div class="form-group focused">
-                                <label class="form-control-label" for="input-first-name">Blood Group</label>
-                                <input type="text" name="Bgrp" id="input-first-name" class="form-control form-control-alternative" placeholder="First name" value="<?php echo $Bgrp ?>" required>
-                            </div>
+                        <div class="form-group">
+                                    <select name="Bgrp" class="form-control" required>
+                                         <option value="">Select Group</option>
+                                        </option>
+                                        <option value="A+">A+</option>
+                                        <option value="A-">A-</option>
+                                        <option value="B+">B+</option>
+                                        <option value="B-">B-</option>
+                                        <option value="AB+">AB+</option>
+                                        <option value="AB-">AB-</option>
+                                        <option value="O+">O+</option>
+                                        <option value="O-">O-</option>
+                                    </select>
+                                </div>
                         </div>
                     </div>
                 </div>

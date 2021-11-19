@@ -13,6 +13,8 @@ if (!isset($_SESSION["user_name"])) {
     while ($row = mysqli_fetch_assoc($result)) {
 
         $currentpass = $row['ptpass'];
+        $gender = $row['ptgender'];
+        $Bgrp = $row['ptbgrp'];
     }
 }
 ?>
@@ -28,6 +30,11 @@ if (isset($_POST["submit"])) {
         $newgender = $_POST['gender'];
         $new_bgrp = $_POST['Bgrp'];
         $input_crnt_pass = $_POST['crntpass'];
+
+        if($newgender=="")
+        {
+            $newgender=$gender;
+        }
 
         if ($input_crnt_pass == $currentpass) {
 

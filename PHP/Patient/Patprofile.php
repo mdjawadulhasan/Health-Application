@@ -101,7 +101,7 @@ require_once './includes/sidebar.php';
                         <div class="col-lg-6">
                             <div class="form-group focused">
                                 <label class="form-control-label" for="input-first-name">Blood Group</label>
-                                <input type="text" id="input-first-name" class="form-control form-control-alternative" placeholder="First name" value="<?php echo $Bgrp ?>" required>
+                                <input type="text" id="input-first-name" class="form-control form-control-alternative"  value="<?php echo $Bgrp ?>" required>
                             </div>
                         </div>
                     </div>
