@@ -1,0 +1,33 @@
+.profile {
+    padding: 20px 19%;
+}
+
+.usercard {
+    width: 50%;
+    height: auto;
+    margin: 0 auto;
+    margin-bottom: 10px;
+}
+
+.imgcontainer {
+    width: 50%;
+    margin: 0 auto;
+}
+
+img {
+    border-radius: 50%;
+    background-color: rgb(145, 148, 151);
+}
+
+.container {
+    padding: 2px 16px;
+    text-align: center;
+}
+
+.userinfo {
+    margin: 0 auto;
+    background-color: #e9ecef;
+    padding: 100px;
+    box-shadow: 0 14px 18px 0 rgba(0, 0, 0, 0.2);
+    border-radius: 40px;
+}
