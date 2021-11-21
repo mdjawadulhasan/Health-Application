@@ -1,9 +1,9 @@
-var counter2 = document.querySelector('#fnumber').value;
-if (counter2 > 60) {
-    document.querySelector('.counterbox').style.color = "#16a085";
-} else {
-    document.querySelector('.counterbox').style.color = "tomato";
-}
+// var counter2 = document.querySelector('#fnumber').value;
+// if (counter2 > 5) {
+//     document.querySelector('.counterbox').style.color = "#16a085";
+// } else {
+//     document.querySelector('.counterbox').style.color = "tomato";
+// }
 
 
 
@@ -17,11 +17,11 @@ var counter = document.querySelector('#fnumber').value;
 document.querySelector('#fnumber').value = counter;
 
 function check() {
-    if (counter > 60) {
-        document.querySelector('.counterbox').style.color = "#16a085";
-    } else {
-        document.querySelector('.counterbox').style.color = "tomato";
-    }
+    // if (counter > 60) {
+    //     document.querySelector('.counterbox').style.color = "#16a085";
+    // } else {
+    //     document.querySelector('.counterbox').style.color = "tomato";
+    // }
 }
 
 
@@ -52,29 +52,28 @@ subtractBtn.addEventListener("click", function() {
 
 $(document).ready(function() {
     $.ajax({
-        url: "http://localhost/phawa/PHP/Patient/BPMgraph.php",
+        url: "http://localhost/phawa/PHP/Patient/weightgraph.php",
         method: "GET",
         success: function(data) {
             console.log(data);
-            var player = [];
-            var heartrcount = [];
+            var user = [];
+            var whtcounter = [];
 
             for (var i in data) {
-                player.push(data[i].crnt_date);
-                heartrcount.push(data[i].heartrcount);
+                user.push(data[i].crnt_date);
+                whtcounter.push(data[i].whtcounter);
             }
 
 
             var chartdata = {
-                labels: player,
+                labels: user,
                 datasets: [{
-                    label: 'Heart Rate',
-                    backgroundColor: '#f87373',
+                    label: 'Body Weight',
+                    backgroundColor: '#f8c592',
                     borderColor: '#fff',
-                    hoverBackgroundColor: ' #ff0000',
-                    hoverBorderColor: 'rgba(200, 200, 200, 1)',
-                    data: heartrcount
-
+                    hoverBackgroundColor: 'rgb(240, 128, 15)',
+                    hoverBorderColor: 'rgb(240, 128, 15)',
+                    data: whtcounter
                 }]
             };
 

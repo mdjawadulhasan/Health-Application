@@ -20,10 +20,6 @@
     background: #9dedf9;
 }
 
-.services .box-container .b2 {
-    background: #f87373;
-}
-
 .services .box-container .box:hover {
     box-shadow: 0 4px 8px 0 rgba(5, 241, 190, 0.2);
     transform: translateY(2%);
@@ -175,6 +171,10 @@
 
 /*Heart Rate Data*/
 
+.services .box-container .b2 {
+    background: #f87373;
+}
+
 .Heartratedata {
     padding: 0 9%;
     display: flex;
@@ -188,5 +188,28 @@
 }
 
 .Heartratedata .image img {
+    width: 100%;
+}
+
+
+/*Body Weight Data*/
+
+.services .box-container .b3 {
+    background: #f8c592;
+}
+
+.whtcounterhm {
+    padding: 0 9%;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+}
+
+.whtcounterhm .image {
+    flex: auto;
+}
+
+.whtcounterhm .image img {
     width: 100%;
 }

@@ -40,16 +40,16 @@ require_once './includes/sidebar.php';
                 <p>Update Your Average Heart Rate.</p>
 
             </div>
-
-            <div class="box">
-                <a href="https://www.google.com/" class="fas fa-user-md"></a>
-                <h3>expert doctors</h3>
-                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ad, omnis.</p>
+          
+            <div class="box b3">
+                <a href="Bodyweightdata.php" class="fas fa-child"></a>
+                <h3>Body Weight</h3>
+                <p>Update Your Body Weight</p>
 
             </div>
 
-            <div class="box">
-                <a href="https://www.google.com/" class="fas fa-pills"></a>
+            <div class="box b4">
+                <a href="https://www.google.com/" class="fas fa-glass-whiskey"></a>
                 <h3>medicines</h3>
                 <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ad, omnis.</p>
 
