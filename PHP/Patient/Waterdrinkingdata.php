@@ -1,23 +1,24 @@
 <?php
 
+use function PHPSTORM_META\type;
 
 session_start();
 if (!isset($_SESSION["user_name"])) {
     header("refresh: 0; url=Patsignin.php");
     exit();
 }
-$title = 'Weight Record';
+$title = 'Water Drinking Data';
 require_once './includes/header.php';
 require_once './includes/sidebar.php';
 $conn = mysqli_connect('localhost', 'root', '', 'phawa');
 
-$defaultvalue = 40;
+$defaultvalue = 0;
 $user_name = $_SESSION["user_name"];
 $Todaydt = date('Y-m-d');
-$query = "SELECT *FROM weightdatatbl where crnt_date='$Todaydt' and username='$user_name'";
+$query = "SELECT *FROM waterdatatbl where crnt_date='$Todaydt' and username='$user_name'";
 $result = mysqli_query($conn, $query);
 while ($row = mysqli_fetch_assoc($result)) {
-    $whtcounter = $row['whtcounter'];
+    $defaultvalue = $row['watercounter'];
 }
 ?>
 
@@ -35,13 +36,13 @@ while ($row = mysqli_fetch_assoc($result)) {
 </head>
 
 <body>
-    <section class="whtcounterhm" id="whtcounterhm">
+    <section class="watercounterhm" id="watercounterhm">
 
         <div class="image">
-            <img src="../../Images/whtcounterhm.svg" alt="">
+            <img src="../../Images/Drinking.svg" alt="">
         </div>
         <div class="Countercontent">
-            <p>What is your body weight?</p>
+            <p>How Many glasses of water have you drunk today?</p>
             <div class="counterbox">
                 <span id="number">
 
@@ -52,7 +53,7 @@ while ($row = mysqli_fetch_assoc($result)) {
                     else
                         echo $defaultvalue;
                     ?>
-                </span> KG
+                </span> Glass
             </div>
             <div class="btns center">
                 <button class="btnsubtract">-</button>
@@ -82,7 +83,7 @@ while ($row = mysqli_fetch_assoc($result)) {
     <!-- javascript -->
     <script type="text/javascript" src="Js/jquery.min.js"></script>
     <script type="text/javascript" src="Js/Chart.min.js"></script>
-    <script type="text/javascript" src="Js/weight.js"></script>
+    <script type="text/javascript" src="Js/waterdata.js"></script>
 
     
 
@@ -97,10 +98,9 @@ if (isset($_POST["Setted"])) {
 
         $countval = $_POST['Count'];
         $user_name = $_SESSION["user_name"];
-        // $Todaydt = date('Y-m-d');
-        // $conn = mysqli_connect('localhost', 'root', '', 'phawa');
+        
 
-        $query = "SELECT *FROM weightdatatbl where crnt_date='$Todaydt' and username='$user_name'";
+        $query = "SELECT *FROM waterdatatbl where crnt_date='$Todaydt' and username='$user_name'";
         $result = mysqli_query($conn, $query);
         $row = mysqli_fetch_array($result, MYSQLI_ASSOC);
         $count = mysqli_num_rows($result);
@@ -109,9 +109,9 @@ if (isset($_POST["Setted"])) {
 
 
         if ($count >= 1) {
-            $sql = "UPDATE weightdatatbl SET whtcounter ='$countval' where crnt_date='$Todaydt' and username='$user_name'";
+            $sql = "UPDATE waterdatatbl SET watercounter=' $countval' where crnt_date='$Todaydt' and username='$user_name'";
         } else {
-            $sql = "INSERT INTO weightdatatbl(weightdataid ,username,crnt_date,whtcounter) VALUES ('0','$user_name',' $Todaydt','$countval')";
+            $sql = "INSERT INTO waterdatatbl(waterdataid,username,crnt_date,watercounter) VALUES ('0','$user_name',' $Todaydt','$countval')";
         }
 
         if (mysqli_query($conn, $sql)) {
