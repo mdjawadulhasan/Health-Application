@@ -20,6 +20,10 @@
     background: #9dedf9;
 }
 
+.services .box-container .b2 {
+    background: #f87373;
+}
+
 .services .box-container .box:hover {
     box-shadow: 0 4px 8px 0 rgba(5, 241, 190, 0.2);
     transform: translateY(2%);
@@ -62,7 +66,7 @@
     width: 100%;
 }
 
-.sleephm .Countercontent {
+.Countercontent {
     flex: auto;
 }
 
@@ -166,4 +170,23 @@
     border-style: solid;
     border-color: crimson;
     border-radius: 25px;
+}
+
+
+/*Heart Rate Data*/
+
+.Heartratedata {
+    padding: 0 9%;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+}
+
+.Heartratedata .image {
+    flex: auto;
+}
+
+.Heartratedata .image img {
+    width: 100%;
 }

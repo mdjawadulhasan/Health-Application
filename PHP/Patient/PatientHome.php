@@ -35,9 +35,9 @@ require_once './includes/sidebar.php';
             </div>
 
             <div class="box b2">
-                <a href="https://www.google.com/" class="fas fa-ambulance"></a>
-                <h3>24/7 ambulance</h3>
-                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ad, omnis.</p>
+                <a href="Heartratedata.php" class="fas fa-heartbeat"></a> 
+                <h3>Average Heart Rate</h3>
+                <p>Update Your Average Heart Rate.</p>
 
             </div>
 
