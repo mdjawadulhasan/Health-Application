@@ -86,54 +86,75 @@ subtractBtn3.addEventListener("click", function() {
 
 
 
-// $(document).ready(function() {
-//     $.ajax({
-//         url: "http://localhost/phawa/PHP/Patient/watergrapgh.php",
-//         method: "GET",
-//         success: function(data) {
-//             console.log(data);
-//             var user = [];
-//             var watercounter = [];
+$(document).ready(function() {
+    $.ajax({
+        url: "http://localhost/phawa/PHP/Patient/excgraph.php",
+        method: "GET",
+        success: function(data) {
+            console.log(data);
+            var user = [];
+            var inruncounter = [];
+            var outruncounter = [];
+            var cyclingcounter = [];
 
-//             for (var i in data) {
-//                 user.push(data[i].crnt_date);
-//                 watercounter.push(data[i].watercounter);
-//             }
+            for (var i in data) {
+                user.push(data[i].crnt_date);
+                inruncounter.push(data[i].inruncounter);
+                outruncounter.push(data[i].outruncounter);
+                cyclingcounter.push(data[i].cyclingcounter);
 
-
-//             var chartdata = {
-//                 labels: user,
-//                 datasets: [{
-//                     label: 'Water Glass',
-//                     backgroundColor: 'rgb(28, 164, 202)',
-//                     borderColor: '#fff',
-//                     hoverBackgroundColor: 'rgb(15, 91, 112)',
-//                     hoverBorderColor: 'rgb(240, 128, 15)',
-//                     data: watercounter
-//                 }]
-//             };
+            }
 
 
+            var chartdata = {
+                labels: user,
+                datasets: [{
+                        label: 'Indoor(Km)',
+                        backgroundColor: '#ff0053',
+                        borderColor: '#fff',
+                        data: inruncounter
+                    },
+                    {
+                        label: 'Outdoor(Km)',
+                        backgroundColor: '#59f3a6',
+                        borderColor: '#fff',
+                        data: outruncounter
+                    },
+                    {
+                        label: 'cycling(Km)',
+                        backgroundColor: '#9dedf9',
+                        borderColor: '#fff',
+                        data: cyclingcounter
+                    }
 
-//             var ctx = $("#mycanvas");
 
-//             var barGraph = new Chart(ctx, {
-//                 type: 'bar',
-//                 data: chartdata,
-//                 options: {
-//                     scales: {
-//                         yAxes: [{
-//                             ticks: {
-//                                 beginAtZero: true
-//                             }
-//                         }]
-//                     }
-//                 }
 
-//             });
-//         },
-//         error: function(data) {
-//             console.log(data);
-//         }
-//     });
-// });
+
+
+                ]
+            };
+
+
+
+            var ctx = $("#mycanvas");
+
+            var barGraph = new Chart(ctx, {
+                type: 'bar',
+                data: chartdata,
+                options: {
+                    scales: {
+                        yAxes: [{
+                            ticks: {
+                                beginAtZero: true
+                            }
+                        }]
+                    }
+                }
+
+            });
+        },
+        error: function(data) {
+            console.log(data);
+        }
+    });
+});

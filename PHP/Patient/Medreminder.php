@@ -22,19 +22,24 @@ require_once './includes/sidebar.php';
 </head>
 
 <body>
-  <div class="wrapper">
-  <p id="hmicon"><i class="fas fa-capsules" ></i></p>
-    <header>Medicine to take</header>
-    <div class="inputField">
-      <input type="text" placeholder="Add To Your Medicine List" />
-      <button><i class="fas fa-plus"></i></button>
+  <div class="reminderhm">
+    <div class="reminderimg">
+      <img src="../../Images/Reminder.svg" alt="">
     </div>
-    <ul class="todoList">
+    <div class="wrapper">
+      <p id="hmicon"><i class="fas fa-capsules"></i></p>
+      <header>Medicine to take</header>
+      <div class="inputField">
+        <input type="text" placeholder="Add To Your Medicine List" />
+        <button><i class="fas fa-plus"></i></button>
+      </div>
+      <ul class="todoList">
 
-    </ul>
-    <div class="cmntline">
-      <span>You have <span class="pendingTasks"></span> Medicine To Take</span>
-      <!-- <button>Clear All</button> -->
+      </ul>
+      <div class="cmntline">
+        <span>You have <span class="pendingTasks"></span> Medicine To Take</span>
+        <!-- <button>Clear All</button> -->
+      </div>
     </div>
   </div>
 

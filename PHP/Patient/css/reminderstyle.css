@@ -10,6 +10,19 @@
     color: #ffff;
 }
 
+.reminderhm {
+    padding: 2rem 9%;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    gap: 5rem;
+    text-align: center;
+}
+
+.reminderimg img {
+    width: 100%;
+    height: 80%;
+}
+
 body {
     width: 100%;
     height: 100vh;
@@ -17,13 +30,13 @@ body {
 }
 
 .wrapper {
-    background: rgb(156, 147, 147);
+    background: rgb(247, 244, 244);
     max-width: 400px;
     width: 100%;
-    margin: 120px auto;
-    padding: 25px;
     border-radius: 5px;
     box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.1);
+    padding: 10px;
+    height: 80%;
 }
 
 .wrapper header {
@@ -92,7 +105,7 @@ p i {
 .todoList li {
     position: relative;
     list-style: none;
-    margin-bottom: 8px;
+    margin-bottom: 4px;
     background: #f2f2f2;
     border-radius: 3px;
     padding: 10px 15px;

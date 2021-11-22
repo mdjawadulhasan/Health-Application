@@ -17,7 +17,7 @@ $Todaydt = date('Y-m-d');
 $query = "SELECT *FROM weightdatatbl where crnt_date='$Todaydt' and username='$user_name'";
 $result = mysqli_query($conn, $query);
 while ($row = mysqli_fetch_assoc($result)) {
-    $whtcounter = $row['whtcounter'];
+    $defaultvalue = $row['whtcounter'];
 }
 ?>
 
