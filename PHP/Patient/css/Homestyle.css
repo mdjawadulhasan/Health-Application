@@ -32,7 +32,7 @@
 }
 
 .services .box-container .box p {
-    color: rgb(116, 111, 111);
+    color: rgb(3, 3, 3);
     font-size: 1rem;
     line-height: 2;
 }
@@ -98,7 +98,7 @@
 .btnsubtract {
     font-size: 2rem;
     background-color: rgb(250, 245, 245);
-    border: .1rem solid #16a085;
+    border: 0.1rem solid #16a085;
     box-shadow: 0.5rem 0.5rem 0 rgb(22 160 133 / 20%);
     border-radius: 0.5 rem;
     cursor: pointer;
@@ -110,7 +110,7 @@
 .btnadd {
     font-size: 2rem;
     background-color: rgb(250, 245, 245);
-    border: .1rem solid #16a085;
+    border: 0.1rem solid #16a085;
     box-shadow: 0.5rem 0.5rem 0 rgb(22 160 133 / 20%);
     border-radius: 0.5 rem;
     cursor: pointer;
@@ -122,7 +122,7 @@
 .btnset {
     font-size: 2rem;
     background-color: rgb(250, 245, 245);
-    border: .1rem solid #16a085;
+    border: 0.1rem solid #16a085;
     box-shadow: 0.5rem 0.5rem 0 rgb(22 160 133 / 20%);
     border-radius: 0.5 rem;
     cursor: pointer;
@@ -235,4 +235,8 @@
 
 .watercounterhm .image img {
     width: 100%;
+}
+
+.services .box-container .b4 {
+    background: #ff3434;
 }

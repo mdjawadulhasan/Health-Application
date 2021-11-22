@@ -47,11 +47,11 @@ require_once './includes/sidebar.php';
                 <p>Update Your Body Weight</p>
 
             </div>
-
-            <div class="box">
-                <a href="https://www.google.com/" class="fas fa-procedures"></a>
-                <h3>bed facility</h3>
-                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ad, omnis.</p>
+           
+            <div class="box b4">
+                <a href="Exercisedata.php" class="fas fa-running"></a>
+                <h3>Exercise</h3>
+                <p>Update Your Regular Exercise Data.</p>
 
             </div>
 
