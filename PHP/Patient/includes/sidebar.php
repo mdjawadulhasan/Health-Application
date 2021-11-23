@@ -17,7 +17,7 @@
       <li><a href="../../../../PHAWA/PHP/Patient/Seepresc.php"><i class="fas fa-file-medical"></i>  Prescriptions </a></li>
       <li><a href="../../../../PHAWA/PHP/Patient/Donorlist.php"> <i class="fas fa-hand-holding-water"></i>  Donor Lists </a></li>
       <li><a href="../../../../PHAWA/PHP/Patient/covidinfo.php"><i class="fas fa-virus"></i>  Covid-19 Info</a></li>
-      <li><a href="#"><i class="fas fa-file-medical-alt"> </i>  Vaccination History</a></li>
+      <li><a href="../../../../PHAWA/PHP/Patient/Vaccinationhistory.php"><i class="fas fa-file-medical-alt"> </i>  Vaccination History</a></li>
       <li><a href="../../../../PHAWA/PHP/Patient/Medreminder.php">  <i class="far fa-bell"></i>  Medicine Reminder</a></li>
       
       

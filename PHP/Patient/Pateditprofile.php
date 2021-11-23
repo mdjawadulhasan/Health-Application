@@ -69,7 +69,8 @@ if (!isset($_SESSION["user_name"])) {
                         <div class="col-lg-6">
                             <div class="form-group focused">
                                 <label class="form-control-label" for="input-first-name">User Name</label>
-                                <input type="text" id="input-first-name" class="form-control form-control-alternative" placeholder="First name" value="<?php echo $user_name ?>" disabled>
+                                <input type="text" id="input-first-name"  readonly class="form-control form-control-alternative" placeholder="First name" value="<?php echo $user_name ?>" >
+                                
                             </div>
                         </div>
                         <div class="col-lg-6">

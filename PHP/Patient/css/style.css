@@ -481,3 +481,55 @@ nav i {
     margin-top: -420px;
     margin-right: 200px;
 }
+
+
+/* 
+Vaccination History */
+
+.infoinput {
+    padding: 2rem 20%;
+}
+
+.vsubmitbtn {
+    float: left;
+    color: #fff;
+    border-color: #16a085;
+    background-color: #16a085;
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.5);
+    font-size: .875rem;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    margin-left: 25px;
+}
+
+.vsubmitbtn:hover {
+    transform: translateY(2%);
+    cursor: pointer;
+}
+
+.printbtn {
+    float: left;
+    color: #fff;
+    border-color: #0c2e9e;
+    background-color: #1114bd;
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.5);
+    font-size: .875rem;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    margin-left: 25px;
+}
+
+.printbtn:hover {
+    transform: translateY(2%);
+    cursor: pointer;
+}
+
+.vcntbl {
+    padding: 2rem 9%;
+    text-align: center;
+    margin-left: 350px;
+}

@@ -65,8 +65,8 @@ require_once './includes/sidebar.php';
 
 
 
-            <div class="box">
-                <a href="https://www.google.com/" class="fas fa-heartbeat"></a>
+            <div class="box b6">
+                <a href="Caloriescal.php" class="fas fa-heartbeat"></a>
                 <h3>Total care</h3>
                 <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ad, omnis.</p>
 
