@@ -40,11 +40,11 @@ if (isset($_POST["submit"])) {
         if ($usernameInDB == $user_name) {
 
             echo '<script>alert("User Name already available!,Try different User Name!")</script>';
-            header("refresh: 0.5; url=Patsignup.php");
+            header("refresh: 0.5; url=signup.php");
             mysqli_close($conn);
         } else  if ($mailInDB == $user_email) {
             echo '<script>alert("Mail address already exist !,Try different mail address!")</script>';
-            header("refresh: 0.5; url=Patsignup.php");
+            header("refresh: 0.5; url=signup.php");
             mysqli_close($conn);
         } else {
             if (mysqli_query($conn, $sql)) {

@@ -22,6 +22,8 @@ if (session_status() >= 0) {
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="../Patient/css/signupstyle.css" />
+    <script type="text/javascript" src="Js/formvalidation.js"></script>
+
     <title>Document</title>
 </head>
 
@@ -41,7 +43,7 @@ if (session_status() >= 0) {
                     <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
                         <h3 class="register-heading">Registration</h3>
 
-                        <form action="Patsignupprocess.php" method="post" class="row register-form">
+                        <form action="Patsignupprocess.php" name="signupForm" onsubmit="return validateForm()" method="post" class="row register-form">
                             <div class="col-md-6">
                                 <div class="form-group">
                                     <input type="text" class="form-control" placeholder="First Name *" name="fname" value="" required />
@@ -95,7 +97,7 @@ if (session_status() >= 0) {
                                     </select>
                                 </div>
                                 <div class="form-group">
-                                    <input type="password" class="form-control" placeholder="Confirm Password *" name="user_pass" value="" required />
+                                    <input type="password" class="form-control" placeholder="Password *" name="user_pass" value="" required />
                                 </div>
                                 <input type="submit" name="submit" class="btnRegister" />
                             </div>
