@@ -64,11 +64,10 @@ require_once './includes/sidebar.php';
 
 
 
-
             <div class="box b6">
-                <a href="Caloriescal.php" class="fas fa-heartbeat"></a>
-                <h3>Total care</h3>
-                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ad, omnis.</p>
+                <a href="Covidtest.php" class="fas fa-virus"></a>
+                <h3>Covid-19 Test</h3>
+                <p>Test Covid-19 Possibility possibility by your symptoms</p>
 
             </div>
 

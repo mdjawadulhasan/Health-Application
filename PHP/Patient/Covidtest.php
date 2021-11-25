@@ -19,8 +19,7 @@ require_once './includes/sidebar.php';
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <body>
-
-<iframe src="https://www.myfitnesspal.com/exercise/lookup" frameborder="0"></iframe>
+<iframe src="https://livecoronatest.com/chat.php?city=Unnamed%20Road&lat=23.820264&lng=90.417367&addr_dist=Unknown&addr_div=Unknown" width="100%" height="1000px" ></iframe>
 </body>
 
 </html>
