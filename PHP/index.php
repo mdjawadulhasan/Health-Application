@@ -15,6 +15,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Health Care System - Home</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Counter-Up/1.0.0/jquery.counterup.min.js"></script>
   <link rel="stylesheet" href="style.css" />
 </head>
 
@@ -89,6 +92,8 @@
     </div>
   </div>
 
+
+
   <div class="covidinfocontainer">
     <div class="coimg">
       <img src="../Images/Covidimg.svg" alt="">
@@ -102,7 +107,34 @@
     </div>
   </div>
 
+  <div class="counter-up">
+    <div class="content">
+      <div class="box">
+        <div class="icon"><i class="fas fa-users"></i></div>
+        <div class="counter">124 </div>
+        <div class="text">Total Users</div>
+      </div>
+      <div class="box">
+        <div class="icon"><i class="fas fa-user-md"></i></div>
+        <div class="counter">150</div>
+        <div class="text">Doctors Available</div>
+      </div>
+      <div class="box">
+        <div class="icon"><i class="fas fa-user-check"></i></div>
+        <div class="counter">100</div>
+        <div class="text">Donors Available</div>
+      </div>
+      
+    </div>
+  </div>
 
+  <div class="update">
+    <p>Gets Every Single Health Updates Here</p>
+    <h1>This system Always observing your health data and notify you whenever necessary</h1>
+  </div>
+
+
+  
   <script>
     var count = 0;
 
@@ -117,9 +149,20 @@
         document.querySelector(".home").style.backgroundColor = "#fafafa";
         document.querySelector("h3").style.color = "black";
         document.querySelector("p").style.color = "#777";
+
+
+
       }
 
     }
+
+
+    $(document).ready(function() {
+      $(".counter").counterUp({
+        delay: 10,
+        time: 1200,
+      });
+    });
   </script>
 </body>
 
