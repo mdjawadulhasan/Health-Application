@@ -18,6 +18,7 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/Counter-Up/1.0.0/jquery.counterup.min.js"></script>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" crossorigin="anonymous">
   <link rel="stylesheet" href="style.css" />
 </head>
 
@@ -124,7 +125,7 @@
         <div class="counter">100</div>
         <div class="text">Donors Available</div>
       </div>
-      
+
     </div>
   </div>
 
@@ -133,8 +134,54 @@
     <h1>This system Always observing your health data and notify you whenever necessary</h1>
   </div>
 
+  <div class="contact-wrap">
+    <div class="contact-in">
+      <h1>Contact Info</h1>
+      <h2><i class="fa fa-phone" aria-hidden="true"></i> Phone</h2>
+      <p>+880 12121921</p>
+      <h2><i class="fa fa-envelope" aria-hidden="true"></i> Email</h2>
+      <p>hcs@gmail.com</p>
+      <h2><i class="fa fa-map-marker" aria-hidden="true"></i> Address</h2>
+      <p>Kuril,Dhaka</p>
+      <ul>
+        <li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+        <li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+        <li><a href="#"><i class="fa fa-google" aria-hidden="true"></i></a></li>
+        <li><a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+      </ul>
+    </div>
 
-  
+
+
+
+    <div class="map">
+      <div class="mapouter">
+        <div class="gmap_canvas"><iframe width="600" height="500" id="gmap_canvas" src="https://maps.google.com/maps?q=AIUB%20dhaka&t=&z=13&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe><a href="https://123movies-org.net">123movies alternatives</a><br>
+          <style>
+            .mapouter {
+              position: relative;
+              text-align: right;
+              height: 500px;
+              width: 600px;
+            }
+          </style><a href="https://www.embedgooglemap.net"></a>
+          <style>
+            .gmap_canvas {
+              overflow: hidden;
+              background: none !important;
+              height: 500px;
+              width: 600px;
+            }
+          </style>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="ftr">
+    <p>© 2021 HCS. All Right Reserved</p>
+  </div>
+
   <script>
     var count = 0;
 

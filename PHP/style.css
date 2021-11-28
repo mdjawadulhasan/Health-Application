@@ -209,11 +209,8 @@ section {
 
 .update {
     background: #7F7FD5;
-    /* fallback for old browsers */
     background: -webkit-linear-gradient(to right, #91EAE4, #86A8E7, #7F7FD5);
-    /* Chrome 10-25, Safari 5.1-6 */
     background: linear-gradient(to right, #91EAE4, #86A8E7, #7F7FD5);
-    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
 
 .update p {
@@ -233,4 +230,121 @@ section {
     font-size: 34px;
     font-weight: 200;
     padding-bottom: 10rem;
+}
+
+.contactinfo {
+    padding: 10rem 9%;
+    display: grid;
+    grid-template-columns: auto auto;
+    text-align: center;
+}
+
+.contact {
+    padding: 0px 100px;
+}
+
+.map {
+    padding: 0px 100px;
+}
+
+.contact-wrap {
+    width: 80%;
+    height: auto;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 2rem 0%;
+}
+
+.contact-in {
+    padding: 40px 30px;
+}
+
+.contact-in:nth-child(1) {
+    flex: 30%;
+    background: url(../Images/contact.jpg);
+}
+
+.contact-in:nth-child(2) {
+    flex: 45%;
+    background: #c31432;
+}
+
+.contact-in:nth-child(3) {
+    flex: 25%;
+    padding: 0;
+}
+
+.contact-in h1 {
+    font-size: 24px;
+    color: rgb(252, 252, 252);
+    text-transform: uppercase;
+    font-weight: 500;
+    margin-bottom: 20px;
+    font-family: "Zen Antique Soft", serif;
+}
+
+.contact-in h2 {
+    font-size: 20px;
+    font-weight: 400;
+    margin-bottom: 15px;
+    color: white;
+}
+
+.contact-in h2 i {
+    font-size: 16px;
+    width: 40px;
+    height: 40px;
+    margin-right: 10px;
+    background: #fffdfd;
+    color: rgb(7, 0, 0);
+    border-radius: 50px;
+    line-height: 40px;
+    text-align: center;
+}
+
+.contact-in p {
+    color: white;
+    font-size: 24px;
+    font-weight: 300;
+    margin-bottom: 20px;
+}
+
+.contact-in ul {
+    padding: 0;
+    margin: 0;
+}
+
+.contact-in ul li {
+    list-style: none;
+    display: inline-block;
+    margin-right: 5px;
+    margin-top: 5px;
+}
+
+.contact-in ul li a {
+    display: block;
+    width: 30px;
+    height: 30px;
+    text-align: center;
+    background: rgb(248, 247, 247);
+    border-radius: 50px;
+}
+
+.contact-in ul li a i {
+    font-size: 14px;
+    line-height: 30px;
+    color: rgb(12, 8, 8);
+}
+
+.ftr {
+    width: 100%;
+    padding: 1% 0%;
+    background-color: #0b131e;
+}
+
+.ftr p {
+    text-align: center;
+    font-size: 2.2rem;
+    font-family: "Zen Antique Soft", serif;
 }
