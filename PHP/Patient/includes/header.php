@@ -18,6 +18,9 @@
     <script src="https://kit.fontawesome.com/a076d05399.js"></script>
 
     <!-- <link rel="shortcut icon" href="../../../Images/Logo.svg"/> -->
+
+    
+    <link rel="icon" href="../../Images/ticon.svg" type="image/icon type">
     
 
 </head>

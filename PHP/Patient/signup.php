@@ -22,6 +22,7 @@ if (session_status() >= 0) {
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="../Patient/css/signupstyle.css" />
     <script type="text/javascript" src="Js/formvalidation.js"></script>
+    <link rel="icon" href="../../Images/ticon.svg" type="image/icon type">
 
     <title>Document</title>
 </head>
