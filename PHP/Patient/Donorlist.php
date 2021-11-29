@@ -38,9 +38,9 @@ function ShowDonor($sql)
 
 
 <section class="Dnrlist">
-    <span>
-        <h2>Donor List</h2>
-    </span>
+<div class="pagetxt">
+        <p>Donor List</p>
+    </div>
     <form class="DonorList-Form" action="<?php echo $_SERVER['PHP_SELF']; ?>" method="post">
 
         <div class="srchdt">

@@ -337,7 +337,7 @@ nav i {
 }
 
 .pagetxt p {
-    text-align: center;
+    /* text-align: center; */
     font-family: "Stylish", sans-serif;
     color: black;
     padding: 1rem;
@@ -345,6 +345,8 @@ nav i {
     font-size: 54px;
     font-weight: 700;
     margin-top: -20px;
+    text-decoration: underline solid black;
+    text-align: center;
 }
 
 
@@ -399,7 +401,7 @@ nav i {
 
 .dnrimg {
     float: left;
-    margin-top: 100px;
+    margin-top: 10px;
     margin-left: 0px;
 }
 
@@ -503,7 +505,10 @@ nav i {
 Vaccination History */
 
 .infoinput {
-    padding: 2rem 20%;
+    margin-top: -14px;
+    padding: 5rem 20%;
+    background-repeat: no-repeat;
+    background-size: 100%;
 }
 
 .vsubmitbtn {
