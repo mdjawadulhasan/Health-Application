@@ -19,6 +19,7 @@ require_once './includes/sidebar.php';
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://raw.githack.com/eKoopmans/html2pdf/master/dist/html2pdf.bundle.js"></script>
     <title>Document</title>
 </head>
 
@@ -56,13 +57,13 @@ require_once './includes/sidebar.php';
                 </div>
             </div>
             <button type="submit" name="submit" class="vsubmitbtn">Save</button>
-            <button type="submit" name="Print" class="printbtn">Print</button>
         </form>
+        <button onclick="Printpage()" class="printbtn">Print</button>
     </div>
 
 
-    <div class="vcntbl">
-        <table class="tablestyle">
+    <div class="vcntbl" >
+        <table class="tablestyle" id="vtbl">
             <thead>
                 <tr>
                     <th>Vaccine Name</th>
@@ -91,6 +92,15 @@ require_once './includes/sidebar.php';
             ?>
     </div>
 
+    <script>
+        function Printpage(){
+            
+            const element=document.getElementById("vtbl");
+            html2pdf()
+            .from(element)
+            .save();
+        }
+    </script>
 </body>
 
 </html>
