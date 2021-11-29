@@ -40,7 +40,7 @@ if (!isset($_SESSION["user_name"])) {
     <div class="profile">
         <div class="usercard">
             <div class="imgcontainer">
-                <img src="../../Images/placeholder.png" alt="Avatar" style="width:100%">
+                <img src="../../Images/placeholder.jpg" alt="Avatar" style="width:100%">
             </div>
             <div class="container">
                 <h4><b><?php echo $name ?></b></h4>
