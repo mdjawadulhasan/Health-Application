@@ -1,5 +1,11 @@
+body {}
+
 .services {
     padding: 2rem 9%;
+    background: url(../../../Images/Pathomebg.jpg);
+    background-size: 100%;
+    padding-bottom: 10%;
+    margin-top: -17px;
 }
 
 .services .box-container {

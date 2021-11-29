@@ -321,15 +321,30 @@ nav i {
 
 .viewaptimg {
     float: left;
-    margin-top: 100px;
+    margin-top: 50px;
     margin-left: 180px;
 }
 
 .viewapttbl {
     float: left;
-    margin-top: 200px;
+    margin-top: 50px;
     margin-left: 10px;
     font-size: 1.5rem;
+}
+
+.pagetxt {
+    top: 0;
+}
+
+.pagetxt p {
+    text-align: center;
+    font-family: "Stylish", sans-serif;
+    color: black;
+    padding: 1rem;
+    line-height: 1.2;
+    font-size: 54px;
+    font-weight: 700;
+    margin-top: -20px;
 }
 
 
