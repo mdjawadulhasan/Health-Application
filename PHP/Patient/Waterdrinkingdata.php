@@ -76,7 +76,11 @@ while ($row = mysqli_fetch_assoc($result)) {
         </div>
     </section>
     <div id="chart-container">
-        <p class="chartext"><h2><center>Your Previous Data </center></h2></p>
+        <p class="chartext">
+        <h2>
+            <center>Your Previous Data </center>
+        </h2>
+        </p>
         <canvas id="mycanvas"></canvas>
     </div>
 
@@ -85,7 +89,7 @@ while ($row = mysqli_fetch_assoc($result)) {
     <script type="text/javascript" src="Js/Chart.min.js"></script>
     <script type="text/javascript" src="Js/waterdata.js"></script>
 
-    
+
 
 </body>
 
@@ -98,7 +102,7 @@ if (isset($_POST["Setted"])) {
 
         $countval = $_POST['Count'];
         $user_name = $_SESSION["user_name"];
-        
+
 
         $query = "SELECT *FROM waterdatatbl where crnt_date='$Todaydt' and username='$user_name'";
         $result = mysqli_query($conn, $query);
@@ -116,11 +120,19 @@ if (isset($_POST["Setted"])) {
 
         if (mysqli_query($conn, $sql)) {
             mysqli_close($conn);
+            echo '<script>Swal.fire(
+                "Data Updated!",
+                "",
+                "success"
+              )</script>';
         } else {
-            echo '<script>alert("Try Again")</script>';
+            echo '<script>Swal.fire(
+                "Try Again",
+                 "",
+                 "error"
+            )</script>';
         }
     }
 }
 
 ?>
-

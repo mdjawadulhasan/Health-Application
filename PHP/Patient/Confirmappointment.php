@@ -4,6 +4,7 @@ if (!isset($_SESSION["user_name"])) {
     header("refresh: 0; url=Patsignin.php");
     exit();
 }
+require_once './includes/header.php';
 $user_name = $_SESSION["user_name"];
 $query = "SELECT * FROM patienttbl WHERE ptusername='$user_name';";
 $conn = mysqli_connect('localhost', 'root', '', 'phawa');
@@ -33,12 +34,21 @@ if (isset($_POST["submit"])) {
         $conn = mysqli_connect('localhost', 'root', '', 'phawa');
         $sql="INSERT INTO appointmenttbl(aptid,doctorid,patientid,apdtname,apptname,appdate) VALUES ('0','$Dtrid',$patid,'$Dtrname','$patname','$AptDate')";
         if (mysqli_query($conn, $sql)) {
-            echo '<script>alert("Appointment Has been Set!")</script>';
-            header("refresh: 0; url=Bookappointment.php");
+            echo '<script>Swal.fire(
+                "Appointment Has been Set!",
+                "",
+                "success"
+              )
+              </script>';
+            header("refresh: 1; url=Bookappointment.php");
             mysqli_close($conn);
         } else {
-            // echo "Signup is not Done !";
-            echo '<script>alert("Try Again!")</script>';
+           
+            echo '<script>Swal.fire(
+                "Try Again",
+                 "",
+                 "error"
+            )</script>';
         }
     }
 }

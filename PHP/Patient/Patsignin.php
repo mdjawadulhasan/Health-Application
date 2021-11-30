@@ -10,20 +10,27 @@ if (session_status() >= 1) {
 
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
     <link rel="stylesheet" href="./css/Loginstyle.css">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
-   
+    
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="sweetalert2.min.js"></script>
+    <link rel="stylesheet" href="sweetalert2.min.css">
+
+    
     <link rel="icon" href="../../Images/ticon.svg" type="image/icon type">
     <title>Login</title>
 </head>
+
 <body>
     <section class="side">
         <img src="../../Images/Loginhm.svg" alt="">
-        
+
     </section>
 
     <div class="login-box">
@@ -32,7 +39,7 @@ if (session_status() >= 1) {
                 <p class="title">Welcome!</p>
                 <div class="separator"></div>
                 <p class="welcome-message">Provide Login Credentials</p>
-    
+
                 <form class="login-form" action="<?php echo $_SERVER['PHP_SELF']; ?>" method="post">
                     <div class="frm">
                         <input type="text" name="user_name" placeholder="Username" required>
@@ -42,15 +49,16 @@ if (session_status() >= 1) {
                         <input type="password" name="user_pass" placeholder="Password" required>
                         <i class="fas fa-lock"></i>
                     </div>
-    
+
                     <button type="submit" name="submit" class="submit">Login</button>
                 </form>
-                <div class="signup_link">Not a Member ?  <a href="signup.php"> Sign up</a></div>
+                <div class="signup_link">Not a Member ? <a href="signup.php"> Sign up</a></div>
             </div>
         </section>
     </div>
-    
+
 </body>
+
 </html>
 
 <?php
@@ -75,7 +83,11 @@ if (isset($_POST["submit"])) {
             mysqli_close($conn);
             exit();
         } else {
-            echo '<script>alert("Credential Incorrect!")</script>';
+            echo '<script>Swal.fire(
+                "Credentials Incorrect",
+               "Try Again",
+                "error"
+              )</script>';
         }
     }
 }

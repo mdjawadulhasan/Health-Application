@@ -98,10 +98,7 @@ if (isset($_POST["Setted"])) {
 
         $countval = $_POST['Count'];
         $user_name = $_SESSION["user_name"];
-        // $Todaydt = date('Y-m-d');
-        // $conn = mysqli_connect('localhost', 'root', '', 'phawa');
-
-
+       
         $query = "SELECT *FROM sleepdatatbl where crnt_date='$Todaydt' and username='$user_name'";
         $result = mysqli_query($conn, $query);
         $row = mysqli_fetch_array($result, MYSQLI_ASSOC);
@@ -118,8 +115,17 @@ if (isset($_POST["Setted"])) {
 
         if (mysqli_query($conn, $sql)) {
             mysqli_close($conn);
+            echo '<script>Swal.fire(
+                "Data Updated!",
+                "",
+                "success"
+              )</script>';
         } else {
-            echo '<script>alert("Try Again")</script>';
+            echo '<script>Swal.fire(
+                "Try Again",
+                 "",
+                 "error"
+            )</script>';
         }
     }
 }
