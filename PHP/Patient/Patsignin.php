@@ -1,5 +1,4 @@
 <?php
-
 if (session_status() >= 1) {
     session_start();
     if (isset($_SESSION["user_name"])) {
@@ -17,12 +16,17 @@ if (session_status() >= 1) {
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
     <link rel="stylesheet" href="./css/Loginstyle.css">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
-    
+
     <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script src="sweetalert2.min.js"></script>
     <link rel="stylesheet" href="sweetalert2.min.css">
 
-    
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+
+
+
+
     <link rel="icon" href="../../Images/ticon.svg" type="image/icon type">
     <title>Login</title>
 </head>
@@ -33,6 +37,8 @@ if (session_status() >= 1) {
 
     </section>
 
+
+
     <div class="login-box">
         <section class="main">
             <div class="loginctrl">
@@ -40,7 +46,7 @@ if (session_status() >= 1) {
                 <div class="separator"></div>
                 <p class="welcome-message">Provide Login Credentials</p>
 
-                <form class="login-form" action="<?php echo $_SERVER['PHP_SELF']; ?>" method="post">
+                <form class="login-form" action="loginprocess.php" method="post">
                     <div class="frm">
                         <input type="text" name="user_name" placeholder="Username" required>
                         <i class="fas fa-user"></i>
@@ -50,46 +56,101 @@ if (session_status() >= 1) {
                         <i class="fas fa-lock"></i>
                     </div>
 
-                    <button type="submit" name="submit" class="submit">Login</button>
+                    <button type="submit" class="lbtn" name="submit" class="submit">Login</button>
                 </form>
-                <div class="signup_link">Not a Member ? <a href="signup.php"> Sign up</a></div>
+                Not a Member ?
+                <br> <button type="button" class="btsn" data-toggle="modal" data-target=".bd-example-modal-lg">Sign up</button>
             </div>
         </section>
     </div>
 
+
+
+
+    
+
+
+
+    <div class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="col-md-9 register-right">
+                    <div class="tab-content" id="myTabContent">
+                        <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+                            <h3 class="register-heading">Registration</h3>
+
+                            <form action="Patsignupprocess.php" name="signupForm"  onsubmit="return validateForm()" method="post" class="row register-form">
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <input type="text" class="form-control" placeholder="First Name *" name="fname" value="" required />
+                                    </div>
+                                    <div class="form-group">
+                                        <input type="text" class="form-control" placeholder="Last Name *" name="lname" value="" required />
+                                    </div>
+                                    <div class="form-group">
+                                        <input type="text" class="form-control" placeholder="Age *" name="age" value="" required />
+                                    </div>
+                                    <div class="form-group">
+                                        <input type="text" class="form-control" placeholder="User Name *" name="user_name" value="" required />
+                                    </div>
+                                    <div class="form-group">
+                                        <div class="maxl">
+                                            <label class="radio inline">
+                                                <input type="radio" name="gender" value="Male" checked />
+                                                <span> Male </span>
+                                            </label>
+                                            <label class="radio inline">
+                                                <input type="radio" name="gender" value="Female" />
+                                                <span>Female </span>
+                                            </label>
+                                            <label class="radio inline">
+                                                <input type="radio" name="gender" value="Others" />
+                                                <span>Others </span>
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <input type="email" class="form-control" placeholder="Your Email *" name="user_email" value="" required />
+                                    </div>
+                                    <div class="form-group">
+                                        <input type="text" class="form-control" name="phnno" placeholder="01x-xxxxxxxx" pattern="[0-9]{3}-[0-9]{8}" required />
+                                    </div>
+                                    <div class="form-group">
+                                        <select name="Bgrp" class="form-control">
+                                            <option class="hidden" selected disabled>
+                                                Blood Group
+                                            </option>
+                                            <option value="A+">A+</option>
+                                            <option value="A-">A-</option>
+                                            <option value="B+">B+</option>
+                                            <option value="B-">B-</option>
+                                            <option value="AB+">AB+</option>
+                                            <option value="AB-">AB-</option>
+                                            <option value="O+">O+</option>
+                                            <option value="O-">O-</option>
+                                        </select>
+                                    </div>
+                                    <div class="form-group">
+                                        <input type="password" class="form-control" placeholder="Password *" name="user_pass" value="" required />
+                                    </div>
+                                    <input type="submit" name="submit" class="btnRegister" />
+                                </div>
+
+                        </div>
+                    </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
 </body>
 
 </html>
 
-<?php
-
-if (isset($_POST["submit"])) {
-    if ($_SERVER["REQUEST_METHOD"] == "POST") {
-        // collect value of input field
-        $user_name = $_POST['user_name'];
-        $user_pass = $_POST['user_pass'];
-
-        $conn = mysqli_connect('localhost', 'root', '', 'phawa');
-        $query = "SELECT * from patienttbl WHERE ptusername='$user_name' and ptpass='$user_pass';";
-
-        $result = mysqli_query($conn, $query);
-        $row = mysqli_fetch_array($result, MYSQLI_ASSOC);
-        $count = mysqli_num_rows($result);
-
-        if ($count == 1) {
-            // session_start();
-            $_SESSION["user_name"] = $_POST["user_name"];
-            header("refresh: 0; url=PatientHome.php");
-            mysqli_close($conn);
-            exit();
-        } else {
-            echo '<script>Swal.fire(
-                "Credentials Incorrect",
-               "Try Again",
-                "error"
-              )</script>';
-        }
-    }
-}
-
-?>

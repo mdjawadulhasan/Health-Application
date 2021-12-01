@@ -5,20 +5,17 @@
     box-sizing: border-box;
     font-family: 'Zen Antique Soft', serif;
     color: #303433;
-
-    outline: none; 
+    outline: none;
     border: none;
     text-transform: capitalize;
     text-decoration: none;
 }
 
-
-
 body {
-    min-height: 100vh;
     width: 100%;
     display: grid;
     grid-template-columns: 1fr 1fr;
+    /* background-image: linear-gradient(to right top, #16a08a, #00a986, #00b27f, #03bb76, #27c369, #39cb76, #48d383, #56db90, #6fe3b4, #92ead1, #bbefe6, #e5f3f2); */
 }
 
 section {
@@ -26,8 +23,6 @@ section {
     justify-content: center;
     align-items: center;
 }
-
-
 
 .side img {
     width: 90%;
@@ -78,7 +73,7 @@ section {
 }
 
 input,
-button {
+.lbtn {
     border: none;
     outline: none;
     border-radius: 30px;
@@ -93,27 +88,26 @@ input {
     padding: 14px 64px;
 }
 
-input:hover{
+input:hover {
     border: solid;
 }
 
-input ~ i {
+input~i {
     position: absolute;
     left: 32px;
     top: 50%;
     transform: translateY(-50%);
     color: #888;
-    transition: color   0.4s;
+    transition: color 0.4s;
 }
 
-input:focus ~ i {
+input:focus~i {
     color: #16a085;
-    
 }
 
-button.submit {
+.lbtn {
     color: #0c0101;
-    background-color: #fcfcfc;;
+    background-color: #fcfcfc;
     padding: 14px 64px;
     margin: 32px auto;
     text-transform: uppercase;
@@ -124,31 +118,60 @@ button.submit {
     border: solid;
 }
 
-button.submit:hover {
+.lbtn:hover {
     opacity: 0.9;
     background-color: #16a085;
     color: white;
 }
 
-
-.signup_link a:hover{
+.btsn {
+    background-color: white;
     font-size: 22px;
-    color: #16a085;;
-    
+    border: none;
 }
 
+.btsn:hover {
+    font-size: 22px;
+    color: #16a085;
+}
 
-.login-box{
+.login-box {
     margin-top: 100px;
     margin-right: 200px;
     margin-left: 200px;
-    margin-bottom: 135px;
-   
     border-radius: 30px;
-    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
 }
 
 
+/* Signup */
 
+.modal-content {
+    padding: 3%;
+}
 
+.register-right {
+    margin-left: 60px;
+}
 
+.btnRegister {
+    float: right;
+    margin-top: 10%;
+    border: none;
+    border-radius: 1.5rem;
+    padding: 2%;
+    background: #050607;
+    color: #fff;
+    font-weight: 600;
+    width: 50%;
+    cursor: pointer;
+}
+
+.btnRegister:hover {
+    background-color: #16a085;
+}
+
+.register-heading {
+    text-align: center;
+    color: #495057;
+}
