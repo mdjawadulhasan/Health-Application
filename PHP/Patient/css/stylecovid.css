@@ -1,12 +1,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
 body {
     font-family: 'Poppins', sans-serif;
-    display: flex;
+    /* display: flex; */
     align-items: center;
     justify-content: center;
 }
 
 .container {
+    margin: auto;
+    width: 50%;
     margin-top: 100px;
     width: 74%;
     border-radius: 24px;
@@ -23,12 +25,6 @@ body {
 .container h2 {
     margin: 0 0 30px;
     text-align: center;
-}
-
-img#flag {
-    height: 130px;
-    width: 130px;
-    position: relative;
 }
 
 .card {
@@ -86,6 +82,29 @@ img#flag {
 .card i {
     font-size: .9rem;
     color: black;
+}
+
+#covidmap {
+    padding: 30px;
+    margin: auto;
+    width: 70%;
+    display: none;
+}
+
+.sbtn {
+    margin-left: 700px;
+    padding: 1%;
+    text-align: center;
+    border-radius: 1rem;
+    margin-top: 30px;
+    background: #050607;
+    color: #fff;
+    cursor: pointer;
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.sbtn:hover {
+    background-color: #16a085;
 }
 
 @media screen and (max-width: 768px) {
