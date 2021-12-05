@@ -18,18 +18,22 @@
     <script src="https://kit.fontawesome.com/a076d05399.js"></script>
 
    
-    
+    <style>
+    .navbar i {
+    color: #16a085;
+}
+</style>
 
 </head>
 
 <!-- header section starts  --> 
  <header class="header">
-    <a href="PatientHome.php" class="logo"><i class="fas fa-laptop-medical"></i> Health Care System</a>
+    <a href="Adminhome.php" class="logo"><i class="fas fa-laptop-medical"></i> Health Care System</a>
     <nav class="navbar">
           <a href="AddDonor.php">Manage Donor</a>
                 <a href="ManagePat.php">Manage Patient</a>
                 <a href="ManageDoctor.php">Manage Doctor</a>
-                 <a href="Adminlogout.php">Logout </a>
+                 <a href="Adminlogout.php"><i class="fas fa-sign-out-alt"></i></a>
     </nav>
 </header>
 

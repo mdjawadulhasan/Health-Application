@@ -56,7 +56,7 @@ require_once './includes/sidebar.php';
 
     <div class="container">
         
-  <img src="../../Images/eat.svg" width="350" height="150">
+  <img src="../../Images/eat.png" width="200" height="150">
 
       <h2>BMI Calculator</h2>
       <h3>Your BMI is: <span id="bmi">0.00</span></h3>

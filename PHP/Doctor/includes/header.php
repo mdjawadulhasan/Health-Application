@@ -29,7 +29,7 @@
 
 <!-- header section starts  -->
 <header class="header">
-    <a href="PatientHome.php" class="logo"><i class="fas fa-laptop-medical"></i> Health Care System</a>
+    <a href="Dtprofile.php" class="logo"><i class="fas fa-laptop-medical"></i> Health Care System</a>
     <nav class="navbar">
         <a href="Dtlogout.php"><i class="fas fa-sign-out-alt"></i></a>
     </nav>

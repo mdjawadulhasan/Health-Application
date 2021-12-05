@@ -1,14 +1,13 @@
+<?php
+$title = 'Profile';
+require_once './includes/header.php'; ?>
 
-    <?php
-$title = 'Profile'; 
-  require_once './includes/header.php'; ?>
-   
 
 
 <?php
 session_start();
 if (!isset($_SESSION["user_name"])) {
-    header("refresh: 1; url=Dtindex.php");
+    header("refresh: 0; url=Dtsignin.php");
     exit();
 } else {
 
@@ -36,13 +35,15 @@ if (!isset($_SESSION["user_name"])) {
 
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/css/bootstrap.min.css" />
     <link rel="stylesheet" href="../Doctor/css/profilestyle.css">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet">
 </head>
+
 <body>
-     <div class="profile">
+    <div class="profile">
         <div class="usercard">
             <div class="imgcontainer">
                 <img src="../../Images/p1.png" alt="Avatar" style="width:100%">
@@ -66,7 +67,7 @@ if (!isset($_SESSION["user_name"])) {
                         <div class="col-lg-6">
                             <div class="form-group">
                                 <label class="form-control-label" for="input-email">Email address</label>
-                                <input type="email" id="input-email" class="form-control form-control-alternative" value="<?php echo  $user_email ?>"  required>
+                                <input type="email" id="input-email" class="form-control form-control-alternative" value="<?php echo  $user_email ?>" required>
                             </div>
                         </div>
                     </div>
@@ -86,7 +87,7 @@ if (!isset($_SESSION["user_name"])) {
                     </div>
                 </div>
                 <hr class="my-4">
-                <h4 class="heading-small text-muted mb-4"><b>Professional  Information<b></h4>
+                <h4 class="heading-small text-muted mb-4"><b>Professional Information<b></h4>
                 <div class="pl-lg-4">
                     <div class="row">
                         <div class="col-lg-6">
@@ -106,7 +107,7 @@ if (!isset($_SESSION["user_name"])) {
                         <div class="col-lg-6">
                             <div class="form-group focused">
                                 <label class="form-control-label" for="input-first-name">Visiting Time </label>
-                                <input type="text" id="input-first-name" class="form-control form-control-alternative"  value="<?php echo  $vtime ?>" required>
+                                <input type="text" id="input-first-name" class="form-control form-control-alternative" value="<?php echo  $vtime ?>" required>
                             </div>
                         </div>
                         <div class="col-lg-6">
@@ -120,18 +121,19 @@ if (!isset($_SESSION["user_name"])) {
                         <div class="col-lg-6">
                             <div class="form-group focused">
                                 <label class="form-control-label" for="input-first-name">Chamber </label>
-                                <input type="text" id="input-first-name" class="form-control form-control-alternative"  value="<?php echo $chamber ?>" required>
+                                <input type="text" id="input-first-name" class="form-control form-control-alternative" value="<?php echo $chamber ?>" required>
                             </div>
                         </div>
-                     
 
-                </div>
+
+                    </div>
             </form>
             <br>
             <br>
             <button type="button" class="editbtn" onclick="location.href='Dteditprofile.php';">Edit Profile</button>
-            
+
         </div>
     </div>
 </body>
+
 </html>

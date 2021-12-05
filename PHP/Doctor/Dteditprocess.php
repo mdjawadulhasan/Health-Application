@@ -1,7 +1,7 @@
 <?php
 session_start();
 if (!isset($_SESSION["user_name"])) {
-    header("refresh: 1; url=Dtindex.php");
+    header("refresh: 0; url=Dtsignin.php");
     exit();
 } else {
 
