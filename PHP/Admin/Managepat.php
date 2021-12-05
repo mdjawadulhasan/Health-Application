@@ -1,10 +1,4 @@
 
-<style>
-<?php
-
-   include "design.css";
-?>
-</style>
 
 <?php
 session_start();
@@ -12,48 +6,42 @@ if (!isset($_SESSION["user_name"])) {
     header("refresh: 0; url=Admin.php");
     exit();
 }
-
+$title = 'Donor List';
+require_once './includes/header.php';
 
 ?>
+<br>
+<br>
+<br>
+<br>
+<br>
 
 
-<!DOCTYPE html>
-<html>
-<body>
-   <header id="main-header">
- <div class="container">
- <h1>Hello Admin"</br>
- Manage Patient</h1>
-</div>
-</header>
-
-<nav id="navbar">
-    <div class="container">
-<ul>
-    <li style="text-align:left"><a href="http://localhost/Health/"><b>&#8803;&nbsp; HOME<b></a></li> 
-    <li><a href="AddDonor.php">Manage Donor</a></li>
- 
-    <li><a href="ManagePat.php">Manage Patient</a></li>
+<section class="Dnrlist">
     
-    <li><a href="ManageDoctor.php">Manage Doctor</a></li>
-    
-   <li> <a href="Adminlogout.php">Logout </a></li>
-</ul>
-</div>
-</nav>
 
-<br><table border="1">
-    <tr style="background-color:#81D3BD">
-        <th>Name</th>
+    <div class="dnrimg">
+       
+    </div>
+    <div class="dnrtbl">
+    <table class="tablestyle">
+        <thead>
+            <tr>
+            <th>Name</th>
         <th>Phone No</th>
         <th>Gender</th>
         <th>Age</th>
         <th>Blood Group</th>
         <th>Username</th>
         <th>Usermail</th>
-        <th>&nbsp;&nbsp;&#128465&nbsp;&nbsp;</th>
-        
-    </tr>
+            <th>&nbsp;&nbsp; Delete(&#128465)  &nbsp;&nbsp;</th>
+            </tr>
+        </thead>
+        <tbody>
+    </div>
+   
+</section>
+
 
     
 
@@ -77,7 +65,7 @@ echo '<td><center>'.$r['ptbgrp'].'</center></td>';
 echo '<td><center>'.$r['ptusername'].'</center></td>';
 echo '<td><center>'.$r['ptuseremail'].'</center></td>';
 echo "<td><a href=\"PatDelete.php?pid=$r[pid]\" onClick=\"return confirm
-('Are you sure to delete?')\"><input type='submit' value='Delete'></a></td>";
+('Are you sure to delete?')\"><input type='submit' value=''>&nbsp;&nbsp; &nbsp;&nbsp;<i class='fas fa-trash-alt'></i></a></td>";
 
 
 

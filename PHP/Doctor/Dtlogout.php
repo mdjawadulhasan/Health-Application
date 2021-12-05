@@ -5,7 +5,7 @@ if(session_status()>=0)
     session_unset();
     session_destroy();
  
-    header("refresh: 0; url=Dtindex.php");
+    header("refresh: 0; url=Dtsignin.php");
 
 }
 

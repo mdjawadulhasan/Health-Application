@@ -1,9 +1,4 @@
-<style>
-    <?php
 
-    include "design.css";
-    ?>
-</style>
 
 <?php
 session_start();
@@ -28,59 +23,50 @@ while ($row = mysqli_fetch_assoc($result)) {
 
 ?>
 
+<?php
+$title = 'View Appointment';
+require_once './includes/header.php';
+require_once './includes/sidebar.php';
+?>
+
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../Doctor/css/bmistyle.css" />
+    <title>BMI</title>
+  </head>
+  <body>
+  <div class="container">
 
-<head>
+  <form action="ConfirPresc.php" method="post">
 
-</head>
+<input type="hidden" name="ptid" value="<?php echo $ptid; ?>">
+<h3>SET PRESCRIPTION DATE:<h3>
+<input type="date" name="prescdate" required>
+<label for="Presc"><h3>Give Prescription:</label>
+<br>
+<textarea name="presctext" rows="10" cols="30" required>Provide the Prescription :</textarea>
+<br>
+<button type="submit" name="submit" style="background-color:#04AA6D">SET</button><br><br>
+</div>
+</form>
 
-<body>
-    <header id="main-header">
-        <div class="container">
-            <h1>Welcome Doctor</h1>
-            <h1>Welcome to Personal Health Application</h1>
-            <h1>Prescription Giving Page</h1>
+    <div class="container">
+        
+  <img src="../../Images/eat.svg" width="350" height="150">
 
-        </div>
-    </header>
-    <nav id="navbar">
-        <div class="container">
-            <ul>
-                <li style="text-align:left"><a href="http://localhost/phawa/php"><b>&#8803;&nbsp; HOME<b></a></li>
-                <li><a href="ProvidePrescr.php"><b>Give Prescrption<b></a></li>
-                <li> <a href="Dteditprofile.php"><b>Edit<b></a></li>
-                <li> <a href="Dtprofile.php"><b>Profile<b></a></li>
-                <li><a href="Dtlogout.php"><b>Logout<b></a>
-                <li>
-            </ul>
-        </div>
-    </nav>
+      <h2>BMI Calculator</h2>
+      <h3>Your BMI is: <span id="bmi">0.00</span></h3>
+      <input type="text" id="weight" placeholder="Weight (kg)" />
+      <input type="text" id="height" placeholder="Height (feet) " />
+      <button id="calculate">Calculate</button>
+    </div>
+    <script src="../Doctor/bmiapp.js"></script>
 
-
-    <p><b>Name :<b><?php echo $ptname ?></p>
-    <p><b>Age :<b><?php echo   $ptage ?></p>
-    <p><b>Blood Group :<b><?php echo $ptbgrp ?></p>
-
-
-    <form action="ConfirPresc.php" method="post">
-
-
-
-        <input type="hidden" name="ptid" value="<?php echo $ptid; ?>">
-
-        <label for="apt">SET PRESCRIPTION DATE:</label>
-        <input type="date" name="prescdate" required>
-        <br>
-        <label for="Presc">Give Prescription:</label>
-        <br>
-        <textarea name="presctext" rows="10" cols="30" required>Provide the Prescription</textarea>
-        <br>
-        <button type="submit" name="submit" style="background-color:#04AA6D">SET</button><br><br>
-
-    </form>
-
-
+ 
 </body>
 
 </html>

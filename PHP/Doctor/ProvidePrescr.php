@@ -1,11 +1,10 @@
-<style>
-    <?php
-
-    include "design.css";
-    ?>
-</style>
 
 
+<?php
+$title = 'View Appointment';
+require_once './includes/header.php';
+require_once './includes/sidebar.php';
+?>
 <?php
 session_start();
 if (!isset($_SESSION["user_name"])) {
@@ -18,42 +17,23 @@ if (!isset($_SESSION["user_name"])) {
 ?>
 
 
-<!DOCTYPE html>
-<html>
+        <section class="viewapt">
+    <div class="viewaptimg">
+    <img src="../../Images/Apt.gif" alt="" width="500" height="500">
+    </div>
+    <div class="viewapttbl">
+    <table class="tablestyle">
+        <thead>
 
-<body>
-    <header id="main-header">
-        <div class="container">
-            <h1>Welcome Doctor</h1>
-            <h1>Welcome to Personal Health Application</h1>
-            <h1>Give Prescription</h1>
+            <tr>
+                <th>Doctor Name</th>
+                <th>Patient Name</th>
+                <th>Appointment Date</th>
+                <th>Give</th>
 
-        </div>
-    </header>
-    <nav id="navbar">
-        <div class="container">
-            <ul>
-                <li style="text-align:left"><a href="http://localhost/phawa/php"><b>&#8803;&nbsp; HOME<b></a></li>
-                <li><a href="ProvidePrescr.php"><b>Give Prescrption<b></a></li>
-                <li> <a href="Dteditprofile.php"><b>Edit<b></a></li>
-                <li> <a href="Dtprofile.php"><b>Profile<b></a></li>
-                <li><a href="Dtlogout.php"><b>Logout<b></a>
-                <li>
-            </ul>
-        </div>
-    </nav>
-
-
-    <br>
-    <table border="1">
-        <tr style="background-color:#81D3BD">
-            <th>Doctor Name</th>
-            <th>Patient Name</th>
-            <th>Appointment Date</th>
-            <th>Give Prescription</th>
-
-        </tr>
-
+            </tr>
+        </thead>
+        <tbody>
 
         <?php
         $user_name = $_SESSION["user_name"];
@@ -76,12 +56,14 @@ if (!isset($_SESSION["user_name"])) {
             echo '<td><center>' . $r['apdtname'] . '</center></td>';
             echo '<td><center>' . $r['apptname'] . '</center></td>';
             echo '<td><center>' . $r['appdate'] . '</center></td>';
-            echo "<td><a href=\"ProvidePrescrProcess.php?patientid=$r[patientid]\"><input type='submit' value='Give Prescription'></a></td>";
+            echo "<td><a href=\"ProvidePrescrProcess.php?patientid=$r[patientid]\"><input type='submit' value='' ><i class='fa fa-forward'></i></a></td>";
         }
         ?>
 
     </table>
+    </div>
+    </section>
 
-</body>
+<!-- </body>
 
-</html>
+</html> -->

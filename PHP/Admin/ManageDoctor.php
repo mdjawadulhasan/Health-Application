@@ -1,9 +1,4 @@
-<style>
-    <?php
 
-    include "design.css";
-    ?>
-</style>
 
 
 <?php
@@ -12,41 +7,38 @@ if (!isset($_SESSION["user_name"])) {
     header("refresh: 0; url=Admin.php");
     exit();
 }
+$title = 'Donor List';
+require_once './includes/header.php';
 
 
 ?>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
 
 
-<!DOCTYPE html>
-<html>
 
-<body>
 
-    <header id="main-header">
-        <div class="container">
-            <h1>Welcome Admin</h1>
-            <h1>Manage Doctor</h1>
-        </div>
-    </header>
 
-    <nav id="navbar">
-        <div class="container">
-            <ul>
-                <li style="text-align:left"><a href="http://localhost/Health/"><b>&#8803;&nbsp; HOME<b></a></li>
-                <li><a href="AddDonor.php">Manage Donor</a></li>
+   
+     
+    
+        <section class="Dnrlist">
+    
 
-                <li><a href="ManagePat.php">Manage Patient</a></li>
-
-                <li><a href="ManageDoctor.php">Manage Doctor</a></li>
-
-                <li> <a href="Adminlogout.php">Logout </a></li>
-            </ul>
-        </div>
-    </nav>
-
-    <br>
-    <table border="1">
-        <tr style="background-color:#81D3BD">
+    <div class="dnrimg">
+       
+    </div>
+    <div class="dnrtbl">
+    <table class="tablestyle">
+        <thead>
+            <tr>
             <th>Name</th>
             <th>User Name</th>
             <th>Degree</th>
@@ -54,9 +46,15 @@ if (!isset($_SESSION["user_name"])) {
             <th>Chamber</th>
             <th>Phone No</th>
             <th>Mail ID</th>
-            <th>&nbsp;&nbsp; &#128465 &nbsp;&nbsp;</th>
+            <th>&nbsp;&nbsp; Delete(&#128465)  &nbsp;&nbsp;</th>
+            </tr>
+        </thead>
+        <tbody>
+    </div>
+   
+</section>
 
-        </tr>
+
 
 
 
@@ -79,17 +77,18 @@ if (!isset($_SESSION["user_name"])) {
             echo '<td><center>' . $r['dtphone'] . '</center></td>';
             echo '<td><center>' . $r['dtemail_id'] . '</center></td>';
             echo "<td><a href=\"DoctorDelete.php?dtid=$r[dtid]\" onClick=\"return confirm
-('Are you sure to delete?')\"><input type='submit' value='Delete'></a></td>";
+('Are you sure to delete?')\"><input type='submit' value=''> &nbsp;&nbsp; &nbsp;&nbsp;<i class='fas fa-trash-alt'></i></a></td>";
 
 
 
 
             echo '</tr><center>';
+      
         }
 
         ?>
-    </table>
 
+</table>
 </body>
 
 </html>

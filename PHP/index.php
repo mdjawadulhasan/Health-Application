@@ -54,9 +54,9 @@
       </p>
 
       <div class="btn">
-        <a href="Patient/Patsignin.php" class="loginbtn">Continue as Patient <span class="fas fa-sign-in-alt"></span></a>
+        <a href="Patient/Patsignin.php" class="loginbtn">Continue as User <span class="fas fa-sign-in-alt"></span></a>
 
-        <a href="Admin/Admin.php" class="loginbtn">Continue as Doctor <span class="fas fa-sign-in-alt"></span></a>
+        <a href="Doctor/Dtsignin.php" class="loginbtn">Continue as Doctor <span class="fas fa-sign-in-alt"></span></a>
       </div>
 
 

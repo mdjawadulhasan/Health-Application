@@ -1,9 +1,9 @@
-<style>
-    <?php
 
-    include "design.css";
-    ?>
-</style>
+    <?php
+$title = 'Profile'; 
+  require_once './includes/header.php'; ?>
+   
+
 
 <?php
 session_start();
@@ -31,52 +31,107 @@ if (!isset($_SESSION["user_name"])) {
 }
 
 ?>
+<?php require_once './includes/sidebar.php'; ?>
+
 
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-
-    <title>Document</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="../Doctor/css/profilestyle.css">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet">
 </head>
-
-
 <body>
-
-    <header id="main-header">
-        <div class="container">
-            <h1>Welcome Doctor</h1>
-            <h1>Welcome to Personal Health Application</h1>
-            <h1>Profile</h1>
+     <div class="profile">
+        <div class="usercard">
+            <div class="imgcontainer">
+                <img src="../../Images/p1.png" alt="Avatar" style="width:100%">
+            </div>
+            <div class="container">
+                <h4><b><?php echo $name ?></b></h4>
+            </div>
         </div>
-    </header>
-    <nav id="navbar">
-        <div class="container">
-            <ul>
-                <li style="text-align:left"><a href="http://localhost/phawa/php"><b>&#8803;&nbsp; HOME<b></a></li>
-                <li><a href="ProvidePrescr.php"><b>Give Prescrption<b></a></li>
-                <li> <a href="Dteditprofile.php"><b>Edit<b></a></li>
-                <li><a href="Dtlogout.php"><b>Logout<b></a>
-                <li>
 
+        <div class="userinfo">
+            <form>
+                <h4 class="heading-small text-muted mb-4"><b>User information<b></h4>
+                <div class="pl-lg-4">
+                    <div class="row">
+                        <div class="col-lg-6">
+                            <div class="form-group focused">
+                                <label class="form-control-label" for="input-username">Name</label>
+                                <input type="text" id="input-username" class="form-control form-control-alternative" placeholder="Username" value="<?php echo $name ?>" required>
+                            </div>
+                        </div>
+                        <div class="col-lg-6">
+                            <div class="form-group">
+                                <label class="form-control-label" for="input-email">Email address</label>
+                                <input type="email" id="input-email" class="form-control form-control-alternative" value="<?php echo  $user_email ?>"  required>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-lg-6">
+                            <div class="form-group focused">
+                                <label class="form-control-label" for="input-first-name">User Name</label>
+                                <input type="text" id="input-first-name" class="form-control form-control-alternative" placeholder="First name" value="<?php echo $user_name ?>">
+                            </div>
+                        </div>
+                        <div class="col-lg-6">
+                            <div class="form-group focused">
+                                <label class="form-control-label" for="input-last-name">Phone Number</label>
+                                <input type="text" id="input-last-name" class="form-control form-control-alternative" value="<?php echo  $phnno ?>" required>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <hr class="my-4">
+                <h4 class="heading-small text-muted mb-4"><b>Professional  Information<b></h4>
+                <div class="pl-lg-4">
+                    <div class="row">
+                        <div class="col-lg-6">
+                            <div class="form-group focused">
+                                <label class="form-control-label" for="input-username">Department </label>
+                                <input type="text" id="input-username" class="form-control form-control-alternative" value="<?php echo $dept ?>" required>
+                            </div>
+                        </div>
+                        <div class="col-lg-6">
+                            <div class="form-group">
+                                <label class="form-control-label" for="input-degree">Degree </label>
+                                <input type="text" id="input-email" class="form-control form-control-alternative" value="<?php echo   $degree ?>" required>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-lg-6">
+                            <div class="form-group focused">
+                                <label class="form-control-label" for="input-first-name">Visiting Time </label>
+                                <input type="text" id="input-first-name" class="form-control form-control-alternative"  value="<?php echo  $vtime ?>" required>
+                            </div>
+                        </div>
+                        <div class="col-lg-6">
+                            <div class="form-group focused">
+                                <label class="form-control-label" for="input-username">Visiting Days </label>
+                                <input type="text" id="input-username" class="form-control form-control-alternative" value="<?php echo   $vdays ?>" required>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-lg-6">
+                            <div class="form-group focused">
+                                <label class="form-control-label" for="input-first-name">Chamber </label>
+                                <input type="text" id="input-first-name" class="form-control form-control-alternative"  value="<?php echo $chamber ?>" required>
+                            </div>
+                        </div>
+                     
 
-
-            </ul>
+                </div>
+            </form>
+            <br>
+            <br>
+            <button type="button" class="editbtn" onclick="location.href='Dteditprofile.php';">Edit Profile</button>
+            
         </div>
-    </nav>
-    <p><b>Name :<b><?php echo $name ?></p>
-    <p><b>User Name :<b><?php echo $user_name ?></p>
-    <p><b>Degree :<b><?php echo   $degree ?></p>
-    <p><b>Department :<b><?php echo $dept ?></p>
-    <p><b>Chamber :<b><?php echo $chamber ?></p>
-    <p><b>Visiting Time :<b><?php echo  $vtime ?></p>
-    <p><b>Visiting Days :<b><?php echo   $vdays ?></p>
-    <p><b>Phone No :<b><?php echo  $phnno ?></p>
-    <p><b>Mail id :<b><?php echo  $user_email ?></p>
-    <br>
-   
-
-
+    </div>
 </body>
-
 </html>

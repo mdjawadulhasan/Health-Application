@@ -1,17 +1,4 @@
-<style>
-    <?php
-
-    include "design.css";
-    ?>
-</style>
-
-
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-
-    <?php
+ <?php
 
     if (session_status() >= 0) {
         session_start();
@@ -21,43 +8,64 @@
     }
 
     ?>
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<title>Animated Login Form</title>
+	<link rel="stylesheet" type="text/css" href="../Admin/css/adlogstyle.css">
+	<link href="https://fonts.googleapis.com/css?family=Poppins:600&display=swap" rel="stylesheet">
+	<script src="https://kit.fontawesome.com/a81368914c.js"></script>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+   
 </head>
 
 <body>
-    <header id="main-header">
-        <div class="container">
-            <h1>Sign in First</h1>
+   
+    <img class="wave" src="img/admin.svg">
+	<div class="container">
+		<div class="img">
+			
+		</div>
+		<div class="login-content">
+			<form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="post">
+			
+				<h2 class="title">Admin</h2>
+           		<div class="input-div one">
+           		   <div class="i">
+           		   		<i class="fas fa-user"></i>
+           		   </div>
+           		   <div class="div">
+           		   		<h5>Username</h5>
+           		   		<input type="text" name="user_name" class="input" value="" required>
+           		   </div>
+           		</div>
+           		<div class="input-div pass">
+           		   <div class="i"> 
+           		    	<i class="fas fa-lock"></i>
+           		   </div>
+           		   <div class="div">
+           		    	<h5>Password</h5>
+           		    	<input type="password" name="user_pass" class="input" value="" required>
+            	   </div>
+            	</div>
+            	
+            	<input type="submit" name="submit" class="btn" value="Login">
+            </form>
         </div>
-
-    </header>
-
-    <nav id="navbar">
-        <div class="container">
-            <ul>
-                <li style="text-align:left"><a href="http://localhost/phawa/php"><b>&#8803;&nbsp; HOME<b></a></li>
-
-            </ul>
-        </div>
-    </nav>
-
-    <form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="post">
-
-        <br> <label for="user_name">User name: </label>
-        <input type="text" name="user_name" value="" required><br><br>
-
-        <label for="user_pass">Password: </label>
-        <input type="password" name="user_pass" value="" required><br><br>
-        <button type="submit" name="submit" style="background-color:#81D3BD"><b>Login</b></button>
-
-
-
-    </form>
+    </div>
+    <script type="text/javascript" src="../Admin/js/main.js"></script>
 
 
 
 
 
 
+</body>
+
+</html>
     <?php
 
     if (isset($_POST["submit"])) {
@@ -77,7 +85,3 @@
     }
 
     ?>
-
-</body>
-
-</html>

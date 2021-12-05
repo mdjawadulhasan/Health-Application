@@ -1,10 +1,6 @@
-<style>
-    <?php
-    include "design.css";
-    ?>
-</style>
-
-
+<?php
+$title = 'Profile';
+require_once './includes/header.php'; ?>
 <?php
 session_start();
 if (!isset($_SESSION["user_name"])) {
@@ -27,116 +23,129 @@ if (!isset($_SESSION["user_name"])) {
         $vdays = $row['dtvisitingdays'];
         $phnno = $row['dtphone'];
         $currentpass = $row['dtpass'];
+        $user_email = $row['dtemail_id'];
     }
 }
 ?>
 
-
+<?php require_once './includes/sidebar.php'; ?>
 
 <!DOCTYPE html>
 <html>
+
+<head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="../Doctor/css/profilestyle.css">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet">
+</head>
+
 
 <body>
 
     <body>
 
-        <header id="main-header">
-            <div class="container">
-            <h1>Welcome Doctor</h1>
-            <h1>Welcome to Personal Health Application</h1>
-            <h1>EDIT PROFILE</h1>
+        <div class="profile">
+            <div class="usercard">
+                <div class="imgcontainer">
+                    <img src="../../Images/p1.png" alt="Avatar" style="width:100%">
+                </div>
+                <div class="container">
+                    <h4><b><?php echo $name ?></b></h4>
+                </div>
             </div>
-        </header>
-        <nav id="navbar">
-            <div class="container">
-                <ul>
-                    <li style="text-align:left"><a href="http://localhost/phawa/php"><b>&#8803;&nbsp; HOME<b></a></li>
-                    <li><a href="ProvidePrescr.php"><b>Give Prescrption<b></a></li>
-                    <li> <a href="Dteditprofile.php"><b>Edit<b></a></li>
-                    <li> <a href="Dtprofile.php"><b>Profile<b></a></li>
-                    <li><a href="Dtlogout.php"><b>Logout<b></a>
-                    <li>
-                </ul>
-            </div>
-        </nav>
 
 
-        <br>
-        <form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="post">
+            <br>
+            <div class="userinfo">
+                <form action="Dteditprocess.php" method="post">
+                    <h4 class="heading-small text-muted mb-4"><b>User information<b></h4>
+                    <div class="pl-lg-4">
+                        <div class="row">
+                            <div class="col-lg-6">
+                                <div class="form-group focused">
+                                    <label class="form-control-label" for="input-username">Name</label>
+                                    <input type="text" id="input-username" name="name" class="form-control form-control-alternative" placeholder="Username" value="<?php echo $name ?>" readonly>
+                                </div>
+                            </div>
+                            <div class="col-lg-6">
+                                <div class="form-group">
+                                    <label class="form-control-label" for="input-email">Email address</label>
+                                    <input type="email" id="input-email"  class="form-control form-control-alternative" value="<?php echo  $user_email ?>" readonly>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-lg-6">
+                                <div class="form-group focused">
+                                    <label class="form-control-label" for="input-first-name">User Name</label>
+                                    <input type="text" id="input-first-name"  class="form-control form-control-alternative" placeholder="First name" value="<?php echo $user_name ?>" readonly>
+                                </div>
+                            </div>
+                            <div class="col-lg-6">
+                                <div class="form-group focused">
+                                    <label class="form-control-label" for="input-last-name">Phone Number</label>
+                                    <input type="text" id="input-last-name" name="phnno" class="form-control form-control-alternative" value="<?php echo  $phnno ?>" required>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <hr class="my-4">
+                    <h4 class="heading-small text-muted mb-4"><b>Professional Information<b>
+                    </h4>
+                    <div class="pl-lg-4">
+                        <div class="row">
+                            <div class="col-lg-6">
+                                <div class="form-group focused">
+                                    <label class="form-control-label" for="input-username">Department </label>
+                                    <input type="text" id="input-username" name="dept" class="form-control form-control-alternative" value="<?php echo $dept ?>" required>
+                                </div>
+                            </div>
+                            <div class="col-lg-6">
+                                <div class="form-group">
+                                    <label class="form-control-label" for="input-degree">Degree </label>
+                                    <input type="text" id="input-degree" name="degree" class="form-control form-control-alternative" value="<?php echo   $degree ?>" required>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-lg-6">
+                                <div class="form-group focused">
+                                    <label class="form-control-label" for="input-first-name">Visiting Time </label>
+                                    <input type="text" id="input-first-name"  name="vtime" class="form-control form-control-alternative" value="<?php echo  $vtime ?>" required>
+                                </div>
+                            </div>
+                            <div class="col-lg-6">
+                                <div class="form-group focused">
+                                    <label class="form-control-label" for="input-username">Visiting Days </label>
+                                    <input type="text" id="input-username" name="vdays"  class="form-control form-control-alternative" value="<?php echo   $vdays ?>" required>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-lg-6">
+                                <div class="form-group focused">
+                                    <label class="form-control-label" for="input-first-name">Chamber </label>
+                                    <input type="text" id="input-first-name" name="chamber"  class="form-control form-control-alternative" value="<?php echo $chamber ?>" required>
+                                </div>
+                            </div>
+                        </div>
+                        <hr class="my-4">
+                        <h6 class="heading-small text-muted mb-4">Password Confirmation</h6>
+                        <div class="pl-lg-4">
 
-            <label for="name"><b>Name :<b> </label>
-            <input type="text" name="name" value="<?php echo $name; ?>" required><br><br>
+                            <div class="col-lg-6">
+                                <div class="form-group">
+                                    <label class="form-control-label" for="input-email">Current Password</label>
+                                    <input type="password" name="crntpass" id="input-email" class="form-control form-control-alternative" value="" required>
+                                </div>
+                            </div>
+                        </div>
 
-            <label for="degree"><b>Degree :<b> </label>
-            <input type="text" name="degree" value="<?php echo $degree; ?>" required><br><br>
+                        <button type="submit" name="submit" class="savebtn">Save</button>
 
-            <label for="dept"><b>Department :<b> </label>
-            <input type="text" name="dept" value="<?php echo $dept; ?>" required><br><br>
-
-            <label for="chamber"><b>Chamber :<b> </label>
-            <input type="text" name="chamber" value="<?php echo $chamber; ?>" required><br><br>
-
-            <label for="vtime"><b>Visiting Time :<b> </label>
-            <input type="text" name="vtime" value="<?php echo $vtime; ?>" required><br><br>
-
-            <label for="vdays"><b>Visiting Days :<b> </label>
-            <input type="text" name="vdays" value="<?php echo $vdays; ?>" required><br><br>
-
-            <label for="phnno"><b>Phone No :<b> </label>
-            <input type="text" name="phnno" value="<?php echo $phnno; ?>" required><br><br>
-
-
-            <label for="user_pass"><b>New Password:<b> </label>
-            <input type="password" name="newpass" value="<?php echo $currentpass; ?>" required><br><br>
-
-
-            <label for="user_pass"><b>Current Password:<b> </label>
-            <input type="password" name="crntpass" value="" required><br><br>
-
-
-            <button type="submit" name="submit" style="background-color:#04AA6D"><b>Update<b></button><br><br>
-
-        </form>
+                    </div>
+                </form>
 
     </body>
 
 </html>
-
-
-<?php
-
-if (isset($_POST["submit"])) {
-    if ($_SERVER["REQUEST_METHOD"] == "POST") {
-
-
-        $new_name = $_POST['name'];
-        $new_degree = $_POST['degree'];
-        $new_dept = $_POST['dept'];
-        $new_chamber = $_POST['chamber'];
-        $new_vtime = $_POST['vtime'];
-        $new_vdays = $_POST['vdays'];
-        $new_phnno = $_POST['phnno'];
-        $new_pass = $_POST['newpass'];
-
-
-
-        $input_crnt_pass = $_POST['crntpass'];
-        if ($input_crnt_pass == $currentpass) {
-
-            $sql = "UPDATE doctortbl SET dtname='$new_name',dtdegree='$new_degree',dtdept='$new_dept',dtchamber='$new_chamber',dtvisitingtime='$new_vtime',dtvisitingdays='$new_vdays',dtphone='$new_phnno',dtpass='$new_pass' where dtuser_name='$user_name';";
-            if (mysqli_query($conn, $sql)) {
-                echo '<script>alert("Info Updated!")</script>';
-                header("refresh: 0; url=Dteditprofile.php");
-                mysqli_close($conn);
-            } else {
-                echo '<script>alert("Try Again!")</script>';
-                header("refresh: 0; url=Dteditprofile.php");
-            }
-        } else {
-            echo '<script>alert("Password Didnt matched!")</script>';
-            header("refresh: 0; url=Dteditprofile.php");
-        }
-    }
-}
-
-?>

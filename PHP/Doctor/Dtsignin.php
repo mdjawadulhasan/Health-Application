@@ -1,9 +1,4 @@
-<style>
-    <?php
 
-    include "design.css";
-    ?>
-</style>
 <?php
 if (session_status() >= 1) {
     session_start();
@@ -18,37 +13,47 @@ if (session_status() >= 1) {
 
 <!DOCTYPE html>
 <html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+    <link rel="stylesheet" href="./css/Loginstyle.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+    <title>Login</title>
+</head>
 
 <body>
 
-    <header id="main-header">
-        <div class="container">
-            <h1>Welcome Doctor</h1>
-            <h1>Welcome to Personal Health Application</h1>
-            <h1>Sign in to Continue</h1>
-        </div>
-    </header>
-    <nav id="navbar">
-        <div class="container">
-            <ul>
-                <li style="text-align:left"><a href="http://localhost/phawa/php"><b>&#8803;&nbsp; HOME<b></a></li>
-
-            </ul>
-        </div>
-    </nav>
-    <br>
-    <form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="post">
-
-        <label for="user_name">User name: </label>
-        <input type="text" name="user_name" value="" required><br><br>
-
-        <label for="user_pass">Password: </label>
-        <input type="password" name="user_pass" value="" required><br><br>
-
-
-        <button type="submit" name="submit" style="background-color:#04AA6D">Login</button><br><br>
-
-    </form>
+<section class="side">
+        <img src="../../Images/Dtlog.svg" alt="">
+        
+    </section>
+   
+    <div class="login-box">
+    
+        <section class="main">
+            <div class="loginctrl">
+               
+                <p class="title">Welcome!</p>
+                <div class="separator"></div>
+                <p class="welcome-message">Provide Login Credentials</p>
+    
+                <form class="login-form" action="<?php echo $_SERVER['PHP_SELF']; ?>" method="post">
+                    <div class="frm">
+                        <input type="text" name="user_name" placeholder="Username" required>
+                        <i class="fas fa-user"></i>
+                    </div>
+                    <div class="frm">
+                        <input type="password" name="user_pass" placeholder="Password" required>
+                        <i class="fas fa-lock"></i>
+                    </div>
+    
+                    <button type="submit" name="submit" class="submit">Login</button>
+                </form>
+                <div class="signup_link">Not a Member ?  <a href="Dtsignup.php"> Sign up</a></div>
+            </div>
+        </section>
+        </div
 
 </body>
 
