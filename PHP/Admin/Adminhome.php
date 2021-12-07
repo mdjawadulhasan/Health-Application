@@ -120,19 +120,6 @@ if (!isset($_SESSION["user_name"])) {
         </div>
 
     </section>
-    <div id="chart-container">
-        <p class="chartext">
-        <h2>
-            <center>Your Previous Data </center>
-        </h2>
-        </p>
-        <canvas id="mycanvas"></canvas>
-    </div>
-
-    <!-- javascript -->
-    <script type="text/javascript" src="Js/jquery.min.js"></script>
-    <script type="text/javascript" src="Js/Chart.min.js"></script>
-    <script type="text/javascript" src="Js/userdata.js"></script>
 </body>
 
 </html>

@@ -2,7 +2,7 @@
 <?php
 session_start();
 if (!isset($_SESSION["user_name"])) {
-    header("refresh: 1; url=patindex.php");
+    header("refresh: 1; url=Patsignin.php");
     exit();
 } else {
     $user_name = $_SESSION["user_name"];

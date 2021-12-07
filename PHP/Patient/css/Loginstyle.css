@@ -133,6 +133,7 @@ input:focus~i {
 .btsn:hover {
     font-size: 22px;
     color: #16a085;
+    cursor: pointer;
 }
 
 .login-box {

@@ -43,7 +43,6 @@ if (isset($_POST["submit"])) {
             header("refresh: 1; url=Bookappointment.php");
             mysqli_close($conn);
         } else {
-           
             echo '<script>Swal.fire(
                 "Try Again",
                  "",

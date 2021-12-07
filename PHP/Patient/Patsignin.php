@@ -67,7 +67,7 @@ if (session_status() >= 1) {
 
 
 
-    
+
 
 
 
@@ -79,7 +79,7 @@ if (session_status() >= 1) {
                         <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
                             <h3 class="register-heading">Registration</h3>
 
-                            <form action="Patsignupprocess.php" name="signupForm"  onsubmit="return validateForm()" method="post" class="row register-form">
+                            <form action="Patsignupprocess.php" name="signupForm" onsubmit="return validateForm()" method="post" class="row register-form">
                                 <div class="col-md-6">
                                     <div class="form-group">
                                         <input type="text" class="form-control" placeholder="First Name *" name="fname" value="" required />
@@ -150,7 +150,61 @@ if (session_status() >= 1) {
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
+    <script>
+        function validateForm() {
+            let fnameval = document.forms["signupForm"]["fname"].value;
+            for (let i = 0; i < fnameval.length; i++) {
+
+                if (fnameval[i] <= 65 || fnameval[i] >= 120) {
+                    alert("Invalid First Name");
+                    return false;
+                }
+            }
+
+
+            let lnameval = document.forms["signupForm"]["lname"].value;
+            for (let i = 0; i < lnameval.length; i++) {
+
+                if (lnameval[i] <= 65 || lnameval[i] >= 120) {
+                    alert("Invalid last Name");
+                    return false;
+                }
+            }
+
+
+            let ageval = document.forms["signupForm"]["age"].value;
+            if ((ageval % 1 != 0) || isNaN(ageval)) {
+                alert("Invalid Age");
+                return false;
+            }
+
+            let user_nameval = document.forms["signupForm"]["user_name"].value;
+            let count = 0;
+            for (let i = 0; i < user_nameval.length; i++) {
+                if (!isNaN(user_nameval)) {
+                    count++;
+                }
+            }
+
+            if (count == user_nameval.length) {
+                alert("Invalid User Name");
+                return false;
+            }
+
+
+            let passval = document.forms["signupForm"]["user_pass"].value;
+            if (passval.length < 5) {
+                alert("Password is Too weak");
+                return false;
+            }
+
+
+
+
+        }
+    </script>
+
+
 </body>
 
 </html>
-

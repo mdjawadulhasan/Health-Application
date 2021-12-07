@@ -30,16 +30,20 @@
 
     <link rel="icon" href="../../Images/ticon.svg" type="image/icon type">
 
-
+    <style>
+        .navbar i {
+            color: #16a085;
+            font-size: 2rem;
+        }
+    </style>
 </head>
 
 
 <header class="header">
     <a href="PatientHome.php" class="logo"><i class="fas fa-laptop-medical"></i> Health Care System</a>
     <nav class="navbar">
-        <a href="PatientHome.php">Home</a>
-        <a href="Patprofile.php">Profile</a>
-        <a href="Patlogout.php">Log out</a>
+        <a href="Patprofile.php"><i class="fas fa-user"></i></a>
+        <a href="Patlogout.php"><i class="fas fa-sign-out-alt"></i></a>
     </nav>
 </header>
 
