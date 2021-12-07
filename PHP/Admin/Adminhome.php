@@ -22,6 +22,11 @@ if (!isset($_SESSION["user_name"])) {
     <link rel="icon" href="../../Images/ticon.svg" type="image/icon type">
 
     <link rel="stylesheet" href="../Admin/css/adhomestyle.css">
+    <style>
+         .navbar i {
+            color: #16a085;
+        }
+    </style>
 </head>
 
 <body>
@@ -50,7 +55,7 @@ if (!isset($_SESSION["user_name"])) {
             <a href="AddDonor.php">Manage Donor</a>
             <a href="ManagePat.php">Manage Patient</a>
             <a href="ManageDoctor.php">Manage Doctor</a>
-            <a href="Adminlogout.php">Logout </a>
+            <a href="Adminlogout.php"><i class="fas fa-sign-out-alt"></i></a>
         </nav>
 
         <div id="menu-btn" class="fas fa-bars"></div>

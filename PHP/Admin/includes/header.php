@@ -2,6 +2,9 @@
 <html lang="en">
 
 <head>
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css" />
+    <script src="/assets/vendor/bootstrap-datepicker/dist/js/bootstrap-datepicker.min.js"></script>
+
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -31,9 +34,9 @@
 <header class="header">
     <a href="Adminhome.php" class="logo"><i class="fas fa-laptop-medical"></i> Health Care System</a>
     <nav class="navbar">
-        <a href="AddDonor.php">Manage Donor</a>
-        <a href="ManagePat.php">Manage Patient</a>
-        <a href="ManageDoctor.php">Manage Doctor</a>
+        <a href="AddDonor.php"><h6>Manage Donor</h6></a>
+        <a href="ManagePat.php"><h6>Manage Patient</h6></a>
+        <a href="ManageDoctor.php"><h6>Manage Doctor</h6></a>
         <a href="Adminlogout.php"><i class="fas fa-sign-out-alt"></i></a>
     </nav>
 </header>

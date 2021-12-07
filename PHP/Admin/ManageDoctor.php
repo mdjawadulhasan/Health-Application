@@ -16,8 +16,8 @@ require_once './includes/header.php';
 <div class="hd"><h2><i class="fas fa-chevron-circle-right"></i> Manage Doctors</h2></div>
 
 
-<section class="Dnrlist">
-    <div class="dnrtbl">
+<section class="Dctrlist">
+    <div class="Dctrlist">
         <table class="tablestyle">
             <thead>
                 <tr>

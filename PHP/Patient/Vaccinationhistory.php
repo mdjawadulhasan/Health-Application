@@ -47,7 +47,7 @@ require_once './includes/sidebar.php';
                     <div class="col-lg-6">
                         <div class="form-group focused">
                             <label class="form-control-label">Vaccine Name</label>
-                            <input type="text" name="vname" class="form-control form-control-alternative" required>
+                            <input type="text" autocomplete="off" name="vname" class="form-control form-control-alternative" required>
                         </div>
                     </div>
                     <div class="col-lg-6">

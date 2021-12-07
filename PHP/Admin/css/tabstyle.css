@@ -10,6 +10,22 @@
     text-decoration: none;
 }
 
+a:link {
+    text-decoration: none;
+}
+
+a:visited {
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+a:active {
+    text-decoration: none;
+}
+
 .header {
     padding: 1rem 9%;
     position: fixed;
@@ -259,7 +275,41 @@ nav i {
 
 /* Donor List */
 
-.Dnrlist {}
+.infoinput {
+    padding: 0% 9rem;
+}
+
+.form-control {
+    background-color: #f8f8ff;
+}
+
+.form-control:hover {
+    background-color: #f8f8ff;
+}
+
+.vsubmitbtn {
+    float: left;
+    color: #fff;
+    border-color: #16a085;
+    background-color: #16a085;
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.5);
+    font-size: .875rem;
+    padding-left: 40px;
+    padding-right: 40px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    margin-left: 25px;
+}
+
+.vsubmitbtn:hover {
+    transform: translateY(2%);
+    cursor: pointer;
+}
+
+.Dnrlist {
+    margin: auto;
+    width: 70%;
+}
 
 .Dnrin i {
     position: absolute;
@@ -296,6 +346,14 @@ nav i {
     margin-top: 20px;
     margin-left: 20px;
     font-size: 1.5rem;
+}
+
+
+/*Doctor Tbl */
+
+.Dctrlist {
+    padding: 5px 10px;
+    margin: auto;
 }
 
 
