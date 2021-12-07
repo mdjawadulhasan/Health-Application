@@ -2,12 +2,11 @@
 
 session_start();
 if (!isset($_SESSION["user_name"])) {
-  header("refresh: 0; url=Patsignin.php");
+  header("refresh: 0; url=Dtsignin.php");
   exit();
 }
 
 
-//setting header to json
 header('Content-Type: application/json');
 
 
@@ -23,7 +22,7 @@ if (!$mysqli) {
 
 //query to get data from the table
 // $query = sprintf("SELECT playerid, score FROM score ORDER BY playerid");
-$user_name = $_SESSION["user_name"];
+$user_name = "jawad12";
 $query = sprintf("SELECT crnt_date,inruncounter ,outruncounter,cyclingcounter FROM excdatatbl where username='$user_name' ORDER BY crnt_date ");
 
 

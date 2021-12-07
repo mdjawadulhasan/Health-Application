@@ -20,6 +20,9 @@
 
     <link rel="icon" href="../../Images/ticon.svg" type="image/icon type">
 
+
+    
+
 <style>
     .navbar i {
     color: #16a085;

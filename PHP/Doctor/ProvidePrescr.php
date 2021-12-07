@@ -1,5 +1,3 @@
-
-
 <?php
 $title = 'View Appointment';
 require_once './includes/header.php';
@@ -16,50 +14,50 @@ if (!isset($_SESSION["user_name"])) {
 ?>
 
 
-        <section class="viewapt">
+<section class="viewapt">
     <div class="viewaptimg">
-    <img src="../../Images/Apt.gif" alt="" width="500" height="500">
+        <img src="../../Images/Apt.gif" alt="" width="500" height="500">
     </div>
     <div class="viewapttbl">
-    <table class="tablestyle">
-        <thead>
+        <table class="tablestyle">
+            <thead>
 
-            <tr>
-                <th>Doctor Name</th>
-                <th>Patient Name</th>
-                <th>Appointment Date</th>
-                <th>Give</th>
+                <tr>
+                    <th>Doctor Name</th>
+                    <th>Patient Name</th>
+                    <th>Appointment Date</th>
+                    <th>Give</th>
 
-            </tr>
-        </thead>
-        <tbody>
+                </tr>
+            </thead>
+            <tbody>
 
-        <?php
-        $user_name = $_SESSION["user_name"];
-        $query = "SELECT * FROM doctortbl WHERE dtuser_name='$user_name';";
-        $conn = mysqli_connect('localhost', 'root', '', 'phawa');
-        $result = mysqli_query($conn, $query);
+                <?php
+                $user_name = $_SESSION["user_name"];
+                $query = "SELECT * FROM doctortbl WHERE dtuser_name='$user_name';";
+                $conn = mysqli_connect('localhost', 'root', '', 'phawa');
+                $result = mysqli_query($conn, $query);
 
-        while ($row = mysqli_fetch_assoc($result)) {
+                while ($row = mysqli_fetch_assoc($result)) {
 
-            $dtid = $row['dtid'];
-        }
+                    $dtid = $row['dtid'];
+                }
 
 
-        $conn = mysqli_connect('localhost', 'root', '', 'phawa');
-        $query = "SELECT *FROM appointmenttbl where doctorid='$dtid'";
-        $result = mysqli_query($conn, $query);
+                $conn = mysqli_connect('localhost', 'root', '', 'phawa');
+                $query = "SELECT *FROM appointmenttbl where doctorid='$dtid'";
+                $result = mysqli_query($conn, $query);
 
-        while ($r = mysqli_fetch_array($result)) {
-            echo '<tr>';
-            echo '<td><center>' . $r['apdtname'] . '</center></td>';
-            echo '<td><center>' . $r['apptname'] . '</center></td>';
-            echo '<td><center>' . $r['appdate'] . '</center></td>';
-            echo "<td><a href=\"ProvidePrescrProcess.php?patientid=$r[patientid]\"><input type='submit' value='' ><i class='fa fa-forward'></i></a></td>";
-        }
-        ?>
+                while ($r = mysqli_fetch_array($result)) {
+                    echo '<tr>';
+                    echo '<td><center>' . $r['apdtname'] . '</center></td>';
+                    echo '<td><center>' . $r['apptname'] . '</center></td>';
+                    echo '<td><center>' . $r['appdate'] . '</center></td>';
+                    echo "<td><a href=\"ProvidePrescrProcess.php?patientid=$r[patientid]\"><input type='submit' value='' ><i class='fa fa-forward'></i></a></td>";
+                }
+                ?>
 
-    </table>
+        </table>
     </div>
-    </section>
-
+    
+</section>
