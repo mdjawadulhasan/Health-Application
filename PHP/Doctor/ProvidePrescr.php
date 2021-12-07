@@ -3,12 +3,11 @@
 <?php
 $title = 'View Appointment';
 require_once './includes/header.php';
-require_once './includes/sidebar.php';
 ?>
 <?php
 session_start();
 if (!isset($_SESSION["user_name"])) {
-    header("refresh: 0; url=Dtprofile.php");
+    header("refresh: 0; url=Dtsignin.php");
     exit();
 }
 
@@ -64,6 +63,3 @@ if (!isset($_SESSION["user_name"])) {
     </div>
     </section>
 
-<!-- </body>
-
-</html> -->

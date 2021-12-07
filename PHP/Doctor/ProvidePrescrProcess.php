@@ -3,7 +3,7 @@
 <?php
 session_start();
 if (!isset($_SESSION["user_name"])) {
-    header("refresh: 0; url=Dtprofile.php");
+    header("refresh: 0; url=Dtsignin.php");
     exit();
 }
 
@@ -26,7 +26,7 @@ while ($row = mysqli_fetch_assoc($result)) {
 <?php
 $title = 'View Appointment';
 require_once './includes/header.php';
-require_once './includes/sidebar.php';
+
 ?>
 
 <!DOCTYPE html>

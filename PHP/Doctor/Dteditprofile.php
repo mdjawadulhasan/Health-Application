@@ -28,7 +28,6 @@ if (!isset($_SESSION["user_name"])) {
 }
 ?>
 
-<?php require_once './includes/sidebar.php'; ?>
 
 <!DOCTYPE html>
 <html>
