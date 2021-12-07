@@ -20,7 +20,23 @@ require_once './includes/sidebar.php';
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://raw.githack.com/eKoopmans/html2pdf/master/dist/html2pdf.bundle.js"></script>
-    <title>Document</title>
+    <style>
+        a:link {
+            text-decoration: none;
+        }
+
+        a:visited {
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: none;
+        }
+
+        a:active {
+            text-decoration: none;
+        }
+    </style>
 </head>
 
 <body>
@@ -62,7 +78,7 @@ require_once './includes/sidebar.php';
     </div>
 
 
-    <div class="vcntbl" >
+    <div class="vcntbl">
         <table class="tablestyle" id="vtbl">
             <thead>
                 <tr>
@@ -93,15 +109,14 @@ require_once './includes/sidebar.php';
     </div>
 
     <script>
-        function Printpage(){
-            
-            const element=document.getElementById("vtbl");
+        function Printpage() {
+
+            const element = document.getElementById("vtbl");
             html2pdf()
-            .from(element)
-            .save();
+                .from(element)
+                .save();
         }
     </script>
 </body>
 
 </html>
-

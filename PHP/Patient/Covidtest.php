@@ -4,7 +4,7 @@ if (!isset($_SESSION["user_name"])) {
     header("refresh: 0; url=Patsignin.php");
     exit();
 }
-$title = 'Calories Burned';
+$title = 'Covid-19 Test';
 require_once './includes/header.php';
 require_once './includes/sidebar.php';
 
@@ -19,12 +19,13 @@ require_once './includes/sidebar.php';
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <style>
         .framediv {
-            margin-top: -180px;
+            margin-top: -130px;
             margin-right: 0px;
+            height: 100%;
             
         }
         *{
-            overflow-y: hidden;
+            /* overflow-y: hidden; */
         }
         
     </style>

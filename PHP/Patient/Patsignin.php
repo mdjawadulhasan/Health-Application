@@ -156,7 +156,11 @@ if (session_status() >= 1) {
             for (let i = 0; i < fnameval.length; i++) {
 
                 if (fnameval[i] <= 65 || fnameval[i] >= 120) {
-                    alert("Invalid First Name");
+                    Swal.fire(
+                        "Invalid FIrst Name",
+                        "Try Again",
+                        "error"
+                    )
                     return false;
                 }
             }
@@ -166,7 +170,11 @@ if (session_status() >= 1) {
             for (let i = 0; i < lnameval.length; i++) {
 
                 if (lnameval[i] <= 65 || lnameval[i] >= 120) {
-                    alert("Invalid last Name");
+                    Swal.fire(
+                        "Invalid Last Name",
+                        "Try Again",
+                        "error"
+                    )
                     return false;
                 }
             }
@@ -174,7 +182,11 @@ if (session_status() >= 1) {
 
             let ageval = document.forms["signupForm"]["age"].value;
             if ((ageval % 1 != 0) || isNaN(ageval)) {
-                alert("Invalid Age");
+                Swal.fire(
+                        "Invalid Age",
+                        "Try Again",
+                        "error"
+                    )
                 return false;
             }
 
@@ -187,14 +199,23 @@ if (session_status() >= 1) {
             }
 
             if (count == user_nameval.length) {
-                alert("Invalid User Name");
+                Swal.fire(
+                        "Invalid User Name",
+                        "Try Again",
+                        "error"
+                    )
                 return false;
             }
 
 
             let passval = document.forms["signupForm"]["user_pass"].value;
             if (passval.length < 5) {
-                alert("Password is Too weak");
+               
+                Swal.fire(
+                        "Password is Too weak",
+                        "Try Again",
+                        "error"
+                    )
                 return false;
             }
 
