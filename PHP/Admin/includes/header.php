@@ -18,7 +18,7 @@
     <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
     <script src="https://kit.fontawesome.com/a076d05399.js"></script>
 
-
+    <link rel="icon" href="../../Images/ticon.svg" type="image/icon type">
     <style>
         .navbar i {
             color: #16a085;

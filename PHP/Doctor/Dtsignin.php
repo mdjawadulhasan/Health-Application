@@ -20,6 +20,7 @@ if (session_status() >= 1) {
     <link rel="stylesheet" href="./css/Loginstyle.css">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
     <title>Login</title>
+    <link rel="icon" href="../../Images/ticon.svg" type="image/icon type">
 </head>
 
 <body>
