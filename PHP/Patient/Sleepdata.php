@@ -21,7 +21,32 @@ while ($row = mysqli_fetch_assoc($result)) {
     $defaultvalue = $row['hrcounter'];
 }
 ?>
+<!doctype html>
+<html lang="en">
 
+<body>
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                </div>
+                <div class="modal-body">
+                    <div id="chart-container">
+                        <p class="chartext">
+                        <h2>
+                            <center>Users Previous Data </center>
+                        </h2>
+                        </p>
+                        <canvas id="mycanvas"></canvas>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+</body>
+
+</html>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -72,20 +97,18 @@ while ($row = mysqli_fetch_assoc($result)) {
 
 
             </div>
-
+            <button class="viewgrph" data-bs-toggle="modal" data-bs-target="#exampleModal">See Exercise Data</button>
+        </div>
         </div>
     </section>
-    <div id="chart-container">
-        <p class="chartext"><h2><center>Your Previous Data </center></h2></p>
-        <canvas id="mycanvas"></canvas>
-    </div>
+
 
     <!-- javascript -->
     <script type="text/javascript" src="Js/jquery.min.js"></script>
     <script type="text/javascript" src="Js/Chart.min.js"></script>
     <script type="text/javascript" src="Js/sleepdata.js"></script>
 
-    
+
 
 </body>
 
@@ -98,7 +121,7 @@ if (isset($_POST["Setted"])) {
 
         $countval = $_POST['Count'];
         $user_name = $_SESSION["user_name"];
-       
+
         $query = "SELECT *FROM sleepdatatbl where crnt_date='$Todaydt' and username='$user_name'";
         $result = mysqli_query($conn, $query);
         $row = mysqli_fetch_array($result, MYSQLI_ASSOC);
@@ -131,4 +154,3 @@ if (isset($_POST["Setted"])) {
 }
 
 ?>
-
