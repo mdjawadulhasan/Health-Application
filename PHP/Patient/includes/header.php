@@ -1,3 +1,7 @@
+<?php
+$msg="ishan islam is your name is it wright or wrong";
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -43,8 +47,21 @@
     <a href="PatientHome.php" class="logo"><i class="fas fa-laptop-medical"></i> Health Care System</a>
     <nav class="navbar">
         <a href="Patprofile.php"><i class="fas fa-user"></i></a>
+        <a href="javascript:myFunction();"> <i class="fas fa-bell"></i></a>
         <a href="Patlogout.php"><i class="fas fa-sign-out-alt"></i></a>
     </nav>
 </header>
+
+<script>
+    function myFunction() {
+        Swal.fire({
+            position: 'top-end',
+            icon: 'warning',
+            title: '<?php echo $msg ?>',
+            showConfirmButton: false,
+            timer: 1500
+        })
+    }
+</script>
 
 <body>

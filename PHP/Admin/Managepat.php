@@ -8,6 +8,34 @@ $title = 'Donor List';
 require_once './includes/header.php';
 
 ?>
+<!doctype html>
+<html lang="en">
+<head>
+    <style>
+        h4{
+            text-align: center;
+            color: #16a085;
+        }
+    </style>
+</head>
+<body>
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-sm">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h3>Write Message</h3>
+                </div>
+                <div class="modal-body">
+                    ...
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+</body>
+</html>
+
+
 <br>
 <br>
 <br>
@@ -16,12 +44,9 @@ require_once './includes/header.php';
 <div class="hd"><h2><i class="fas fa-chevron-circle-right"></i> Manage Users</h2></div>
 
 
+<button class="msgbtn" data-bs-toggle="modal" data-bs-target="#exampleModal">Sent Notifications</button>
 <section class="Patlist">
-
-
-    <div class="dnrimg">
-
-    </div>
+    
     <div class="dnrtbl">
         <table class="tablestyle">
             <thead>
@@ -38,8 +63,9 @@ require_once './includes/header.php';
             </thead>
             <tbody>
     </div>
-
 </section>
+
+
 
 
 

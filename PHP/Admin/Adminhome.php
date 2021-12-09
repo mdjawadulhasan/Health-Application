@@ -23,7 +23,7 @@ if (!isset($_SESSION["user_name"])) {
 
     <link rel="stylesheet" href="../Admin/css/adhomestyle.css">
     <style>
-         .navbar i {
+        .navbar i {
             color: #16a085;
         }
     </style>
@@ -57,9 +57,6 @@ if (!isset($_SESSION["user_name"])) {
             <a href="ManageDoctor.php">Manage Doctor</a>
             <a href="Adminlogout.php"><i class="fas fa-sign-out-alt"></i></a>
         </nav>
-
-        <div id="menu-btn" class="fas fa-bars"></div>
-
     </header>
 
 
@@ -93,13 +90,8 @@ if (!isset($_SESSION["user_name"])) {
 
     <br>
 
-    <!-- <br>
-    <h1>Number of Patients : <?php echo $count ?></h1>
-    <h1>Number of Donors : <?php echo $count2 ?></h1>
-    <h1>Number of Doctors : <?php echo $count3 ?></h1> -->
-
+ 
     <section class="icons-container">
-
         <div class="icons">
             <i class="fas fa-procedures"></i>
             <h3><?php echo $count ?></h3>
@@ -125,6 +117,7 @@ if (!isset($_SESSION["user_name"])) {
         </div>
 
     </section>
+
 </body>
 
 </html>
