@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@600&family=Stylish&display=swap');
 body {}
 
 .services {
@@ -58,6 +59,7 @@ body {}
     align-items: center;
     flex-wrap: wrap;
     gap: 1.5rem;
+    margin-bottom: 100%;
 }
 
 .sleephm .image {
@@ -87,13 +89,15 @@ body {}
     padding-top: 50px;
     padding-bottom: 50px;
     margin-left: 200px;
+    font-family: 'Roboto Mono', monospace;
 }
 
 .Countercontent p {
     text-align: center;
-    color: turquoise;
+    color: rgb(1, 12, 11);
     font-size: 2rem;
     margin: 20px;
+    font-family: 'Roboto Mono', monospace;
 }
 
 .btns {
@@ -170,7 +174,7 @@ body {}
     padding-right: 20px;
     padding-top: 10px;
     padding-bottom: 10px;
-    margin-left: 25px;
+    margin-top: 20px;
 }
 
 .viewgrph:hover {
@@ -191,6 +195,7 @@ body {}
     align-items: center;
     flex-wrap: wrap;
     gap: 1.5rem;
+    margin-bottom: 100%;
 }
 
 .Heartratedata .image {
@@ -214,6 +219,7 @@ body {}
     align-items: center;
     flex-wrap: wrap;
     gap: 1.5rem;
+    margin-bottom: 100%;
 }
 
 .whtcounterhm .image {
@@ -232,11 +238,12 @@ body {}
 }
 
 .watercounterhm {
+    display: grid;
+    grid-template-columns: 40% 60%;
+    gap: 1rem;
+    text-align: center;
     padding: 0 9%;
-    display: flex;
-    align-items: center;
-    flex-wrap: wrap;
-    gap: 1.5rem;
+    margin-bottom: 100%;
 }
 
 .watercounterhm .image {
@@ -245,6 +252,10 @@ body {}
 
 .watercounterhm .image img {
     width: 100%;
+}
+
+.watercounterhm .btns {
+    margin-right: 330px;
 }
 
 .services .box-container .b4 {
