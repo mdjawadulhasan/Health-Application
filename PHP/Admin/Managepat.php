@@ -10,14 +10,7 @@ require_once './includes/header.php';
 ?>
 <!doctype html>
 <html lang="en">
-<head>
-    <style>
-        h4{
-            text-align: center;
-            color: #16a085;
-        }
-    </style>
-</head>
+
 <body>
     <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog modal-sm">
@@ -26,13 +19,22 @@ require_once './includes/header.php';
                     <h3>Write Message</h3>
                 </div>
                 <div class="modal-body">
-                    ...
+                    <form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="post">
+                        <div class="form-group">
+                            <label for="exampleInputEmail1">Your Message</label>
+                            <input type="text" name="inputmsg" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" required>
+                            <small id="emailHelp" class="form-text text-muted">This message will be sent to every users.</small>
+                        </div>
+
+                        <button type="submit" name="Setted" class="msgsentbtn">Sent</button>
+                    </form>
                 </div>
             </div>
         </div>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 </body>
+
 </html>
 
 
@@ -41,12 +43,14 @@ require_once './includes/header.php';
 <br>
 <br>
 <br>
-<div class="hd"><h2><i class="fas fa-chevron-circle-right"></i> Manage Users</h2></div>
+<div class="hd">
+    <h2><i class="fas fa-chevron-circle-right"></i> Manage Users</h2>
+</div>
 
 
 <button class="msgbtn" data-bs-toggle="modal" data-bs-target="#exampleModal">Sent Notifications</button>
 <section class="Patlist">
-    
+
     <div class="dnrtbl">
         <table class="tablestyle">
             <thead>
@@ -90,16 +94,37 @@ while ($r = mysqli_fetch_array($result)) {
     echo '<td><center>' . $r['ptuseremail'] . '</center></td>';
     echo "<td><a href=\"PatDelete.php?pid=$r[pid]\" onClick=\"return confirm
 ('Are you sure to delete?')\"><input type='submit' value=''>&nbsp;&nbsp; &nbsp;&nbsp;<i class='fas fa-trash-alt'></i></a></td>";
-
-
-
-
     echo '</tr><center>';
 }
 
 ?>
 </table>
-
 </body>
-
 </html>
+
+
+<?php
+if (isset($_POST["Setted"])) {
+    if ($_SERVER["REQUEST_METHOD"] == "POST") {
+
+        $msg = $_POST['inputmsg'];
+        $conn = mysqli_connect('localhost', 'root', '', 'phawa');
+        $sql = "INSERT INTO notificationtbl(Notificationid,Msg) VALUES ('0','$msg')";
+        if (mysqli_query($conn, $sql)) {
+            echo '<script>Swal.fire(
+                "Data Updated!",
+                "",
+                "success"
+              )</script>';
+            mysqli_close($conn);
+        } else {
+            echo '<script>Swal.fire(
+                "Try Again",
+                 "",
+                 "error"
+            )</script>';
+        }
+    }
+}
+
+?>
