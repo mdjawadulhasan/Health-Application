@@ -112,7 +112,7 @@ if (isset($_POST["Setted"])) {
         $sql = "INSERT INTO notificationtbl(Notificationid,Msg) VALUES ('0','$msg')";
         if (mysqli_query($conn, $sql)) {
             echo '<script>Swal.fire(
-                "Data Updated!",
+                "Message has been sent!",
                 "",
                 "success"
               )</script>';

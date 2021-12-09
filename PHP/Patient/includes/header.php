@@ -1,6 +1,15 @@
 <?php
-$msg="ishan islam is your name is it wright or wrong";
+$msg="";
+$conn = mysqli_connect('localhost', 'root', '', 'phawa');
+$query="SELECT Msg FROM notificationtbl ORDER BY Notificationid DESC LIMIT 1";
+$result = mysqli_query($conn, $query);
+
+while ($r = mysqli_fetch_array($result)) {
+    $msg= $r['Msg'];
+}
+
 ?>
+
 
 <!DOCTYPE html>
 <html lang="en">
