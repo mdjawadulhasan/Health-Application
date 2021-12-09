@@ -40,8 +40,13 @@ require_once './includes/sidebar.php';
 </head>
 
 <body>
+    
     <div class="infoinput" style="background-image: url('../../Images/scope.jpg');">
-        <form action="Addvaccinedataprocess.php" method="post">
+    <div class="titletext">
+        <h2><i class="fas fa-angle-double-right"></i> Vaccination History</h2>
+    </div>
+    <br>   
+    <form action="Addvaccinedataprocess.php" method="post">
             <div class="pl-lg-4">
                 <div class="row">
                     <div class="col-lg-6">

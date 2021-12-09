@@ -42,8 +42,8 @@ function ShowDocttor($sql)
 
 
 <section class="BookApt">
-    <div class="pagetxt">
-        <p>Book Appointment</p>
+    <div class="titletext">
+        <h2><i class="fas fa-angle-double-right"></i> Book Appointment </h2>
     </div>
     <form class="Bookapt-form" action="<?php echo $_SERVER['PHP_SELF']; ?>" method="post">
 

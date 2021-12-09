@@ -15,8 +15,8 @@ if (!isset($_SESSION["user_name"])) {
 ?>
 
 <div class="viewapt">
-    <div class="pagetxt">
-        <p>Appointment List</p>
+    <div class="titletext">
+        <h2><i class="fas fa-angle-double-right"></i> Appointment List </h2>
     </div>
     <div class="viewaptimg">
         <img src="../../Images/Apt.gif" alt="" width="500" height="500">

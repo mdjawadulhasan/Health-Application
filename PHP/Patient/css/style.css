@@ -258,6 +258,10 @@ nav i {
     text-align: center;
 }
 
+.BookApt tr {
+    font-size: 1rem;
+}
+
 
 /* here .srchdt and .dtsrcbtn is common for both book apt abd dbrlist */
 
@@ -569,4 +573,16 @@ Vaccination History */
     padding: 2rem 9%;
     text-align: center;
     margin-left: 350px;
+}
+
+.titletext h2 {
+    padding: 5px;
+    color: #009879;
+    text-align: center;
+    font-weight: bold;
+}
+
+.infoinput h2 {
+    color: #050a0a;
+    margin-top: -50px;
 }

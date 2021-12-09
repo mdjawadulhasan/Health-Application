@@ -38,8 +38,8 @@ function ShowDonor($sql)
 
 
 <section class="Dnrlist">
-<div class="pagetxt">
-        <p>Donor List</p>
+<div class="titletext">
+        <h2><i class="fas fa-angle-double-right"></i> Donor List</h2>
     </div>
     <form class="DonorList-Form" action="<?php echo $_SERVER['PHP_SELF']; ?>" method="post">
 

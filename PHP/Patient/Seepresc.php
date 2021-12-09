@@ -13,8 +13,8 @@ require_once './includes/sidebar.php';
 <body>
 
     <section class="viewpres">
-    <div class="pagetxt">
-        <p>View Prescription</p>
+    <div class="titletext">
+        <h2><i class="fas fa-angle-double-right"></i> View Prescription </h2>
     </div>
         <div class="prescimg">
             <img src="../../Images/prescription.gif" alt="">
