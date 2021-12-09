@@ -92,23 +92,28 @@
     color: white;
 }
 
-#chart-container {
-    margin-top: 100px;
-    width: 70%;
-    height: 70%;
-    padding: 0 9%;
-    margin-left: 150px;
-}
-
 .chartext h2 {
     color: crimson;
     padding: 20px;
     background-color: crimson;
 }
 
-#mycanvas {
-    background-color: rgb(251, 253, 255);
-    border-style: solid;
-    border-color: crimson;
-    border-radius: 25px;
+.viewgrph {
+    color: #fff;
+    border-color: #007bff;
+    background-color: #007bff;
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.5);
+    font-size: .875rem;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    margin-top: 40px;
+    position: inherit;
+    margin-left: -860px;
+}
+
+.viewgrph:hover {
+    transform: translateY(2%);
+    cursor: pointer;
 }

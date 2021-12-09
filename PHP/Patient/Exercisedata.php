@@ -23,6 +23,39 @@ while ($row = mysqli_fetch_assoc($result)) {
     $defaultvalue3 = $row['cyclingcounter'];
 }
 ?>
+<!doctype html>
+<html lang="en">
+<head>
+    <style>
+        h4{
+            text-align: center;
+            color: #16a085;
+        }
+    </style>
+</head>
+<body>
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4>
+                    <i class="fas fa-chevron-circle-right"></i> Your Previous Data 
+                    </h4>
+                </div>
+                <div class="modal-body">
+                    <div id="chart-container">
+                        <p class="chartext">
+
+                        </p>
+                        <canvas id="mycanvas"></canvas>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+</body>
+</html>
 
 
 <!DOCTYPE html>
@@ -38,7 +71,14 @@ while ($row = mysqli_fetch_assoc($result)) {
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Counter-Up/1.0.0/jquery.counterup.min.js"></script>
-
+<style>
+    body {
+            background-image: linear-gradient(to right top, #edd3e2, #e3cfe1, #d8cbdf, #cdc7dd, #c2c3d9, #bbc4da, #b3c4db, #abc5da, #a4cadd, #9ed0dc, #9bd5da, #9cd9d4);
+            margin: 0;
+            height: 100%;
+            
+        }
+</style>
 </head>
 
 <body>
@@ -169,15 +209,12 @@ while ($row = mysqli_fetch_assoc($result)) {
 
 
             </div>
-
+            <button class="viewgrph" data-bs-toggle="modal" data-bs-target="#exampleModal">View Previous Data</button>
         </div>
 
     </div>
 
-    <div id="chart-container">
-        <p class="chartext"><h2><center>Your Previous Data </center></h2></p>
-        <canvas id="mycanvas"></canvas>
-    </div>
+
 </body>
 <script type="text/javascript" src="Js/jquery.min.js"></script>
 <script type="text/javascript" src="Js/Chart.min.js"></script>
@@ -214,6 +251,11 @@ if (isset($_POST["Setted1"])) {
 
         if (mysqli_query($conn, $sql)) {
             mysqli_close($conn);
+            echo '<script>Swal.fire(
+                "Data Updated!",
+                "",
+                "success"
+              )</script>';
         } else {
             echo '<script>alert("Try Again")</script>';
         }
@@ -247,6 +289,11 @@ if (isset($_POST["Setted2"])) {
 
         if (mysqli_query($conn, $sql)) {
             mysqli_close($conn);
+            echo '<script>Swal.fire(
+                "Data Updated!",
+                "",
+                "success"
+              )</script>';
         } else {
             echo '<script>alert("Try Again")</script>';
         }
@@ -281,6 +328,11 @@ if (isset($_POST["Setted3"])) {
 
         if (mysqli_query($conn, $sql)) {
             mysqli_close($conn);
+            echo '<script>Swal.fire(
+                "Data Updated!",
+                "",
+                "success"
+              )</script>';
         } else {
             echo '<script>alert("Try Again")</script>';
         }
