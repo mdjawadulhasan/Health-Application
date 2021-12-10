@@ -49,6 +49,7 @@ require_once './includes/header.php';
 
 
 <button class="msgbtn" data-bs-toggle="modal" data-bs-target="#exampleModal">Sent Notifications</button>
+<button onclick="location.href='ProcessambReq.php';" class="msgbtn" >Process Ambulance Request</button>
 <section class="Patlist">
 
     <div class="dnrtbl">
