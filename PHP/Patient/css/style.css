@@ -616,3 +616,19 @@ Vaccination History */
 .bookamb .btnset {
     padding: 10px;
 }
+
+.bookamb h4 {
+    font-size: 15px;
+    color: rgb(1, 13, 17);
+    background: #ffdbdb;
+    text-align: center;
+    padding: 10px
+}
+
+.bookamb h3 {
+    font-size: 15px;
+    color: rgb(1, 13, 17);
+    background: #ffdbdb;
+    text-align: center;
+    padding: 10px
+}
