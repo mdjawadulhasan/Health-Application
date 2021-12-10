@@ -19,6 +19,7 @@
       <li><a href="../../../../PHAWA/PHP/Patient/covidinfo.php"><i class="fas fa-virus"></i>  Covid-19 Info</a></li>
       <li><a href="../../../../PHAWA/PHP/Patient/Vaccinationhistory.php"><i class="fas fa-file-medical-alt"> </i>  Vaccination History</a></li>
       <li><a href="../../../../PHAWA/PHP/Patient/Medreminder.php">  <i class="far fa-bell"></i>  Medicine Reminder</a></li>
+      <li><a href="../../../../PHAWA/PHP/Patient/Ambulancecall.php">  <i class="fas fa-phone-volume"></i>  Call Ambulance</a></li>
       
       
     
