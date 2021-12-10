@@ -41,7 +41,7 @@ if (isset($_POST["submit"])) {
             $sql = "UPDATE patienttbl SET ptname='$newname',ptuseremail='$newemail', ptgender='$newgender',ptphone='$new_phn',ptage='$new_age',ptbgrp='$new_bgrp' where ptusername='$user_name';";
             if (mysqli_query($conn, $sql)) {
                 echo '<script>alert("Info Updated!")</script>';
-                header("refresh: 0; url=Pateditprofile.php");
+                header("refresh: 0; url=Patprofile.php");
                 mysqli_close($conn);
             } else {
                 echo '<script>alert("Try Again!")</script>';
