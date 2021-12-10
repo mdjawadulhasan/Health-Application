@@ -150,9 +150,9 @@ if (session_status() >= 1) {
             let fnameval = document.forms["signupForm"]["fname"].value;
             for (let i = 0; i < fnameval.length; i++) {
 
-                if (fnameval[i] <= 65 || fnameval[i] >= 120) {
+                if (!isNaN(fnameval[i])) {
                     Swal.fire(
-                        "Invalid FIrst Name",
+                        "Invalid First Name",
                         "Try Again",
                         "error"
                     )
@@ -164,7 +164,7 @@ if (session_status() >= 1) {
             let lnameval = document.forms["signupForm"]["lname"].value;
             for (let i = 0; i < lnameval.length; i++) {
 
-                if (lnameval[i] <= 65 || lnameval[i] >= 120) {
+                if (!isNaN(lnameval[i])) {
                     Swal.fire(
                         "Invalid Last Name",
                         "Try Again",
