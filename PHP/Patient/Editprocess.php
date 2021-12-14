@@ -42,6 +42,7 @@ if (isset($_POST["submit"])) {
             if (mysqli_query($conn, $sql)) {
                 echo '<script>alert("Info Updated!")</script>';
                 header("refresh: 0; url=Patprofile.php");
+                //off con
                 mysqli_close($conn);
             } else {
                 echo '<script>alert("Try Again!")</script>';
