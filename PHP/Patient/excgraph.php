@@ -13,7 +13,7 @@ header('Content-Type: application/json');
 
 
 //get connection
-$mysqli = new mysqli('localhost', 'root', '', 'phawa');
+require_once '../conn2.php';
 
 
 

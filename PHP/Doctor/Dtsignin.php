@@ -70,7 +70,7 @@ if (isset($_POST["submit"])) {
         $user_name = $_POST['user_name'];
         $user_pass = $_POST['user_pass'];
 
-        $conn = mysqli_connect('localhost', 'root', '', 'phawa');
+        require_once '../conn.php';
         $query = "SELECT * from doctortbl WHERE dtuser_name='$user_name' and dtpass='$user_pass';";
 
         $result = mysqli_query($conn, $query);

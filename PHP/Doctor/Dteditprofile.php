@@ -10,7 +10,7 @@ if (!isset($_SESSION["user_name"])) {
 
     $user_name = $_SESSION["user_name"];
     $query = "SELECT * FROM doctortbl WHERE dtuser_name='$user_name';";
-    $conn = mysqli_connect('localhost', 'root', '', 'phawa');
+    require_once '../conn.php';
     $result = mysqli_query($conn, $query);
 
     while ($row = mysqli_fetch_assoc($result)) {

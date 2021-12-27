@@ -6,7 +6,7 @@ if (!isset($_SESSION["user_name"])) {
 }
 
 $patientid = $_GET['patientid'];
-$conn = mysqli_connect('localhost', 'root', '', 'phawa');
+require_once '../conn.php';
 $query = "SELECT * FROM patienttbl WHERE pid='$patientid';";
 $result = mysqli_query($conn, $query);
 

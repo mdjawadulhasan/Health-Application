@@ -1,7 +1,7 @@
 <?php
 
 $did=$_GET['did'];
-$conn = mysqli_connect('localhost', 'root', '', 'phawa');
+require_once '../conn.php';
 $sql = "DELETE FROM donortbl where did=$did";
 
 if (mysqli_query($conn, $sql)) {

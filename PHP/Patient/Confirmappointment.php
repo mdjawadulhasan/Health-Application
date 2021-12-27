@@ -7,7 +7,7 @@ if (!isset($_SESSION["user_name"])) {
 require_once './includes/header.php';
 $user_name = $_SESSION["user_name"];
 $query = "SELECT * FROM patienttbl WHERE ptusername='$user_name';";
-$conn = mysqli_connect('localhost', 'root', '', 'phawa');
+require_once '../conn.php';
 $result = mysqli_query($conn, $query);
 
 while ($row = mysqli_fetch_assoc($result)) {
@@ -31,7 +31,7 @@ if (isset($_POST["submit"])) {
         $Dtrname = $_POST['dtrname'];
         $Dtrid = $_POST['dtrid'];
 
-        $conn = mysqli_connect('localhost', 'root', '', 'phawa');
+        require_once '../conn.php';
         $sql="INSERT INTO appointmenttbl(aptid,doctorid,patientid,apdtname,apptname,appdate) VALUES ('0','$Dtrid',$patid,'$Dtrname','$patname','$AptDate')";
         if (mysqli_query($conn, $sql)) {
             echo '<script>Swal.fire(

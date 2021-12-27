@@ -13,7 +13,7 @@ require_once './includes/sidebar.php';
 
 
 $dtid = $_GET['dtid'];
-$conn = mysqli_connect('localhost', 'root', '', 'phawa');
+require_once '../conn.php';
 $query = "SELECT * FROM doctortbl WHERE dtid='$dtid';";
 $result = mysqli_query($conn, $query);
 

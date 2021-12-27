@@ -16,7 +16,7 @@ if (isset($_POST["submit"])) {
     $user_email = $_POST['user_email'];
 
 
-    $conn = mysqli_connect('localhost', 'root', '', 'phawa');
+    require_once '../conn.php';
     $sql = "INSERT INTO patienttbl(pid,ptname,ptphone,ptgender,ptage,ptbgrp,ptusername,ptpass,ptuseremail) VALUES ('0','$name','$phoneno','$gender','$age','$Bgrp','$user_name','$user_pass','$user_email')";
 
     if (isset($fname) && isset($lname) && isset($phoneno) && isset($gender) && isset($age) && isset($Bgrp) && isset($user_name) && isset($user_pass) && isset($user_email)) {

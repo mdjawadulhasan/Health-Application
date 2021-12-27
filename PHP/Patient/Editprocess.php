@@ -1,5 +1,7 @@
 
 <?php
+require_once '../conn.php';
+
 session_start();
 if (!isset($_SESSION["user_name"])) {
     header("refresh: 1; url=Patsignin.php");
@@ -7,7 +9,7 @@ if (!isset($_SESSION["user_name"])) {
 } else {
     $user_name = $_SESSION["user_name"];
     $query = "SELECT * FROM patienttbl WHERE ptusername='$user_name';";
-    $conn = mysqli_connect('localhost', 'root', '', 'phawa');
+   
     $result = mysqli_query($conn, $query);
 
     while ($row = mysqli_fetch_assoc($result)) {

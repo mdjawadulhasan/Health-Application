@@ -9,7 +9,7 @@ if (!isset($_SESSION["user_name"])) {
 $title = 'Weight Record';
 require_once './includes/header.php';
 require_once './includes/sidebar.php';
-$conn = mysqli_connect('localhost', 'root', '', 'phawa');
+require_once '../conn.php';
 
 $defaultvalue = 40;
 $user_name = $_SESSION["user_name"];
@@ -136,8 +136,7 @@ if (isset($_POST["Setted"])) {
 
         $countval = $_POST['Count'];
         $user_name = $_SESSION["user_name"];
-        // $Todaydt = date('Y-m-d');
-        // $conn = mysqli_connect('localhost', 'root', '', 'phawa');
+        
 
         $query = "SELECT *FROM weightdatatbl where crnt_date='$Todaydt' and username='$user_name'";
         $result = mysqli_query($conn, $query);

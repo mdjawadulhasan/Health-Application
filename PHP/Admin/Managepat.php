@@ -80,7 +80,7 @@ require_once './includes/header.php';
 
 
 
-$conn = mysqli_connect('localhost', 'root', '', 'phawa');
+require_once '../conn.php';
 $query = "SELECT *FROM patienttbl";
 $result = mysqli_query($conn, $query);
 
@@ -105,11 +105,12 @@ while ($r = mysqli_fetch_array($result)) {
 
 
 <?php
+require_once '../conn.php';
 if (isset($_POST["Setted"])) {
     if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
         $msg = $_POST['inputmsg'];
-        $conn = mysqli_connect('localhost', 'root', '', 'phawa');
+        
         $sql = "INSERT INTO notificationtbl(Notificationid,Msg) VALUES ('0','$msg')";
         if (mysqli_query($conn, $sql)) {
             echo '<script>Swal.fire(

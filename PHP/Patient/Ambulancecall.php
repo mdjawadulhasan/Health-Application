@@ -13,7 +13,7 @@ require_once './includes/sidebar.php';
 <?php
 $count=0;
 $user_name = $_SESSION["user_name"];
-$conn = mysqli_connect('localhost', 'root', '', 'phawa');
+require_once '../conn.php';
 $query = "SELECT * from ambulancebooktbl where username='$user_name'";
 $result = mysqli_query($conn, $query);
 $row = mysqli_fetch_array($result, MYSQLI_ASSOC);

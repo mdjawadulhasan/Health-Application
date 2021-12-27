@@ -15,7 +15,7 @@ require_once './includes/sidebar.php';
 
 function ShowDocttor($sql)
 {
-    $conn = mysqli_connect('localhost', 'root', '', 'phawa');
+    require_once '../conn.php';
     $query = $sql;
     $result = mysqli_query($conn, $query);
 

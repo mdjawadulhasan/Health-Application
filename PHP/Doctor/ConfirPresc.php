@@ -6,7 +6,7 @@ if (!isset($_SESSION["user_name"])) {
 }
 $user_name = $_SESSION["user_name"];
 $query = "SELECT * FROM doctortbl WHERE dtuser_name='$user_name';";
-$conn = mysqli_connect('localhost', 'root', '', 'phawa');
+require_once '../conn.php';
 $result = mysqli_query($conn, $query);
 
 while ($row = mysqli_fetch_assoc($result)) {
@@ -30,7 +30,7 @@ if (isset($_POST["submit"])) {
         $ptid = $_POST['ptid'];
         $presctext = $_POST['presctext'];
 
-        $conn = mysqli_connect('localhost', 'root', '', 'phawa');
+        require_once '../conn.php';
         $sql="INSERT INTO prescriptiontbl(prsid,did,pid,prescription,Date,Dtname) VALUES ('0','$dtid','$ptid','$presctext','$Prescdate','$Dtname')";
         if (mysqli_query($conn, $sql)) {
             echo '<script>alert("Prescrition Giving Done!")</script>';

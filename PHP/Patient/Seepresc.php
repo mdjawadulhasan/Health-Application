@@ -35,7 +35,7 @@ require_once './includes/sidebar.php';
                     <?php
                     $user_name = $_SESSION["user_name"];
                     $query = "SELECT * FROM patienttbl WHERE ptusername='$user_name';";
-                    $conn = mysqli_connect('localhost', 'root', '', 'phawa');
+                    require_once '../conn.php';
                     $result = mysqli_query($conn, $query);
 
                     while ($row = mysqli_fetch_assoc($result)) {
@@ -44,7 +44,7 @@ require_once './includes/sidebar.php';
                     }
 
 
-                    $conn = mysqli_connect('localhost', 'root', '', 'phawa');
+                    require_once '../conn.php';
                     $query = "SELECT *FROM prescriptiontbl where pid='$ptid'";
                     $result = mysqli_query($conn, $query);
 

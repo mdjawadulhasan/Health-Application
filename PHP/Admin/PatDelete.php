@@ -1,7 +1,7 @@
 <?php
 
 $pid=$_GET['pid'];
-$conn = mysqli_connect('localhost', 'root', '', 'phawa');
+require_once '../conn.php';
 $sql = "DELETE FROM patienttbl where pid='$pid'";
 
 if (mysqli_query($conn, $sql)) {

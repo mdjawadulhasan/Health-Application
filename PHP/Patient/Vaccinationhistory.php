@@ -95,7 +95,7 @@ require_once './includes/sidebar.php';
             </thead>
             <?php
             $username = $_SESSION["user_name"];
-            $conn = mysqli_connect('localhost', 'root', '', 'phawa');
+            require_once '../conn.php';
             $query = "SELECT *FROM vaccinedatatbl where username='$username' order by vdate desc";
             $result = mysqli_query($conn, $query);
 

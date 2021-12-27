@@ -6,7 +6,7 @@ if (!isset($_SESSION["user_name"])) {
 }
 
 $aptid=$_GET['aptid'];
-$conn = mysqli_connect('localhost', 'root', '', 'phawa');
+require_once '../conn.php';
 $sql = "DELETE FROM appointmenttbl where aptid=$aptid";
 
 if (mysqli_query($conn, $sql)) {

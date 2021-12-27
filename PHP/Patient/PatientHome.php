@@ -103,7 +103,7 @@ require_once './includes/sidebar.php';
 <?php
 $Todaydt = date('Y-m-d');
 $user_name = $_SESSION["user_name"];
-$conn = mysqli_connect('localhost', 'root', '', 'phawa');
+require_once '../conn.php';
 
 $query = "SELECT *FROM sleepdatatbl where crnt_date='$Todaydt' and username='$user_name'";
 $result = mysqli_query($conn, $query);

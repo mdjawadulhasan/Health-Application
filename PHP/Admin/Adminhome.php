@@ -62,7 +62,7 @@ if (!isset($_SESSION["user_name"])) {
 
 
     <?php
-    $conn = mysqli_connect('localhost', 'root', '', 'phawa');
+    require_once '../conn.php';
     $query = "SELECT * from patienttbl";
     $result = mysqli_query($conn, $query);
     $row = mysqli_fetch_array($result, MYSQLI_ASSOC);

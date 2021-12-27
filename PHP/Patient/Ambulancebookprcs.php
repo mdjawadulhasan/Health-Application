@@ -40,7 +40,7 @@ if (isset($_POST["cancel"])) {
        
 
 
-        $conn = mysqli_connect('localhost', 'root', '', 'phawa');
+        require_once '../conn.php';
         $sql = "DELETE FROM ambulancebooktbl where username='$user_name'";
         if (mysqli_query($conn, $sql)) {
             header("location:Ambulancecall.php");

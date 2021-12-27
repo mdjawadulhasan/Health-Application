@@ -13,14 +13,14 @@
 
 </html>
 <?php
-
+require_once '../conn.php';
 if (isset($_POST["submit"])) {
 
     // collect value of input field
     $user_name = $_POST['user_name'];
     $user_pass = $_POST['user_pass'];
 
-    $conn = mysqli_connect('localhost', 'root', '', 'phawa');
+  
     $query = "SELECT * from patienttbl WHERE ptusername='$user_name' and ptpass='$user_pass';";
 
     $result = mysqli_query($conn, $query);

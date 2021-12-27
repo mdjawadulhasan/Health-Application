@@ -1,7 +1,7 @@
 <?php
 
 $dtid=$_GET['dtid'];
-$conn = mysqli_connect('localhost', 'root', '', 'phawa');
+require_once '../conn.php';
 $sql = "DELETE FROM doctortbl where dtid='$dtid'";
 
 if (mysqli_query($conn, $sql)) {

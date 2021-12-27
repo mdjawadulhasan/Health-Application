@@ -7,7 +7,7 @@ if (!isset($_SESSION["user_name"])) {
 $title = 'Exercise Record';
 require_once './includes/header.php';
 require_once './includes/sidebar.php';
-$conn = mysqli_connect('localhost', 'root', '', 'phawa');
+require_once '../conn2.php';
 
 $defaultvalue1 = 0;
 $defaultvalue2 = 0;

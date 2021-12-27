@@ -35,7 +35,7 @@ if (!isset($_SESSION["user_name"])) {
                 <?php
                 $user_name = $_SESSION["user_name"];
                 $query = "SELECT * FROM doctortbl WHERE dtuser_name='$user_name';";
-                $conn = mysqli_connect('localhost', 'root', '', 'phawa');
+                require_once '../conn.php';
                 $result = mysqli_query($conn, $query);
 
                 while ($row = mysqli_fetch_assoc($result)) {
@@ -44,7 +44,7 @@ if (!isset($_SESSION["user_name"])) {
                 }
 
 
-                $conn = mysqli_connect('localhost', 'root', '', 'phawa');
+                require_once '../conn.php';
                 $query = "SELECT *FROM appointmenttbl where doctorid='$dtid'";
                 $result = mysqli_query($conn, $query);
 

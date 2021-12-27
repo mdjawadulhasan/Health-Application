@@ -17,7 +17,7 @@ if (isset($_POST["submit"])) {
         $doses = $_POST['doses'];
         $date = $_POST['vdate'];
 
-        $conn = mysqli_connect('localhost', 'root', '', 'phawa');
+        require_once '../conn.php';
         $sql = "INSERT INTO vaccinedatatbl(vcnid,username,vname,vdoses,vdate) VALUES ('0','$user_name','$vname', '$doses','$date')";
         if (mysqli_query($conn, $sql)) {
             header("location:Vaccinationhistory.php");
@@ -35,7 +35,7 @@ if (isset($_POST["submit"])) {
 
 
 $vcnid=$_GET['vcnid'];
-$conn = mysqli_connect('localhost', 'root', '', 'phawa');
+require_once '../conn.php';
 $sql = "DELETE FROM vaccinedatatbl where vcnid=$vcnid";
 
 if (mysqli_query($conn, $sql)) {

@@ -19,7 +19,7 @@ if (isset($_POST["submit"])) {
 
 
 
-    $conn = mysqli_connect('localhost', 'root', '', 'phawa');
+    require_once '../conn.php';
     $sql = "INSERT INTO doctortbl(dtid,dtname,dtdegree,dtdept,dtchamber,dtvisitingtime,dtvisitingdays,dtphone,dtuser_name,dtemail_id,dtpass) VALUES ('0','$name','$degree','$dept',' $chamber',' $vtime','$vdays',' $phnno','$user_name','$user_email','$user_pass')";
 
 

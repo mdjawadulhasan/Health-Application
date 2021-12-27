@@ -1,5 +1,5 @@
 <?php
-
+require_once '../conn.php';
 
 if (isset($_POST["submit"])) {
 
@@ -10,7 +10,7 @@ if (isset($_POST["submit"])) {
     $area = $_POST['area'];
 
 
-    $conn = mysqli_connect('localhost', 'root', '', 'phawa');
+   
     $sql = "INSERT INTO donortbl(did,dnrname,dnrphone,dnrbrgp,dnrcity,dnrarea) VALUES ('0','$name','$phnno','$Bgrp','$city','$area')";
     if (mysqli_query($conn, $sql)) {
         header("location:AddDonor.php");

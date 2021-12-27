@@ -10,7 +10,7 @@ if (!isset($_SESSION["user_name"])) {
 $title = 'Sleep Record';
 require_once './includes/header.php';
 require_once './includes/sidebar.php';
-$conn = mysqli_connect('localhost', 'root', '', 'phawa');
+require_once '../conn2.php';
 
 $defaultvalue = 0;
 $user_name = $_SESSION["user_name"];

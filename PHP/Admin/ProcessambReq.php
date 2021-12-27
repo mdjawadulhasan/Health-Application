@@ -107,7 +107,7 @@ require_once './includes/header.php';
 
 <?php
 
-$conn = mysqli_connect('localhost', 'root', '', 'phawa');
+require_once '../conn.php';
 $query = "SELECT *FROM ambulancebooktbl";
 $result = mysqli_query($conn, $query);
 
