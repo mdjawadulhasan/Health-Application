@@ -59,7 +59,7 @@ if (session_status() >= 1) {
                     <button type="submit" class="lbtn" name="submit" class="submit">Login</button>
                 </form>
                 Not a Member ?
-                <br> <button type="button" class="btsn" data-toggle="modal" data-target=".bd-example-modal-lg">Sign up</button>
+                <br> <button type="button" class="btsn" name="signupsubmi" data-toggle="modal" data-target=".bd-example-modal-lg">Sign up</button>
             </div>
         </section>
     </div>
@@ -86,7 +86,7 @@ if (session_status() >= 1) {
                                         <input type="text" class="form-control" placeholder="Age *" name="age" value="" required />
                                     </div>
                                     <div class="form-group">
-                                        <input type="text" class="form-control" placeholder="User Name *" name="user_name" value="" required />
+                                        <input type="text" class="form-control" id="siname" placeholder="User Name *" name="user_name" value="" required />
                                     </div>
                                     <div class="form-group">
                                         <div class="maxl">
@@ -128,9 +128,9 @@ if (session_status() >= 1) {
                                         </select>
                                     </div>
                                     <div class="form-group">
-                                        <input type="password" class="form-control" placeholder="Password *" name="user_pass" value="" required />
+                                        <input type="password" class="form-control" id="sipass" placeholder="Password *" name="user_pass" value="" required />
                                     </div>
-                                    <input type="submit" name="submit" class="btnRegister" />
+                                    <input type="submit" name="submit" id="sisubmit" class="btnRegister" />
                                 </div>
 
                         </div>
