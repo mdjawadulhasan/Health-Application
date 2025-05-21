@@ -1,4 +1,5 @@
-![Screenshot_1](https://github.com/user-attachments/assets/172a5cbf-ac78-438d-842f-8c91206268a0)# HealthPlus - Centralized Healthcare Information System
+![Screenshot_1](https://github.com/user-attachments/assets/172a5cbf-ac78-438d-842f-8c91206268a0)
+# HealthPlus - Centralized Healthcare Information System
 
 HealthPlus is a comprehensive healthcare management platform designed to centralize citizens' medical data and streamline healthcare services. The system eliminates the hassle of maintaining physical medical records by creating a unified digital repository while providing integrated access to various healthcare services.
 
