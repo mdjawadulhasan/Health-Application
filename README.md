@@ -80,7 +80,6 @@ HealthPlus is a comprehensive healthcare management platform designed to central
 
 ## Development Status
 This project was developed as an academic demonstration of centralized healthcare information systems. While not currently deployed for public use, the architecture and features showcase the potential for integrated digital healthcare solutions.
-![Screenshot_1](https://github.com/user-attachments/assets/6a9ab87c-2d84-4339-a043-88f5be7a1a73)
 
 
 
